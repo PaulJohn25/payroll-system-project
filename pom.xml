@@ -11,4 +11,13 @@
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>com.mycompany.payrollsystem.PayrollSystem</exec.mainClass>
     </properties>
+    
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+            </resource>
+        </resources>
+    </build>
+    
 </project>
