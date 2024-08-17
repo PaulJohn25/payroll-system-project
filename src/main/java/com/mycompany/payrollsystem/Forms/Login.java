@@ -6,6 +6,7 @@ package com.mycompany.payrollsystem.Forms;
 
 import com.mycompany.payrollsystem.Util;
 import java.awt.Color;
+import javax.swing.JFrame;
 
 /**
  *
@@ -21,6 +22,8 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null); // Centers the form
         util.fitImageToComponent(CompanyLogoPanel, "images/company_image.png");
+        util.fitImageToComponent(hide_panel, "images/hide_icon.png");
+        util.fitImageToComponent(close_panel, "images/close.png");
         setBackground(new Color(0, 0, 0, 0));
     }
 
@@ -47,6 +50,8 @@ public class Login extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        hide_panel = new javax.swing.JLabel();
+        close_panel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -156,6 +161,18 @@ public class Login extends javax.swing.JFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("date with your payroll information.");
 
+        hide_panel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                hide_panelMouseClicked(evt);
+            }
+        });
+
+        close_panel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                close_panelMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout rightRoundedCornerPanel1Layout = new javax.swing.GroupLayout(rightRoundedCornerPanel1);
         rightRoundedCornerPanel1.setLayout(rightRoundedCornerPanel1Layout);
         rightRoundedCornerPanel1Layout.setHorizontalGroup(
@@ -163,23 +180,35 @@ public class Login extends javax.swing.JFrame {
             .addGroup(rightRoundedCornerPanel1Layout.createSequentialGroup()
                 .addGroup(rightRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(rightRoundedCornerPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
                         .addGroup(rightRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(rightRoundedCornerPanel1Layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addGroup(rightRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(50, Short.MAX_VALUE))
+                            .addGroup(rightRoundedCornerPanel1Layout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addGroup(rightRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(rightRoundedCornerPanel1Layout.createSequentialGroup()
+                                .addGap(68, 68, 68)
+                                .addGroup(rightRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 38, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rightRoundedCornerPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(hide_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(close_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         rightRoundedCornerPanel1Layout.setVerticalGroup(
             rightRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rightRoundedCornerPanel1Layout.createSequentialGroup()
-                .addGap(121, 121, 121)
+                .addGap(5, 5, 5)
+                .addGroup(rightRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(hide_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(close_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(80, 80, 80)
                 .addComponent(jLabel4)
                 .addGap(0, 0, 0)
                 .addComponent(jLabel3)
@@ -191,7 +220,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addGap(0, 0, 0)
                 .addComponent(jLabel9)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 186, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout roundedPanel1Layout = new javax.swing.GroupLayout(roundedPanel1);
@@ -225,6 +254,16 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void close_panelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_panelMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_close_panelMouseClicked
+
+    private void hide_panelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hide_panelMouseClicked
+        // TODO add your handling code here:
+        this.setState(JFrame.ICONIFIED);
+    }//GEN-LAST:event_hide_panelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -264,7 +303,9 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CompanyLogoPanel;
+    private javax.swing.JLabel close_panel;
     private javax.swing.JTextField email_textfield;
+    private javax.swing.JLabel hide_panel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
