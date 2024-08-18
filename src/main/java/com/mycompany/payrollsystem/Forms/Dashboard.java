@@ -4,17 +4,23 @@
  */
 package com.mycompany.payrollsystem.Forms;
 
+import com.mycompany.payrollsystem.Util;
+import java.awt.Color;
+
 /**
  *
  * @author Paul
  */
 public class Dashboard extends javax.swing.JFrame {
 
+    private final Util util = new Util();
     /**
      * Creates new form Dashboard
      */
     public Dashboard() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setBackground(new Color(0, 0, 0, 0));
     }
 
     /**
@@ -26,16 +32,17 @@ public class Dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 1012, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 541, Short.MAX_VALUE)
         );
 
         pack();
