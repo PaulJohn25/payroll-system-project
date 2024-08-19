@@ -4,6 +4,7 @@
  */
 package com.mycompany.payrollsystem;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.io.IOException;
 import java.net.URL;
@@ -11,10 +12,12 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
+import javax.swing.border.Border;
 
 /**
  *
@@ -72,5 +75,16 @@ public class Util {
             LOGGER.warning("Image not found: " + imagePathString);
         }
     }
+    
+    public void setLeftAndRightBorder(JLabel label, Color color) {
+        Border bottom_border = BorderFactory.createMatteBorder(0, 4, 0, 4, color);
+        label.setBorder(bottom_border);
+    }
+    
+    public void setLeftBorder(JLabel label, Color color) {
+        Border left_border = BorderFactory.createMatteBorder(0, 4, 0, 0, color);
+        label.setBorder(left_border);
+    }
+ 
     
 }

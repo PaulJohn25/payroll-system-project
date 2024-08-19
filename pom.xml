@@ -27,11 +27,11 @@
         </repository>
     </repositories>
     <dependencies>
-        <dependency>
+<!--        <dependency>
             <groupId>unknown.binary</groupId>
             <artifactId>KGradientPanel</artifactId>
             <version>SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.swinglabs/swingx -->
         <dependency>
             <groupId>org.swinglabs</groupId>
