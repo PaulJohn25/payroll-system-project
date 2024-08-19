@@ -20,7 +20,7 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
 
     private final Util util = new Util();
     private Pattern pattern;
-    private String regex = "^[a-zA-Z0-9._]+@gmail\\.com$";
+    private final String regex = "^[a-zA-Z0-9._]+@gmail\\.com$";
     /**
      * Creates new form TestLogin
      */

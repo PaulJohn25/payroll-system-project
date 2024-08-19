@@ -59,12 +59,10 @@ public class Util {
                 Image resizeImage = orginalImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
                 ImageIcon resizeIcon = new ImageIcon(resizeImage);
 
-                if (component instanceof JLabel) {
-                    ((JLabel) component).setIcon(resizeIcon);
-                } else if (component instanceof JButton) {
-                    ((JButton) component).setIcon(resizeIcon);
-                } else {
-                    LOGGER.warning("Unsupported component: " + component.getClass().getName());
+                switch (component) {
+                    case JLabel jLabel -> jLabel.setIcon(resizeIcon);
+                    case JButton jButton -> jButton.setIcon(resizeIcon);
+                    default -> LOGGER.log(Level.WARNING, "Unsupported component: {0}", component.getClass().getName());
                 }
 
             } catch (Exception e) {
@@ -72,7 +70,7 @@ public class Util {
             }
 
         } else {
-            LOGGER.warning("Image not found: " + imagePathString);
+            LOGGER.log(Level.WARNING, "Image not found: {0}", imagePathString);
         }
     }
     

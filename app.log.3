@@ -1,0 +1,25 @@
+Aug 19, 2024 5:42:21 PM com.mycompany.payrollsystem.Util fitImageToComponent
+SEVERE: Error resizing image
+java.lang.IllegalArgumentException: Width (0) and height (0) must be non-zero
+	at java.desktop/java.awt.image.ReplicateScaleFilter.<init>(ReplicateScaleFilter.java:102)
+	at java.desktop/java.awt.image.AreaAveragingScaleFilter.<init>(AreaAveragingScaleFilter.java:79)
+	at java.desktop/java.awt.Image.getScaledInstance(Image.java:177)
+	at com.mycompany.payrollsystem.Util.fitImageToComponent(Util.java:59)
+	at com.mycompany.payrollsystem.component.TestMenu.<init>(TestMenu.java:26)
+	at com.mycompany.payrollsystem.Forms.Dashboard.initComponents(Dashboard.java:43)
+	at com.mycompany.payrollsystem.Forms.Dashboard.<init>(Dashboard.java:22)
+	at com.mycompany.payrollsystem.Forms.Dashboard$1.run(Dashboard.java:176)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
