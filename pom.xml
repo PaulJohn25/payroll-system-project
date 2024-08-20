@@ -52,8 +52,19 @@
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>com.mycompany.payrollsystem.PayrollSystem</exec.mainClass>
     </properties>
+    
+    
 
     <build>
+        
+        <!-- Include resources from src/main/java -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+            </resource>
+        </resources>
+        
+        
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>

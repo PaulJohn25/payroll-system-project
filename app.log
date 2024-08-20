@@ -2838,3 +2838,7 @@ java.lang.IllegalArgumentException: Width (0) and height (0) must be non-zero
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
 
+Aug 20, 2024 9:14:00 PM com.mycompany.payrollsystem.Util fitImageToComponent
+WARNING: Image not found: images/intra_logo-removebg.png
+Aug 20, 2024 9:14:26 PM com.mycompany.payrollsystem.Util fitImageToComponent
+WARNING: Image not found: images/intra_logo-removebg.png
