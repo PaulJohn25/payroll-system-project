@@ -8,7 +8,6 @@ import com.mycompany.payrollsystem.model.CardModel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-import javax.swing.Icon;
 
 /**
  *
@@ -20,9 +19,8 @@ public class Card extends javax.swing.JPanel {
     
     private final int ARC_WIDTH = 15;
     private final int ARC_HEIGHT = 15;
-    private final int ICON_WIDTH = 10;
-    private final int ICON_HEIGHT = 10;
-    private CardModel cardModel;
+    private final int ICON_WIDTH = 20;
+    private final int ICON_HEIGHT = 20;
     
     // Column 1 card color -> [47,71,186]
     // Column 2 card color -> [255,141,7]
@@ -31,21 +29,16 @@ public class Card extends javax.swing.JPanel {
     /**
      * Creates new form NewJPanel
      */
-    
-    public Card(){}
-    
-    public Card(CardModel cardModel) {
-        this.cardModel = cardModel;
+     
+    public Card() {
         initComponents();
         setOpaque(false);
-        setupCard();
     }
-
-
-    private void setupCard() {
-        card_name.setText(cardModel.getCardText());
-        count.setText(cardModel.getCount().toString());
-        logo_panel.setIcon(cardModel.toIcon(ICON_WIDTH, ICON_HEIGHT));
+    
+    public void setupData(CardModel cardModel) {
+//        card_name.setText(cardModel.getCardText());
+//        count.setText(cardModel.getCount().toString());
+//        logo_panel.setIcon(cardModel.toIcon(ICON_WIDTH, ICON_HEIGHT));
     }
     
     
@@ -66,75 +59,21 @@ public class Card extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        card_name = new javax.swing.JLabel();
-        roundedPanel1 = new com.mycompany.payrollsystem.swing.RoundedPanel();
-        logo_panel = new javax.swing.JLabel();
-        count = new javax.swing.JLabel();
-
-        card_name.setBackground(new java.awt.Color(255, 255, 255));
-        card_name.setFont(new java.awt.Font("Arial Black", 1, 17)); // NOI18N
-        card_name.setForeground(new java.awt.Color(255, 255, 255));
-        card_name.setText("Departments");
-
-        roundedPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        logo_panel.setText("  ");
-
-        javax.swing.GroupLayout roundedPanel1Layout = new javax.swing.GroupLayout(roundedPanel1);
-        roundedPanel1.setLayout(roundedPanel1Layout);
-        roundedPanel1Layout.setHorizontalGroup(
-            roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(roundedPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(logo_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
-        roundedPanel1Layout.setVerticalGroup(
-            roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(roundedPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(logo_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
-
-        count.setBackground(new java.awt.Color(255, 255, 255));
-        count.setFont(new java.awt.Font("Arial Black", 1, 40)); // NOI18N
-        count.setForeground(new java.awt.Color(255, 255, 255));
-        count.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        count.setText("7");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(card_name)
-                    .addComponent(count, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(roundedPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 167, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(roundedPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(card_name)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(count)))
-                .addGap(0, 0, 0))
+            .addGap(0, 80, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel card_name;
-    private javax.swing.JLabel count;
-    private javax.swing.JLabel logo_panel;
-    private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel1;
+    private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel2;
+    private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel3;
     // End of variables declaration//GEN-END:variables
 }

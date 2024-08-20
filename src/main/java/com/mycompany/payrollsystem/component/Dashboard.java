@@ -3,31 +3,31 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.payrollsystem.component;
-
-import com.mycompany.payrollsystem.Util;
 import com.mycompany.payrollsystem.model.CardModel;
-import javax.swing.SwingUtilities;
 
 /**
  *
  * @author Paul
  */
 public class Dashboard extends javax.swing.JPanel {
-    
+
     /**
      * Creates new form Dashboard
      */
     public Dashboard() {
         initComponents();
         setOpaque(false);
-        SwingUtilities.invokeLater(() -> {
-            emloyees_card = new Card(new CardModel("Employees", 7, "employees_card_icon"));
-            departments_card = new Card(new CardModel("Departments", 3, "departments_card_icon"));
-            leaves_card = new Card(new CardModel("Leaves", 0, "leaves_card_icon"));
-            document_files_card = new Card(new CardModel("Documents Files", 3, "documents_card_icon"));
-            loans_card = new Card(new CardModel("Loans", 3, "loans_card_icon"));
-            branches_card = new Card(new CardModel("Branches", 3, "branches_card_icon"));
-        });
+        
+
+//        employees_card.setupData(new CardModel("Employees", 7, "employees_card_icon"));
+//        departments_card.setupData(new CardModel("Departments", 3, "departments_card_icon"));
+//        leaves_card.setupData(new CardModel("Leaves", 0, "leaves_card_icon"));
+//        document_files_card.setupData(new CardModel("<html>Documents<br>Files</html>", 3, "document_files_card_icon"));
+//        loans_card.setupData(new CardModel("Loans", 3, "loans_card_icon"));
+//        branches_card.setupData(new CardModel("Branches", 3, "branches_card_icon"));
+     
+        
+     
     }
 
     /**
@@ -39,52 +39,11 @@ public class Dashboard extends javax.swing.JPanel {
     private void initComponents() {
 
         header1 = new com.mycompany.payrollsystem.component.Header();
-        emloyees_card = new com.mycompany.payrollsystem.component.Card();
-        departments_card = new com.mycompany.payrollsystem.component.Card();
-        leaves_card = new com.mycompany.payrollsystem.component.Card();
-        document_files_card = new com.mycompany.payrollsystem.component.Card();
-        loans_card = new com.mycompany.payrollsystem.component.Card();
-        branches_card = new com.mycompany.payrollsystem.component.Card();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        breadcrumb2 = new com.mycompany.payrollsystem.component.Breadcrumb();
-        dashboard_Profile2 = new com.mycompany.payrollsystem.component.Dashboard_Profile();
+        breadcrumb1 = new com.mycompany.payrollsystem.component.Breadcrumb();
+        dashboard_Profile1 = new com.mycompany.payrollsystem.component.Dashboard_Profile();
 
         setBackground(new java.awt.Color(255, 255, 255));
-
-        emloyees_card.setBackground(new java.awt.Color(47, 71, 186));
-
-        departments_card.setBackground(new java.awt.Color(255, 141, 7));
-
-        leaves_card.setBackground(new java.awt.Color(220, 53, 69));
-
-        document_files_card.setBackground(new java.awt.Color(47, 71, 186));
-
-        loans_card.setBackground(new java.awt.Color(255, 141, 7));
-
-        branches_card.setBackground(new java.awt.Color(220, 53, 69));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 474, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 474, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 329, Short.MAX_VALUE)
-        );
+        setPreferredSize(new java.awt.Dimension(900, 935));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -93,34 +52,11 @@ public class Dashboard extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(header1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(header1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                .addComponent(document_files_card, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(loans_card, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                .addComponent(emloyees_card, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(30, 30, 30)
-                                                .addComponent(departments_card, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(29, 29, 29)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(leaves_card, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(branches_card, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(breadcrumb2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addComponent(dashboard_Profile2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(13, 13, 13)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(breadcrumb1, javax.swing.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(dashboard_Profile1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -128,41 +64,18 @@ public class Dashboard extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(breadcrumb2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(emloyees_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(departments_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(leaves_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(document_files_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(loans_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(branches_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(dashboard_Profile2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(breadcrumb1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dashboard_Profile1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(426, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.mycompany.payrollsystem.component.Card branches_card;
-    private com.mycompany.payrollsystem.component.Breadcrumb breadcrumb2;
-    private com.mycompany.payrollsystem.component.Dashboard_Profile dashboard_Profile2;
-    private com.mycompany.payrollsystem.component.Card departments_card;
-    private com.mycompany.payrollsystem.component.Card document_files_card;
-    private com.mycompany.payrollsystem.component.Card emloyees_card;
+    private com.mycompany.payrollsystem.component.Breadcrumb breadcrumb1;
+    private com.mycompany.payrollsystem.component.Dashboard_Profile dashboard_Profile1;
     private com.mycompany.payrollsystem.component.Header header1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private com.mycompany.payrollsystem.component.Card leaves_card;
-    private com.mycompany.payrollsystem.component.Card loans_card;
     // End of variables declaration//GEN-END:variables
 }
