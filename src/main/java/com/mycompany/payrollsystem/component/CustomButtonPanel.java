@@ -4,7 +4,6 @@
  */
 package com.mycompany.payrollsystem.component;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -13,21 +12,19 @@ import java.awt.RenderingHints;
  *
  * @author Paul
  */
-public class Header extends javax.swing.JPanel {
+public class CustomButtonPanel extends javax.swing.JPanel {
 
-    private final int arcWidth = 15;
-    private final int arcHeight = 15;
-    
-    
     /**
-     * Creates new form Header
+     * Creates new form CustomButtonPanel
      */
-    public Header() {
+    
+    private final int arcWidth = 10;
+    private final int arcHeight = 10;
+    
+    public CustomButtonPanel() {
         initComponents();
         setOpaque(false);
-        this.setBackground(new Color(239, 239, 239));
     }
-    
     
     @Override
     protected void paintComponent(Graphics graphics) {
@@ -37,11 +34,6 @@ public class Header extends javax.swing.JPanel {
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), arcWidth, arcHeight);
         super.paintComponent(graphics);
     }
-    
-    private String getDateTime() {
-        return "";
-    }
-    
 
     /**
      * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this
@@ -51,16 +43,11 @@ public class Header extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
-        datetime_label = new javax.swing.JLabel();
+        logo_panel = new javax.swing.JLabel();
+        text_panel = new javax.swing.JLabel();
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel3.setText("Dashboard");
-
-        datetime_label.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
-        datetime_label.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        datetime_label.setText("Mon, 19 Aug 2024");
+        text_panel.setFont(new java.awt.Font("Arial Black", 0, 15)); // NOI18N
+        text_panel.setText("Settings");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -68,25 +55,25 @@ public class Header extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 520, Short.MAX_VALUE)
-                .addComponent(datetime_label, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logo_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(text_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(datetime_label))
-                .addContainerGap(15, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(logo_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(text_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel datetime_label;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel logo_panel;
+    private javax.swing.JLabel text_panel;
     // End of variables declaration//GEN-END:variables
 }

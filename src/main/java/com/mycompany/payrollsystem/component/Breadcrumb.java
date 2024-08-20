@@ -50,6 +50,8 @@ public class Breadcrumb extends javax.swing.JPanel {
         menu_label_one = new javax.swing.JLabel();
         menu_label_two = new javax.swing.JLabel();
 
+        logo_panel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/dash.png"))); // NOI18N
+
         jLabel1.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("Home  / ");
@@ -68,11 +70,11 @@ public class Breadcrumb extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(logo_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel1)
                 .addGap(2, 2, 2)
                 .addComponent(menu_label_one)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 314, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 332, Short.MAX_VALUE)
                 .addComponent(menu_label_two)
                 .addGap(30, 30, 30))
         );

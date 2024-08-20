@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import javax.swing.BorderFactory;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -74,9 +75,27 @@ public class Util {
         }
     }
     
-    public void setLeftAndRightBorder(JLabel label, Color color) {
-        Border bottom_border = BorderFactory.createMatteBorder(0, 4, 0, 4, color);
-        label.setBorder(bottom_border);
+//    public void setLeftAndRightBorder(JLabel label, Color color) {
+//        Border bottom_border = BorderFactory.createMatteBorder(0, 4, 0, 4, color);
+//        label.setBorder(bottom_border);
+//    }
+//    
+    
+     public Icon toIcon(String icon, int width, int height) {
+       URL imageIcon = getClass().getResource("/com/mycompany/payrollsystem/icons/" + icon + ".png");
+       
+       if (imageIcon != null) {
+           
+           ImageIcon originalIcon = new ImageIcon(imageIcon);
+           Image originalImage = originalIcon.getImage();
+           
+           Image resizeIcon = originalImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+           
+           return new ImageIcon(resizeIcon);
+       } else {
+           LOGGER.log(Level.WARNING, "Icon not found: {0}", icon);
+           return null;
+       }
     }
     
     public void setLeftBorder(JLabel label, Color color) {

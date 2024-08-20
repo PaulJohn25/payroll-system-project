@@ -4,9 +4,11 @@
  */
 package com.mycompany.payrollsystem.component;
 
+import com.mycompany.payrollsystem.model.CardModel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import javax.swing.Icon;
 
 /**
  *
@@ -15,22 +17,44 @@ import java.awt.RenderingHints;
 public class Card extends javax.swing.JPanel {
 
     
-    private final int arcWidth = 15;
-    private final int arcHeight = 15;
+    
+    private final int ARC_WIDTH = 15;
+    private final int ARC_HEIGHT = 15;
+    private final int ICON_WIDTH = 10;
+    private final int ICON_HEIGHT = 10;
+    private CardModel cardModel;
+    
+    // Column 1 card color -> [47,71,186]
+    // Column 2 card color -> [255,141,7]
+    // Column 3 card color -> [220,53,69]
+    
     /**
      * Creates new form NewJPanel
      */
-    public Card() {
+    
+    public Card(){}
+    
+    public Card(CardModel cardModel) {
+        this.cardModel = cardModel;
         initComponents();
         setOpaque(false);
+        setupCard();
     }
 
+
+    private void setupCard() {
+        card_name.setText(cardModel.getCardText());
+        count.setText(cardModel.getCount().toString());
+        logo_panel.setIcon(cardModel.toIcon(ICON_WIDTH, ICON_HEIGHT));
+    }
+    
+    
     @Override
     protected void paintComponent(Graphics graphics) {
         Graphics2D g2 = (Graphics2D) graphics;
         g2.setColor(getBackground());
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2.fillRoundRect(0, 0, getWidth(), getHeight(), arcWidth, arcHeight);
+        g2.fillRoundRect(0, 0, getWidth(), getHeight(), ARC_WIDTH, ARC_HEIGHT);
         super.paintComponent(graphics);
     }
     

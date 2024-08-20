@@ -24,31 +24,43 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="header1" pref="1060" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="breadcrumb1" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Component id="header1" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="card4" min="-2" pref="247" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="card5" min="-2" pref="247" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="document_files_card" min="-2" pref="247" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="loans_card" min="-2" pref="247" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="emloyees_card" min="-2" pref="247" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="departments_card" min="-2" pref="247" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="leaves_card" min="-2" pref="247" max="-2" attributes="0"/>
+                                          <Component id="branches_card" min="-2" pref="247" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="card1" min="-2" pref="247" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="card2" min="-2" pref="247" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="breadcrumb2" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="card3" min="-2" pref="247" max="-2" attributes="0"/>
-                                  <Component id="card6" min="-2" pref="247" max="-2" attributes="0"/>
-                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="dashboard_Profile2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -61,20 +73,30 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="header1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Component id="breadcrumb1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="card1" min="-2" max="-2" attributes="0"/>
-                  <Component id="card2" min="-2" max="-2" attributes="0"/>
-                  <Component id="card3" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="breadcrumb2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="emloyees_card" min="-2" max="-2" attributes="0"/>
+                          <Component id="departments_card" min="-2" max="-2" attributes="0"/>
+                          <Component id="leaves_card" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="document_files_card" min="-2" max="-2" attributes="0"/>
+                          <Component id="loans_card" min="-2" max="-2" attributes="0"/>
+                          <Component id="branches_card" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="dashboard_Profile2" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="card4" min="-2" max="-2" attributes="0"/>
-                  <Component id="card5" min="-2" max="-2" attributes="0"/>
-                  <Component id="card6" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="28" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jPanel3" max="32767" attributes="0"/>
+                  <Component id="jPanel2" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="278" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -82,19 +104,81 @@
   <SubComponents>
     <Component class="com.mycompany.payrollsystem.component.Header" name="header1">
     </Component>
-    <Component class="com.mycompany.payrollsystem.component.Card" name="card1">
+    <Component class="com.mycompany.payrollsystem.component.Card" name="emloyees_card">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ba" green="47" red="2f" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="com.mycompany.payrollsystem.component.Card" name="card2">
+    <Component class="com.mycompany.payrollsystem.component.Card" name="departments_card">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="7" green="8d" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="com.mycompany.payrollsystem.component.Card" name="card3">
+    <Component class="com.mycompany.payrollsystem.component.Card" name="leaves_card">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="45" green="35" red="dc" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="com.mycompany.payrollsystem.component.Breadcrumb" name="breadcrumb1">
+    <Component class="com.mycompany.payrollsystem.component.Card" name="document_files_card">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ba" green="47" red="2f" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="com.mycompany.payrollsystem.component.Card" name="card4">
+    <Component class="com.mycompany.payrollsystem.component.Card" name="loans_card">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="7" green="8d" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="com.mycompany.payrollsystem.component.Card" name="card5">
+    <Component class="com.mycompany.payrollsystem.component.Card" name="branches_card">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="45" green="35" red="dc" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
-    <Component class="com.mycompany.payrollsystem.component.Card" name="card6">
+    <Container class="javax.swing.JPanel" name="jPanel2">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="474" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel3">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="474" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="329" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Component class="com.mycompany.payrollsystem.component.Breadcrumb" name="breadcrumb2">
+    </Component>
+    <Component class="com.mycompany.payrollsystem.component.Dashboard_Profile" name="dashboard_Profile2">
     </Component>
   </SubComponents>
 </Form>

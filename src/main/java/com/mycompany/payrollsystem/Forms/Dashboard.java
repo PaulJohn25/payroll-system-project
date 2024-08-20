@@ -23,7 +23,6 @@ public class Dashboard extends javax.swing.JFrame {
         initComponents();
 //        this.setLocationRelativeTo(null);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        util.fitImageToComponent(test_image_label, "images/intra_logo-removebg.png");
         util.fitImageToComponent(hide_panel, "images/hide_icon.png");
         util.fitImageToComponent(close_panel, "images/close.png");
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
@@ -264,15 +263,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel hide_panel;
     private javax.swing.JLabel intra_logo_label;
     private javax.swing.JPanel intra_logo_panel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel menu_header_panel;
     private javax.swing.JLabel menu_logo_label;
-    private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel1;
     private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel2;
     private com.mycompany.payrollsystem.component.TestMenu testMenu1;
     // End of variables declaration//GEN-END:variables
