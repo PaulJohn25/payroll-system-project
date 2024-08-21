@@ -28,8 +28,8 @@ public class Dashboard_Profile extends javax.swing.JPanel {
         setOpaque(false);
         setBackground(backgroundColor);
         SwingUtilities.invokeLater(() -> {
-            button_dashboard_settings.setupButton("icons/settings_black.png", "Settings");
-            button_dashboard_logout.setupButton("icons/logout _black.png", "Logout");
+            button_dashboard_settings.setupButton("icons/settings_black.png", "Settings", true);
+            button_dashboard_logout.setupButton("icons/logout _black.png", "Logout", false);
         });
     }
 

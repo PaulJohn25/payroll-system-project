@@ -81,6 +81,11 @@ public class Util {
 //    }
 //    
     
+    public void setBottomBorder(JLabel label, Color color) {
+        Border bottom_border = BorderFactory.createMatteBorder(0, 0, 2, 0, color);
+        label.setBorder(bottom_border);
+    }
+    
      public Icon toIcon(String icon, int width, int height) {
        URL imageIcon = getClass().getResource("/com/mycompany/payrollsystem/icons/" + icon + ".png");
        

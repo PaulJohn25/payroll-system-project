@@ -53,7 +53,9 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
         password_error_label = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        show_password_checkbox = new javax.swing.JCheckBox();
+        jPanel1 = new javax.swing.JPanel();
+        forgot_password_label = new javax.swing.JLabel();
         rightRoundedCornerPanel1 = new com.mycompany.payrollsystem.swing.RightRoundedCornerPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -115,9 +117,39 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
         jLabel10.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
         jLabel10.setText("Password");
 
-        jLabel11.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel11.setText("Forgot password?");
+        show_password_checkbox.setBackground(new java.awt.Color(255, 255, 255));
+        show_password_checkbox.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        show_password_checkbox.setText("Show password");
+        show_password_checkbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                show_password_checkboxActionPerformed(evt);
+            }
+        });
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 141, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 29, Short.MAX_VALUE)
+        );
+
+        forgot_password_label.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        forgot_password_label.setForeground(new java.awt.Color(102, 153, 255));
+        forgot_password_label.setText("Forgot password?");
+        forgot_password_label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                forgot_password_labelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                forgot_password_labelMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout leftRoundedCornerPanel1Layout = new javax.swing.GroupLayout(leftRoundedCornerPanel1);
         leftRoundedCornerPanel1.setLayout(leftRoundedCornerPanel1Layout);
@@ -126,27 +158,34 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
             .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
                 .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel1))
-                    .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
                         .addGap(147, 147, 147)
                         .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(CompanyLogoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(sign_up_button, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
+                        .addGap(27, 27, 27)
                         .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(password_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(email_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(email_error_label, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(password_error_label, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11))))
+                            .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel10)
+                                    .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
+                                            .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(forgot_password_label))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(show_password_checkbox))
+                                        .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(password_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(email_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(email_error_label, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(password_error_label, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jLabel1)))
+                    .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
+                        .addGap(118, 118, 118)
+                        .addComponent(sign_up_button, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         leftRoundedCornerPanel1Layout.setVerticalGroup(
@@ -170,11 +209,18 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
                 .addComponent(password_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(password_error_label)
-                .addGap(5, 5, 5)
-                .addComponent(jLabel11)
-                .addGap(24, 24, 24)
+                .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(forgot_password_label, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, leftRoundedCornerPanel1Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(show_password_checkbox, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(sign_up_button, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addGap(41, 41, 41))
         );
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
@@ -255,7 +301,7 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
                 .addGroup(rightRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(hide_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(close_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100)
+                .addGap(130, 130, 130)
                 .addComponent(jLabel4)
                 .addGap(0, 0, 0)
                 .addComponent(jLabel3)
@@ -282,8 +328,10 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
         );
         roundedPanel1Layout.setVerticalGroup(
             roundedPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(leftRoundedCornerPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(rightRoundedCornerPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(roundedPanel1Layout.createSequentialGroup()
+                .addComponent(leftRoundedCornerPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 45, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -325,6 +373,28 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
         String password = new String(passwordChars);
         validatePasswordInput(password, password_error_label);
     }//GEN-LAST:event_password_textfieldKeyReleased
+
+    private void show_password_checkboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_show_password_checkboxActionPerformed
+        // TODO add your handling code here:
+        
+        if (show_password_checkbox.isSelected()) {
+            password_textfield.setEchoChar((char)0); // Show password
+            System.out.println("Selected");
+        } else {
+            password_textfield.setEchoChar('*'); // Hide password
+            System.out.println("Unselected");
+        }
+    }//GEN-LAST:event_show_password_checkboxActionPerformed
+
+    private void forgot_password_labelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgot_password_labelMouseEntered
+        // TODO add your handling code here:
+        util.setBottomBorder(forgot_password_label, new Color(102,153,255));
+    }//GEN-LAST:event_forgot_password_labelMouseEntered
+
+    private void forgot_password_labelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgot_password_labelMouseExited
+        // TODO add your handling code here:
+        forgot_password_label.setBorder(null);
+    }//GEN-LAST:event_forgot_password_labelMouseExited
 
     @Override
     public boolean validateEmailInput(String input, JLabel error_label) {
@@ -416,10 +486,10 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
     private javax.swing.JLabel close_panel;
     private javax.swing.JLabel email_error_label;
     private javax.swing.JTextField email_textfield;
+    private javax.swing.JLabel forgot_password_label;
     private javax.swing.JLabel hide_panel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -428,11 +498,13 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private com.mycompany.payrollsystem.swing.LeftRoundedCornerPanel leftRoundedCornerPanel1;
     private javax.swing.JLabel password_error_label;
     private javax.swing.JPasswordField password_textfield;
     private com.mycompany.payrollsystem.swing.RightRoundedCornerPanel rightRoundedCornerPanel1;
     private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel1;
+    private javax.swing.JCheckBox show_password_checkbox;
     private javax.swing.JButton sign_up_button;
     // End of variables declaration//GEN-END:variables
 }

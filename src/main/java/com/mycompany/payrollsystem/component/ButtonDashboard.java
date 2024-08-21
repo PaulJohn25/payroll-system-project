@@ -5,6 +5,7 @@
 package com.mycompany.payrollsystem.component;
 
 import com.mycompany.payrollsystem.Util;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -16,6 +17,7 @@ import java.awt.RenderingHints;
 public class ButtonDashboard extends javax.swing.JPanel {
 
     private Util util = new Util();
+    private boolean isSettings;
     /**
      * Creates new form CustomButtonPanel
      */
@@ -28,9 +30,10 @@ public class ButtonDashboard extends javax.swing.JPanel {
         setOpaque(false);
     }
     
-    public void setupButton(String iconPath, String text) {
+    public void setupButton(String iconPath, String text, boolean isSettings) {
         util.fitImageToComponent(icon_label, iconPath);
         text_panel.setText(text);
+        this.isSettings = isSettings;
     }
     
     
@@ -54,6 +57,15 @@ public class ButtonDashboard extends javax.swing.JPanel {
 
         icon_label = new javax.swing.JLabel();
         text_panel = new javax.swing.JLabel();
+
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                formMouseExited(evt);
+            }
+        });
 
         text_panel.setFont(new java.awt.Font("Arial Black", 0, 15)); // NOI18N
         text_panel.setText("Settings");
@@ -79,6 +91,30 @@ public class ButtonDashboard extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        // TODO add your handling code here:
+        if (isSettings) {
+            util.fitImageToComponent(icon_label, "icons/settings_white.png");
+        } else {
+            util.fitImageToComponent(icon_label, "icons/logout_white.png");
+        }
+        setBackground(new Color(66, 195, 255));
+        text_panel.setForeground(new Color(255, 255, 255));
+    }//GEN-LAST:event_formMouseEntered
+
+    private void formMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseExited
+        // TODO add your handling code here:
+        
+        if (isSettings) {
+            util.fitImageToComponent(icon_label, "icons/settings_black.png");
+        } else {
+            util.fitImageToComponent(icon_label, "icons/logout _black.png");
+        }
+        
+        setBackground(new Color(240, 240, 240));
+        text_panel.setForeground(new Color(0, 0, 0));
+    }//GEN-LAST:event_formMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -6,6 +6,7 @@ package com.mycompany.payrollsystem.component;
 
 import com.mycompany.payrollsystem.Util;
 import com.mycompany.payrollsystem.model.MenuModel;
+import com.mycompany.payrollsystem.swing.ListMenu;
 import javax.swing.SwingUtilities;
 
 /**
@@ -22,32 +23,33 @@ public class Menu extends javax.swing.JPanel {
     public Menu() {
         initComponents();
         setOpaque(false);
-        listMenu2.setBorder(null);
+        listMenu.setBorder(null);
         SwingUtilities.invokeLater(() -> {
             util.fitImageToComponent(logo_panel, "images/intra_logo-removebg.png");
             init();
         });
-        
-            
-     
+    }
+    
+    public ListMenu getListMenu() {
+        return listMenu;
     }
     
     private void init() {
-        listMenu2.addItem(new MenuModel("dashboard", "Dashboard"));
-        listMenu2.addItem(new MenuModel("employees", "Employees"));
-        listMenu2.addItem(new MenuModel("file_management", "File Management"));
-        listMenu2.addItem(new MenuModel("payroll_management", "Payroll Management"));
-        listMenu2.addItem(new MenuModel("other_income_management", "Other Income Management"));
-        listMenu2.addItem(new MenuModel("loan_management", "Loan Management"));
-        listMenu2.addItem(new MenuModel("timekeeping", "Timekeeping"));
-        listMenu2.addItem(new MenuModel("leave_management", "Leave Management"));
-        listMenu2.addItem(new MenuModel("schedule_management", "Schedule Management"));
-        listMenu2.addItem(new MenuModel("statutories", "Statutories"));
-        listMenu2.addItem(new MenuModel("report", "Report"));
-        listMenu2.addItem(new MenuModel("user_management", "User Management"));
-        listMenu2.addItem(new MenuModel("permission_management", "Permission Management"));
-        listMenu2.addItem(new MenuModel("system_management", "System Management"));
-        listMenu2.addItem(new MenuModel("logout", "Log out"));
+        listMenu.addItem(new MenuModel("dashboard", "Dashboard"));
+        listMenu.addItem(new MenuModel("employees", "Employees"));
+        listMenu.addItem(new MenuModel("file_management", "File Management"));
+        listMenu.addItem(new MenuModel("payroll_management", "Payroll Management"));
+        listMenu.addItem(new MenuModel("other_income_management", "Other Income Management"));
+        listMenu.addItem(new MenuModel("loan_management", "Loan Management"));
+        listMenu.addItem(new MenuModel("timekeeping", "Timekeeping"));
+        listMenu.addItem(new MenuModel("leave_management", "Leave Management"));
+        listMenu.addItem(new MenuModel("schedule_management", "Schedule Management"));
+        listMenu.addItem(new MenuModel("statutories", "Statutories"));
+        listMenu.addItem(new MenuModel("report", "Report"));
+        listMenu.addItem(new MenuModel("user_management", "User Management"));
+        listMenu.addItem(new MenuModel("permission_management", "Permission Management"));
+        listMenu.addItem(new MenuModel("system_management", "System Management"));
+        listMenu.addItem(new MenuModel("logout", "Log out"));
     }
 
     /**
@@ -66,7 +68,7 @@ public class Menu extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        listMenu2 = new com.mycompany.payrollsystem.swing.ListMenu<>();
+        listMenu = new com.mycompany.payrollsystem.swing.ListMenu<>();
 
         listMenu1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -119,9 +121,9 @@ public class Menu extends javax.swing.JPanel {
 
         jScrollPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        listMenu2.setBackground(new java.awt.Color(245, 247, 248));
-        listMenu2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jScrollPane1.setViewportView(listMenu2);
+        listMenu.setBackground(new java.awt.Color(245, 247, 248));
+        listMenu.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jScrollPane1.setViewportView(listMenu);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -162,8 +164,8 @@ public class Menu extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private com.mycompany.payrollsystem.swing.ListMenu<String> listMenu;
     private com.mycompany.payrollsystem.swing.ListMenu<String> listMenu1;
-    private com.mycompany.payrollsystem.swing.ListMenu<String> listMenu2;
     private javax.swing.JLabel logo_panel;
     private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel7;
     // End of variables declaration//GEN-END:variables

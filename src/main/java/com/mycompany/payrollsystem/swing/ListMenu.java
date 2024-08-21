@@ -20,6 +20,20 @@ import javax.swing.SwingUtilities;
  * @param <E>
  */
 public class ListMenu<E extends Object> extends JList<E> {
+
+    /**
+     * @return the selectedIndex
+     */
+    public int getSelectedIndex() {
+        return selectedIndex;
+    }
+
+    /**
+     * @param selectedIndex the selectedIndex to set
+     */
+    public void setSelectedIndex(int selectedIndex) {
+        this.selectedIndex = selectedIndex;
+    }
     
     private final DefaultListModel model;
     private int selectedIndex = -1;
@@ -34,9 +48,9 @@ public class ListMenu<E extends Object> extends JList<E> {
                     Object obj = model.getElementAt(index);
                     
                     if (obj instanceof MenuModel) {
-                        selectedIndex = index;
+                        setSelectedIndex(index);
                     } else {
-                        selectedIndex = index;
+                        setSelectedIndex(index);
                     }
                     
                     repaint();
@@ -52,7 +66,7 @@ public class ListMenu<E extends Object> extends JList<E> {
             public Component getListCellRendererComponent(JList<?> jList, Object o, int index, boolean selected, boolean  focus) {
                 MenuItem menuItem = new MenuItem();
                 menuItem.setItem(o);
-                menuItem.setSelected(selectedIndex == index);
+                menuItem.setSelected(getSelectedIndex() == index);
                 return menuItem;
             }
         };

@@ -27,7 +27,7 @@ public class Dashboard extends javax.swing.JFrame {
         util.fitImageToComponent(close_panel, "images/close.png");
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
         util.fitImageToComponent(intra_logo_label, "images/main_logo-removebg.png");
-       
+        Menu.getListMenu().setSelectedIndex(0);
     }
 
     /**
@@ -44,7 +44,7 @@ public class Dashboard extends javax.swing.JFrame {
         hide_panel = new javax.swing.JLabel();
         menu_header_panel = new javax.swing.JPanel();
         menu_logo_label = new javax.swing.JLabel();
-        testMenu1 = new com.mycompany.payrollsystem.component.Menu();
+        Menu = new com.mycompany.payrollsystem.component.Menu();
         jScrollPane1 = new javax.swing.JScrollPane();
         dashboard2 = new com.mycompany.payrollsystem.component.Dashboard();
         menu_header_panel1 = new javax.swing.JPanel();
@@ -74,11 +74,11 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 826, Short.MAX_VALUE)
                 .addComponent(hide_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(close_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+                .addGap(17, 17, 17))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,7 +148,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(menu_header_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(menu_header_panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(testMenu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -164,7 +164,7 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(menu_header_panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(testMenu1, javax.swing.GroupLayout.PREFERRED_SIZE, 891, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 891, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -234,6 +234,7 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.mycompany.payrollsystem.component.Menu Menu;
     private javax.swing.JLabel close_panel;
     private com.mycompany.payrollsystem.component.Dashboard dashboard2;
     private javax.swing.JLabel hide_panel;
@@ -244,6 +245,5 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel menu_header_panel;
     private javax.swing.JPanel menu_header_panel1;
     private javax.swing.JLabel menu_logo_label;
-    private com.mycompany.payrollsystem.component.Menu testMenu1;
     // End of variables declaration//GEN-END:variables
 }

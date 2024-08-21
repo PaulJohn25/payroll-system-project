@@ -34,7 +34,7 @@ public class BarChart extends javax.swing.JPanel {
     public BarChart() {
         initComponents();
         showBarChart();
-        this.setPreferredSize(new Dimension(412, 300));
+        setPreferredSize(new Dimension(412, 300));
     }
 
     private void showBarChart() {
@@ -62,10 +62,10 @@ public class BarChart extends javax.swing.JPanel {
         domainAxis.setCategoryLabelPositions(CategoryLabelPositions.STANDARD);
 
         chartPanel = new ChartPanel(chart);
-        this.removeAll();
-        this.add(chartPanel, BorderLayout.CENTER);
-        this.validate();
-        this.repaint();
+        removeAll();
+        add(chartPanel, BorderLayout.CENTER);
+        validate();
+        repaint();
     }
 
     /**
