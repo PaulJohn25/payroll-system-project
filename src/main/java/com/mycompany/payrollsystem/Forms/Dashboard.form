@@ -77,10 +77,7 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="menu_header_panel" max="32767" attributes="0"/>
                       <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="menu_header_panel1" max="32767" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="menu_header_panel1" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="testMenu1" min="-2" pref="891" max="-2" attributes="0"/>
@@ -189,7 +186,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="com.mycompany.payrollsystem.component.Dashboard" name="dashboard1">
+            <Component class="com.mycompany.payrollsystem.component.Dashboard" name="dashboard2">
             </Component>
           </SubComponents>
         </Container>

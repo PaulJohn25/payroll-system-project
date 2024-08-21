@@ -2842,3 +2842,197 @@ Aug 20, 2024 9:14:00 PM com.mycompany.payrollsystem.Util fitImageToComponent
 WARNING: Image not found: images/intra_logo-removebg.png
 Aug 20, 2024 9:14:26 PM com.mycompany.payrollsystem.Util fitImageToComponent
 WARNING: Image not found: images/intra_logo-removebg.png
+Aug 20, 2024 10:40:45 PM com.mycompany.payrollsystem.Util fitImageToComponent
+WARNING: Image not found: icon/settings_black.png
+Aug 20, 2024 10:40:45 PM com.mycompany.payrollsystem.Util fitImageToComponent
+WARNING: Image not found: icons/logout_black.png
+Aug 20, 2024 10:41:43 PM com.mycompany.payrollsystem.Util fitImageToComponent
+SEVERE: Error resizing image
+java.lang.IllegalArgumentException: Width (0) and height (0) must be non-zero
+	at java.desktop/java.awt.image.ReplicateScaleFilter.<init>(ReplicateScaleFilter.java:102)
+	at java.desktop/java.awt.image.AreaAveragingScaleFilter.<init>(AreaAveragingScaleFilter.java:79)
+	at java.desktop/java.awt.Image.getScaledInstance(Image.java:177)
+	at com.mycompany.payrollsystem.Util.fitImageToComponent(Util.java:60)
+	at com.mycompany.payrollsystem.component.CustomButtonPanel.setupButton(CustomButtonPanel.java:32)
+	at com.mycompany.payrollsystem.component.Dashboard_Profile.<init>(Dashboard_Profile.java:29)
+	at com.mycompany.payrollsystem.component.Dashboard.initComponents(Dashboard.java:39)
+	at com.mycompany.payrollsystem.component.Dashboard.<init>(Dashboard.java:18)
+	at com.mycompany.payrollsystem.Forms.Dashboard.initComponents(Dashboard.java:49)
+	at com.mycompany.payrollsystem.Forms.Dashboard.<init>(Dashboard.java:23)
+	at com.mycompany.payrollsystem.Forms.Dashboard$3.run(Dashboard.java:233)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+Aug 20, 2024 10:41:43 PM com.mycompany.payrollsystem.Util fitImageToComponent
+WARNING: Image not found: icons/logout_black.png
+Aug 20, 2024 10:42:34 PM com.mycompany.payrollsystem.Util fitImageToComponent
+WARNING: Image not found: icons/logout_black.png
+Aug 20, 2024 10:44:18 PM com.mycompany.payrollsystem.Util fitImageToComponent
+WARNING: Image not found: icons/logout_black.png
+Aug 20, 2024 11:36:27 PM com.mycompany.payrollsystem.Util fitImageToComponent
+SEVERE: Error resizing image
+java.lang.IllegalArgumentException: Width (0) and height (0) must be non-zero
+	at java.desktop/java.awt.image.ReplicateScaleFilter.<init>(ReplicateScaleFilter.java:102)
+	at java.desktop/java.awt.image.AreaAveragingScaleFilter.<init>(AreaAveragingScaleFilter.java:79)
+	at java.desktop/java.awt.Image.getScaledInstance(Image.java:177)
+	at com.mycompany.payrollsystem.Util.fitImageToComponent(Util.java:60)
+	at com.mycompany.payrollsystem.component.Card.setupData(Card.java:42)
+	at com.mycompany.payrollsystem.component.Dashboard.<init>(Dashboard.java:21)
+	at com.mycompany.payrollsystem.Forms.Dashboard.initComponents(Dashboard.java:49)
+	at com.mycompany.payrollsystem.Forms.Dashboard.<init>(Dashboard.java:23)
+	at com.mycompany.payrollsystem.Forms.Dashboard$3.run(Dashboard.java:231)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+Aug 20, 2024 11:36:27 PM com.mycompany.payrollsystem.Util fitImageToComponent
+SEVERE: Error resizing image
+java.lang.IllegalArgumentException: Width (0) and height (0) must be non-zero
+	at java.desktop/java.awt.image.ReplicateScaleFilter.<init>(ReplicateScaleFilter.java:102)
+	at java.desktop/java.awt.image.AreaAveragingScaleFilter.<init>(AreaAveragingScaleFilter.java:79)
+	at java.desktop/java.awt.Image.getScaledInstance(Image.java:177)
+	at com.mycompany.payrollsystem.Util.fitImageToComponent(Util.java:60)
+	at com.mycompany.payrollsystem.component.Card.setupData(Card.java:42)
+	at com.mycompany.payrollsystem.component.Dashboard.<init>(Dashboard.java:22)
+	at com.mycompany.payrollsystem.Forms.Dashboard.initComponents(Dashboard.java:49)
+	at com.mycompany.payrollsystem.Forms.Dashboard.<init>(Dashboard.java:23)
+	at com.mycompany.payrollsystem.Forms.Dashboard$3.run(Dashboard.java:231)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+Aug 20, 2024 11:36:27 PM com.mycompany.payrollsystem.Util fitImageToComponent
+SEVERE: Error resizing image
+java.lang.IllegalArgumentException: Width (0) and height (0) must be non-zero
+	at java.desktop/java.awt.image.ReplicateScaleFilter.<init>(ReplicateScaleFilter.java:102)
+	at java.desktop/java.awt.image.AreaAveragingScaleFilter.<init>(AreaAveragingScaleFilter.java:79)
+	at java.desktop/java.awt.Image.getScaledInstance(Image.java:177)
+	at com.mycompany.payrollsystem.Util.fitImageToComponent(Util.java:60)
+	at com.mycompany.payrollsystem.component.Card.setupData(Card.java:42)
+	at com.mycompany.payrollsystem.component.Dashboard.<init>(Dashboard.java:23)
+	at com.mycompany.payrollsystem.Forms.Dashboard.initComponents(Dashboard.java:49)
+	at com.mycompany.payrollsystem.Forms.Dashboard.<init>(Dashboard.java:23)
+	at com.mycompany.payrollsystem.Forms.Dashboard$3.run(Dashboard.java:231)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+Aug 20, 2024 11:36:27 PM com.mycompany.payrollsystem.Util fitImageToComponent
+SEVERE: Error resizing image
+java.lang.IllegalArgumentException: Width (0) and height (0) must be non-zero
+	at java.desktop/java.awt.image.ReplicateScaleFilter.<init>(ReplicateScaleFilter.java:102)
+	at java.desktop/java.awt.image.AreaAveragingScaleFilter.<init>(AreaAveragingScaleFilter.java:79)
+	at java.desktop/java.awt.Image.getScaledInstance(Image.java:177)
+	at com.mycompany.payrollsystem.Util.fitImageToComponent(Util.java:60)
+	at com.mycompany.payrollsystem.component.Card.setupData(Card.java:42)
+	at com.mycompany.payrollsystem.component.Dashboard.<init>(Dashboard.java:24)
+	at com.mycompany.payrollsystem.Forms.Dashboard.initComponents(Dashboard.java:49)
+	at com.mycompany.payrollsystem.Forms.Dashboard.<init>(Dashboard.java:23)
+	at com.mycompany.payrollsystem.Forms.Dashboard$3.run(Dashboard.java:231)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+Aug 20, 2024 11:36:27 PM com.mycompany.payrollsystem.Util fitImageToComponent
+SEVERE: Error resizing image
+java.lang.IllegalArgumentException: Width (0) and height (0) must be non-zero
+	at java.desktop/java.awt.image.ReplicateScaleFilter.<init>(ReplicateScaleFilter.java:102)
+	at java.desktop/java.awt.image.AreaAveragingScaleFilter.<init>(AreaAveragingScaleFilter.java:79)
+	at java.desktop/java.awt.Image.getScaledInstance(Image.java:177)
+	at com.mycompany.payrollsystem.Util.fitImageToComponent(Util.java:60)
+	at com.mycompany.payrollsystem.component.Card.setupData(Card.java:42)
+	at com.mycompany.payrollsystem.component.Dashboard.<init>(Dashboard.java:25)
+	at com.mycompany.payrollsystem.Forms.Dashboard.initComponents(Dashboard.java:49)
+	at com.mycompany.payrollsystem.Forms.Dashboard.<init>(Dashboard.java:23)
+	at com.mycompany.payrollsystem.Forms.Dashboard$3.run(Dashboard.java:231)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+Aug 20, 2024 11:36:27 PM com.mycompany.payrollsystem.Util fitImageToComponent
+SEVERE: Error resizing image
+java.lang.IllegalArgumentException: Width (0) and height (0) must be non-zero
+	at java.desktop/java.awt.image.ReplicateScaleFilter.<init>(ReplicateScaleFilter.java:102)
+	at java.desktop/java.awt.image.AreaAveragingScaleFilter.<init>(AreaAveragingScaleFilter.java:79)
+	at java.desktop/java.awt.Image.getScaledInstance(Image.java:177)
+	at com.mycompany.payrollsystem.Util.fitImageToComponent(Util.java:60)
+	at com.mycompany.payrollsystem.component.Card.setupData(Card.java:42)
+	at com.mycompany.payrollsystem.component.Dashboard.<init>(Dashboard.java:26)
+	at com.mycompany.payrollsystem.Forms.Dashboard.initComponents(Dashboard.java:49)
+	at com.mycompany.payrollsystem.Forms.Dashboard.<init>(Dashboard.java:23)
+	at com.mycompany.payrollsystem.Forms.Dashboard$3.run(Dashboard.java:231)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+

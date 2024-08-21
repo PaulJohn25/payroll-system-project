@@ -4,6 +4,7 @@
  */
 package com.mycompany.payrollsystem.component;
 
+import com.mycompany.payrollsystem.Util;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -12,8 +13,9 @@ import java.awt.RenderingHints;
  *
  * @author Paul
  */
-public class CustomButtonPanel extends javax.swing.JPanel {
+public class ButtonDashboard extends javax.swing.JPanel {
 
+    private Util util = new Util();
     /**
      * Creates new form CustomButtonPanel
      */
@@ -21,10 +23,17 @@ public class CustomButtonPanel extends javax.swing.JPanel {
     private final int arcWidth = 10;
     private final int arcHeight = 10;
     
-    public CustomButtonPanel() {
+    public ButtonDashboard() {
         initComponents();
         setOpaque(false);
     }
+    
+    public void setupButton(String iconPath, String text) {
+        util.fitImageToComponent(icon_label, iconPath);
+        text_panel.setText(text);
+    }
+    
+    
     
     @Override
     protected void paintComponent(Graphics graphics) {
@@ -43,7 +52,7 @@ public class CustomButtonPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        logo_panel = new javax.swing.JLabel();
+        icon_label = new javax.swing.JLabel();
         text_panel = new javax.swing.JLabel();
 
         text_panel.setFont(new java.awt.Font("Arial Black", 0, 15)); // NOI18N
@@ -54,18 +63,18 @@ public class CustomButtonPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(logo_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(icon_label, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(text_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(text_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addGap(15, 15, 15))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(logo_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(icon_label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(text_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -73,7 +82,7 @@ public class CustomButtonPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel logo_panel;
+    private javax.swing.JLabel icon_label;
     private javax.swing.JLabel text_panel;
     // End of variables declaration//GEN-END:variables
 }

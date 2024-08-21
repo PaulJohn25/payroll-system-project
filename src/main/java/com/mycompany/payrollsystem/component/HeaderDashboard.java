@@ -13,7 +13,7 @@ import java.awt.RenderingHints;
  *
  * @author Paul
  */
-public class Header extends javax.swing.JPanel {
+public class HeaderDashboard extends javax.swing.JPanel {
 
     private final int arcWidth = 15;
     private final int arcHeight = 15;
@@ -22,7 +22,7 @@ public class Header extends javax.swing.JPanel {
     /**
      * Creates new form Header
      */
-    public Header() {
+    public HeaderDashboard() {
         initComponents();
         setOpaque(false);
         this.setBackground(new Color(239, 239, 239));
