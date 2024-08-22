@@ -66,7 +66,7 @@ public class Card extends javax.swing.JPanel {
     private void initComponents() {
 
         text_panel = new javax.swing.JLabel();
-        roundedPanel1 = new com.mycompany.payrollsystem.swing.RoundedPanel();
+        roundedPanel1 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
         icon_panel = new javax.swing.JLabel();
         count_panel = new javax.swing.JLabel();
 
@@ -133,7 +133,7 @@ public class Card extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel count_panel;
     private javax.swing.JLabel icon_panel;
-    private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel1;
+    private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedPanel1;
     private javax.swing.JLabel text_panel;
     // End of variables declaration//GEN-END:variables
 }

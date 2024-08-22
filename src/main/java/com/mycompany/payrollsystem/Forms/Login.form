@@ -37,7 +37,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="com.mycompany.payrollsystem.swing.RoundedPanel" name="roundedPanel1">
+    <Container class="com.mycompany.payrollsystem.swing.RoundedCornersPanel" name="roundedPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -322,7 +322,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="com.mycompany.payrollsystem.swing.RightRoundedCornerPanel" name="rightRoundedCornerPanel1">
+        <Container class="com.mycompany.payrollsystem.swing.RightGradientRoundedCornerPanel" name="rightRoundedCornerPanel1">
 
           <Layout>
             <DimensionLayout dim="0">

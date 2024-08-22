@@ -63,7 +63,7 @@ public class Menu extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         listMenu1 = new com.mycompany.payrollsystem.swing.ListMenu<>();
         jPanel1 = new javax.swing.JPanel();
-        roundedPanel7 = new com.mycompany.payrollsystem.swing.RoundedPanel();
+        roundedPanel7 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
         logo_panel = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -140,9 +140,9 @@ public class Menu extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(roundedPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -153,7 +153,9 @@ public class Menu extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -167,6 +169,6 @@ public class Menu extends javax.swing.JPanel {
     private com.mycompany.payrollsystem.swing.ListMenu<String> listMenu;
     private com.mycompany.payrollsystem.swing.ListMenu<String> listMenu1;
     private javax.swing.JLabel logo_panel;
-    private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel7;
+    private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedPanel7;
     // End of variables declaration//GEN-END:variables
 }

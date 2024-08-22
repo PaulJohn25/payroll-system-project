@@ -10,6 +10,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
  *
@@ -36,7 +38,7 @@ public class MenuItem extends javax.swing.JPanel {
     private final int ICON_HEIGHT = 25;
     
     public MenuItem() {
-        initComponents(); 
+        initComponents();
     }
 
     /**
@@ -54,17 +56,19 @@ public class MenuItem extends javax.swing.JPanel {
     
     @Override
     protected void paintComponent(Graphics graphics) {
-        
+       
         if (selected) {
             Graphics2D g2 = (Graphics2D) graphics;
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             g2.setColor(new Color(255, 255, 255, 0));
             g2.fillRect(0, 0, getWidth(), getHeight());
-            this.setBackground(new Color(47,71,186));
+            setBackground(new Color(47,71,186));
             name_label.setForeground(new Color(255, 255, 255));
             util.setLeftBorder(border_label, leftBorderColor);
             super.paintComponent(graphics);
         }
+        
+        
     }
     
     @SuppressWarnings("unchecked")
@@ -72,9 +76,18 @@ public class MenuItem extends javax.swing.JPanel {
     private void initComponents() {
 
         border_label = new javax.swing.JLabel();
-        roundedPanel1 = new com.mycompany.payrollsystem.swing.RoundedPanel();
+        roundedPanel1 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
         icon_label = new javax.swing.JLabel();
         name_label = new javax.swing.JLabel();
+
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                formMouseExited(evt);
+            }
+        });
 
         roundedPanel1.setBackground(new java.awt.Color(203, 209, 238));
 
@@ -123,11 +136,25 @@ public class MenuItem extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        // TODO add your handling code here:
+        setBackground(new Color(66, 194, 255));
+        name_label.setForeground(new Color(255, 255, 255));
+        repaint();
+    }//GEN-LAST:event_formMouseEntered
+
+    private void formMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseExited
+        // TODO add your handling code here:
+        setBackground(new Color(47,71,186));
+        name_label.setForeground(new Color(240,240,240));
+        repaint();
+    }//GEN-LAST:event_formMouseExited
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel border_label;
     private javax.swing.JLabel icon_label;
     private javax.swing.JLabel name_label;
-    private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel1;
+    private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedPanel1;
     // End of variables declaration//GEN-END:variables
 }

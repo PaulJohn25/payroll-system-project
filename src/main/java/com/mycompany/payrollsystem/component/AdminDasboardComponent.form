@@ -37,7 +37,7 @@
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="leaves_card" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="breadcrumb1" max="32767" attributes="0"/>
+                          <Component id="breadcrumb" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="document_files_card" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -67,7 +67,7 @@
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="breadcrumb1" min="-2" max="-2" attributes="0"/>
+                      <Component id="breadcrumb" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="employees_card" min="-2" max="-2" attributes="0"/>
@@ -83,7 +83,7 @@
                   </Group>
                   <Component id="dashboard_Profile1" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <Component id="jPanel2" max="32767" attributes="0"/>
@@ -96,9 +96,9 @@
   <SubComponents>
     <Component class="com.mycompany.payrollsystem.component.HeaderDashboard" name="header1">
     </Component>
-    <Component class="com.mycompany.payrollsystem.component.Breadcrumb" name="breadcrumb1">
+    <Component class="com.mycompany.payrollsystem.component.Breadcrumb" name="breadcrumb">
     </Component>
-    <Component class="com.mycompany.payrollsystem.component.Dashboard_Profile" name="dashboard_Profile1">
+    <Component class="com.mycompany.payrollsystem.component.Admin_Dashboard_Profile" name="dashboard_Profile1">
     </Component>
     <Component class="com.mycompany.payrollsystem.component.Card" name="employees_card">
       <Properties>
