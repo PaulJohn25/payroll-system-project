@@ -41,7 +41,7 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        roundedPanel1 = new com.mycompany.payrollsystem.swing.RoundedPanel();
+        roundedPanel1 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
         leftRoundedCornerPanel1 = new com.mycompany.payrollsystem.swing.LeftRoundedCornerPanel();
         jLabel1 = new javax.swing.JLabel();
         CompanyLogoPanel = new javax.swing.JLabel();
@@ -56,7 +56,7 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
         show_password_checkbox = new javax.swing.JCheckBox();
         jPanel1 = new javax.swing.JPanel();
         forgot_password_label = new javax.swing.JLabel();
-        rightRoundedCornerPanel1 = new com.mycompany.payrollsystem.swing.RightRoundedCornerPanel();
+        rightRoundedCornerPanel1 = new com.mycompany.payrollsystem.swing.RightGradientRoundedCornerPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -502,8 +502,8 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
     private com.mycompany.payrollsystem.swing.LeftRoundedCornerPanel leftRoundedCornerPanel1;
     private javax.swing.JLabel password_error_label;
     private javax.swing.JPasswordField password_textfield;
-    private com.mycompany.payrollsystem.swing.RightRoundedCornerPanel rightRoundedCornerPanel1;
-    private com.mycompany.payrollsystem.swing.RoundedPanel roundedPanel1;
+    private com.mycompany.payrollsystem.swing.RightGradientRoundedCornerPanel rightRoundedCornerPanel1;
+    private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedPanel1;
     private javax.swing.JCheckBox show_password_checkbox;
     private javax.swing.JButton sign_up_button;
     // End of variables declaration//GEN-END:variables

@@ -12,12 +12,12 @@ import java.awt.RenderingHints;
  *
  * @author Paul
  */
-public class RoundedPanel extends javax.swing.JPanel {
+public class RoundedCornersPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form RoundedPanel
      */
-    public RoundedPanel() {
+    public RoundedCornersPanel() {
         initComponents();
         setOpaque(false);
     }
@@ -33,7 +33,7 @@ public class RoundedPanel extends javax.swing.JPanel {
         
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setColor(getBackground());
-        g2.fillRoundRect(0, 0, width, height, arcWidth * 2, arcHeight * 2);
+        g2.fillRoundRect(0, 0, width, height, arcWidth, arcHeight);
         super.paintComponent(graphics);
     }
 

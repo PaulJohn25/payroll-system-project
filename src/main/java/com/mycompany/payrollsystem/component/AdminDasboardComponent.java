@@ -23,19 +23,15 @@ import org.jfree.data.category.DefaultCategoryDataset;
  *
  * @author Paul
  */
-public class Dashboard extends javax.swing.JPanel {
-
-    private DefaultCategoryDataset dataset;
-    private JFreeChart chart;
-    private CategoryPlot categoryPlot;
-    private ChartPanel chartPanel;
+public class AdminDasboardComponent extends javax.swing.JPanel {
 
     /**
      * Creates new form Dashboard
      */
-    public Dashboard() {
+    public AdminDasboardComponent() {
         initComponents();
         setOpaque(false);
+        breadcrumb.setupBreadcrumb("Dashboard");
       
         SwingUtilities.invokeLater(() -> {
             employees_card.setupData(new CardModel("Employees", 7, "employees_card_icon"));
@@ -45,8 +41,6 @@ public class Dashboard extends javax.swing.JPanel {
             loans_card.setupData(new CardModel("Loans", 3, "loans_card_icon"));
             branches_card.setupData(new CardModel("Branches", 3, "branches_card_icon"));
             showPieChart();
-//            pieChart.addData(new ModelPieChart("Coca", 1, new Color(47, 157, 64)));
-//            pieChart.addData(new ModelPieChart("Vita", 60, new Color(196, 151, 58)));
         });
     }
 
@@ -67,8 +61,8 @@ public class Dashboard extends javax.swing.JPanel {
     private void initComponents() {
 
         header1 = new com.mycompany.payrollsystem.component.HeaderDashboard();
-        breadcrumb1 = new com.mycompany.payrollsystem.component.Breadcrumb();
-        dashboard_Profile1 = new com.mycompany.payrollsystem.component.Dashboard_Profile();
+        breadcrumb = new com.mycompany.payrollsystem.component.Breadcrumb();
+        dashboard_Profile1 = new com.mycompany.payrollsystem.component.Admin_Dashboard_Profile();
         employees_card = new com.mycompany.payrollsystem.component.Card();
         departments_card = new com.mycompany.payrollsystem.component.Card();
         document_files_card = new com.mycompany.payrollsystem.component.Card();
@@ -167,7 +161,7 @@ public class Dashboard extends javax.swing.JPanel {
                                 .addComponent(departments_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(leaves_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(breadcrumb1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(breadcrumb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(document_files_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(35, 35, 35)
@@ -190,7 +184,7 @@ public class Dashboard extends javax.swing.JPanel {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(breadcrumb1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(breadcrumb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(employees_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -202,7 +196,7 @@ public class Dashboard extends javax.swing.JPanel {
                             .addComponent(loans_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(branches_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(dashboard_Profile1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -214,8 +208,8 @@ public class Dashboard extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.payrollsystem.chart.BarChart barChart1;
     private com.mycompany.payrollsystem.component.Card branches_card;
-    private com.mycompany.payrollsystem.component.Breadcrumb breadcrumb1;
-    private com.mycompany.payrollsystem.component.Dashboard_Profile dashboard_Profile1;
+    private com.mycompany.payrollsystem.component.Breadcrumb breadcrumb;
+    private com.mycompany.payrollsystem.component.Admin_Dashboard_Profile dashboard_Profile1;
     private com.mycompany.payrollsystem.component.Card departments_card;
     private com.mycompany.payrollsystem.component.Card document_files_card;
     private com.mycompany.payrollsystem.component.Card employees_card;

@@ -4,45 +4,45 @@
  */
 package com.mycompany.payrollsystem.swing;
 
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-
+import java.awt.geom.Rectangle2D;
 
 /**
  *
  * @author Paul
  */
-public class LeftRoundedCornerPanel extends javax.swing.JPanel {
+public class RoundedCornersPanelWithBorder extends javax.swing.JPanel {
 
     /**
-     * Creates new form LeftRoundedCornerPanel
+     * Creates new form RoundedCordersPanelWithBorder
      */
-    public LeftRoundedCornerPanel() {
+    public RoundedCornersPanelWithBorder() {
         initComponents();
-        setOpaque(false);
+        setOpaque(true);
     }
     
     @Override
     protected void paintComponent(Graphics graphics) {
-        Graphics2D g2 = (Graphics2D) graphics;
         
-        int arcWidth = 15;
-        int arcHeight = 15;
+        super.paintComponent(graphics);
         int width = getWidth();
         int height = getHeight();
         
+        Dimension arcs = new Dimension(10,10);
+  
+        Graphics2D g2 = (Graphics2D) graphics;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2.setColor(getBackground());
-        
-        // Fill the rounded rectangle with rounding only on the left side
-        g2.fillRoundRect(0, 0, width, height, arcWidth * 2, arcHeight * 2);
-        
-        
-        // Fill rectangles to cover the unwanted rounded corners on the right side
-        g2.fillRect(arcWidth, 0, width - arcWidth, arcHeight);
-        g2.fillRect(arcWidth, height - arcHeight, width - arcWidth, arcHeight);
-        super.paintComponent(graphics);
+
+
+        //Draws the rounded opaque panel with borders.
+        graphics.setColor(getBackground());
+        graphics.fillRoundRect(0, 0, width-1, height-1, arcs.width, arcs.height);//paint background
+        graphics.setColor(getForeground());
+        graphics.drawRoundRect(0, 0, width-1, height-1, arcs.width, arcs.height);//paint border
+   
     }
 
     /**
