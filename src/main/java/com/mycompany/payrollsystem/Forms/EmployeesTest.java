@@ -5,6 +5,7 @@
 package com.mycompany.payrollsystem.Forms;
 
 import com.mycompany.payrollsystem.Util;
+import java.awt.Color;
 import javax.swing.JFrame;
 
 /**
@@ -28,6 +29,7 @@ public class EmployeesTest extends javax.swing.JFrame {
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
         util.fitImageToComponent(intra_logo_label, "images/main_logo-removebg.png");
         Menu.getListMenu().setSelectedIndex(1);
+        jScrollPane1.setBackground(Color.WHITE);
     }
 
     /**
@@ -46,7 +48,7 @@ public class EmployeesTest extends javax.swing.JFrame {
         menu_logo_label = new javax.swing.JLabel();
         Menu = new com.mycompany.payrollsystem.component.Menu();
         jScrollPane1 = new javax.swing.JScrollPane();
-        employeesComponent1 = new com.mycompany.payrollsystem.component.EmployeesComponent();
+        employeesTestComponent1 = new com.mycompany.payrollsystem.component.EmployeesTestComponent();
         menu_header_panel1 = new javax.swing.JPanel();
         intra_logo_label = new javax.swing.JLabel();
         Menu1 = new com.mycompany.payrollsystem.component.Menu();
@@ -115,7 +117,7 @@ public class EmployeesTest extends javax.swing.JFrame {
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jScrollPane1.setViewportView(employeesComponent1);
+        jScrollPane1.setViewportView(employeesTestComponent1);
 
         menu_header_panel1.setBackground(new java.awt.Color(203, 209, 238));
 
@@ -169,7 +171,9 @@ public class EmployeesTest extends javax.swing.JFrame {
                         .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 891, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Menu1, javax.swing.GroupLayout.PREFERRED_SIZE, 891, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, 0)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -244,7 +248,7 @@ public class EmployeesTest extends javax.swing.JFrame {
     private com.mycompany.payrollsystem.component.Menu Menu;
     private com.mycompany.payrollsystem.component.Menu Menu1;
     private javax.swing.JLabel close_panel;
-    private com.mycompany.payrollsystem.component.EmployeesComponent employeesComponent1;
+    private com.mycompany.payrollsystem.component.EmployeesTestComponent employeesTestComponent1;
     private javax.swing.JLabel hide_panel;
     private javax.swing.JLabel intra_logo_label;
     private javax.swing.JPanel jPanel1;
