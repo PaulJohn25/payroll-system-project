@@ -4,10 +4,14 @@
  */
 package com.mycompany.payrollsystem.component;
 
+import com.mycompany.payrollsystem.Util;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JPanel;
 
 /**
  *
@@ -18,7 +22,13 @@ public class CardHeader extends javax.swing.JPanel {
     /**
      * Creates new form CardHeader
      */
+    
+    private boolean showPanel;
+    private Util util;
+    
     public CardHeader() {
+        util = new Util();
+        showPanel = false;
         initComponents();
         setOpaque(false);
         setBackground(new Color(47,71,186));
@@ -28,7 +38,32 @@ public class CardHeader extends javax.swing.JPanel {
         card_header_name.setText(cardHeaderText);
     }
     
-    
+    public void showCardHeaderPanel(JPanel panel) {
+        
+        icon_label.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                
+                icon_panel.setBackground(new Color(180, 180, 180));
+                
+                if (!showPanel) {
+                    icon_label.setIcon(util.toIcon("caret-arrow-up"));
+                    panel.setVisible(true);
+                    showPanel = true;
+                } else {
+                    icon_label.setIcon(util.toIcon("caret-down"));
+                    panel.setVisible(false);
+                    showPanel = false;
+                }
+                
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                icon_panel.setBackground(new Color(240, 240, 240));
+            }
+        });
+    }
     
      @Override
     protected void paintComponent(Graphics g) {
@@ -58,27 +93,27 @@ public class CardHeader extends javax.swing.JPanel {
     private void initComponents() {
 
         card_header_name = new javax.swing.JLabel();
-        caret_icon_panel1 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
+        icon_panel = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
         icon_label = new javax.swing.JLabel();
 
         card_header_name.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         card_header_name.setForeground(new java.awt.Color(255, 255, 255));
         card_header_name.setText("Department");
 
-        caret_icon_panel1.setPreferredSize(new java.awt.Dimension(40, 40));
+        icon_panel.setPreferredSize(new java.awt.Dimension(40, 40));
 
         icon_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/caret-down.png"))); // NOI18N
         icon_label.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        javax.swing.GroupLayout caret_icon_panel1Layout = new javax.swing.GroupLayout(caret_icon_panel1);
-        caret_icon_panel1.setLayout(caret_icon_panel1Layout);
-        caret_icon_panel1Layout.setHorizontalGroup(
-            caret_icon_panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout icon_panelLayout = new javax.swing.GroupLayout(icon_panel);
+        icon_panel.setLayout(icon_panelLayout);
+        icon_panelLayout.setHorizontalGroup(
+            icon_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(icon_label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
-        caret_icon_panel1Layout.setVerticalGroup(
-            caret_icon_panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        icon_panelLayout.setVerticalGroup(
+            icon_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(icon_label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
@@ -90,7 +125,7 @@ public class CardHeader extends javax.swing.JPanel {
                 .addGap(28, 28, 28)
                 .addComponent(card_header_name)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 662, Short.MAX_VALUE)
-                .addComponent(caret_icon_panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(icon_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
         layout.setVerticalGroup(
@@ -98,7 +133,7 @@ public class CardHeader extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(caret_icon_panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(icon_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(card_header_name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
@@ -107,11 +142,7 @@ public class CardHeader extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel card_header_name;
-    private com.mycompany.payrollsystem.swing.RoundedCornersPanel caret_icon_panel;
-    private com.mycompany.payrollsystem.swing.RoundedCornersPanel caret_icon_panel1;
-    private javax.swing.JLabel department_caret_icon_logo;
     private javax.swing.JLabel icon_label;
-    private javax.swing.JLabel jLabel4;
-    private com.mycompany.payrollsystem.swing.TopLeftAndTopRightRoundedCornersPanel topLeftAndTopRightRoundedCornersPanel1;
+    private com.mycompany.payrollsystem.swing.RoundedCornersPanel icon_panel;
     // End of variables declaration//GEN-END:variables
 }

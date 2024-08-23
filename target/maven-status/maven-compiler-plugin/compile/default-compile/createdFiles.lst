@@ -42,6 +42,7 @@ com\mycompany\payrollsystem\Forms\Timekeeping.class
 com\mycompany\payrollsystem\swing\ListMenu.class
 com\mycompany\payrollsystem\cell\PanelAction$2.class
 com\mycompany\payrollsystem\custom_exceptions\CustomExceptions.class
+com\mycompany\payrollsystem\component\CardHeader$1.class
 com\mycompany\payrollsystem\swing\CirclePanel.class
 com\mycompany\payrollsystem\Forms\User_Management.class
 com\mycompany\payrollsystem\cell\TableActionEvent.class

@@ -492,8 +492,8 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="department_panel" alignment="0" max="32767" attributes="0"/>
-                  <Component id="cardHeader1" alignment="0" max="32767" attributes="0"/>
-                  <Component id="cardHeader2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="department_card_header" alignment="0" max="32767" attributes="0"/>
+                  <Component id="branch_card_header" alignment="0" max="32767" attributes="0"/>
                   <Component id="branch_panel" alignment="1" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -501,11 +501,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="cardHeader1" min="-2" max="-2" attributes="0"/>
+                      <Component id="department_card_header" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="department_panel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="cardHeader2" min="-2" max="-2" attributes="0"/>
+                      <Component id="branch_card_header" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="branch_panel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="26" max="32767" attributes="0"/>
@@ -678,22 +678,14 @@
                               </Group>
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" pref="628" max="-2" attributes="0"/>
+                              <EmptySpace pref="32" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLabel21" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="jLabel21" alignment="1" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jPanel6" max="32767" attributes="0"/>
+                                      <Component id="jLabel22" pref="31" max="32767" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jPanel6" max="32767" attributes="0"/>
-                                          <Component id="jLabel22" pref="31" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace pref="32" max="32767" attributes="0"/>
-                                      <Component id="jLabel24" min="-2" pref="31" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabel24" alignment="1" min="-2" pref="31" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                           </Group>
@@ -899,9 +891,9 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Component class="com.mycompany.payrollsystem.component.CardHeader" name="cardHeader1">
+            <Component class="com.mycompany.payrollsystem.component.CardHeader" name="department_card_header">
             </Component>
-            <Component class="com.mycompany.payrollsystem.component.CardHeader" name="cardHeader2">
+            <Component class="com.mycompany.payrollsystem.component.CardHeader" name="branch_card_header">
             </Component>
             <Container class="javax.swing.JPanel" name="branch_panel">
               <Properties>

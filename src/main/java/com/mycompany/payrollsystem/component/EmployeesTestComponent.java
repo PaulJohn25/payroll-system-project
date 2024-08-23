@@ -35,8 +35,8 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         initComponents();
         setOpaque(false);
         
-        cardHeader1.setupCardHeader("Department");
-        cardHeader2.setupCardHeader("Branch / Site");
+        department_card_header.setupCardHeader("Department");
+        branch_card_header.setupCardHeader("Branch / Site");
         
         setPreferredSize(new Dimension(900, 2100));
         
@@ -49,6 +49,8 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         employees_table_header.setFont(headerFont);
         department_table_header.setFont(headerFont);
         branch_table_header.setFont(headerFont);
+        department_card_header.showCardHeaderPanel(department_panel);
+        branch_card_header.showCardHeaderPanel(branch_panel);
         
 //        department_caret_icon_logo.addMouseListener(new MouseAdapter () {
 //            @Override
@@ -158,8 +160,8 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         jPanel6 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        cardHeader1 = new com.mycompany.payrollsystem.component.CardHeader();
-        cardHeader2 = new com.mycompany.payrollsystem.component.CardHeader();
+        department_card_header = new com.mycompany.payrollsystem.component.CardHeader();
+        branch_card_header = new com.mycompany.payrollsystem.component.CardHeader();
         branch_panel = new javax.swing.JPanel();
         roundedCornersPanel4 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
         jLabel12 = new javax.swing.JLabel();
@@ -561,18 +563,13 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 628, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(roundedCornersPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(roundedCornersPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(roundedCornersPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(roundedCornersPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)))
-                    .addGroup(roundedCornersPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roundedCornersPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+                    .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(63, 63, 63))
         );
 
@@ -804,19 +801,19 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(department_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(cardHeader1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(cardHeader2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(department_card_header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(branch_card_header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(branch_panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(cardHeader1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(department_card_header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(department_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(cardHeader2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(branch_card_header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(branch_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
@@ -863,15 +860,14 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel addEmployeeButtonPanel;
+    private com.mycompany.payrollsystem.component.CardHeader branch_card_header;
     private javax.swing.JPanel branch_panel;
     private javax.swing.JTable branch_table;
     private com.mycompany.payrollsystem.component.Breadcrumb breadcrumb;
     private javax.swing.ButtonGroup buttonGroup1;
-    private com.mycompany.payrollsystem.component.CardHeader cardHeader1;
-    private com.mycompany.payrollsystem.component.CardHeader cardHeader2;
+    private com.mycompany.payrollsystem.component.CardHeader department_card_header;
     private javax.swing.JPanel department_panel;
     private javax.swing.JTable department_table;
-    private javax.swing.JTable department_table1;
     private javax.swing.JLabel employee_count_label;
     private javax.swing.JLabel employee_count_label1;
     private javax.swing.JLabel employee_count_label2;
@@ -880,7 +876,6 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -894,13 +889,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
@@ -918,16 +907,13 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JLabel logo_panel;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel1;
@@ -935,8 +921,6 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel3;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel4;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel5;
-    private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel6;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel7;
-    private com.mycompany.payrollsystem.swing.TopLeftAndTopRightRoundedCornersPanel topLeftAndTopRightRoundedCornersPanel2;
     // End of variables declaration//GEN-END:variables
 }
