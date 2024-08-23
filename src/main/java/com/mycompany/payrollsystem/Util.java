@@ -102,6 +102,17 @@ public class Util {
            return null;
        }
     }
+     
+     public Icon toIcon(String icon) {
+         URL imageIcon = getClass().getResource("/com/mycompany/payrollsystem/icons/" + icon + ".png");
+       
+       if (imageIcon != null) {
+           return new ImageIcon(imageIcon);
+       } else {
+           LOGGER.log(Level.WARNING, "Icon not found: {0}", icon);
+           return null;
+       }
+     }
     
     public void setLeftBorder(JLabel label, Color color) {
         Border left_border = BorderFactory.createMatteBorder(0, 4, 0, 0, color);

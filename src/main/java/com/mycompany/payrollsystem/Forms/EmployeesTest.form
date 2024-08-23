@@ -33,9 +33,10 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" pref="753" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="jPanel1" min="-2" pref="713" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -59,7 +60,6 @@
                           <Component id="menu_header_panel1" max="32767" attributes="0"/>
                       </Group>
                       <Component id="Menu" min="-2" max="-2" attributes="0"/>
-                      <Component id="Menu1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -79,17 +79,10 @@
                       <Component id="menu_header_panel1" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="Menu" min="-2" pref="891" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Menu1" min="-2" pref="891" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="648" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="Menu" alignment="0" min="-2" pref="891" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" alignment="0" min="-2" pref="648" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -188,6 +181,7 @@
                 <EmptyBorder/>
               </Border>
             </Property>
+            <Property name="horizontalScrollBarPolicy" type="int" value="32"/>
           </Properties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
@@ -232,8 +226,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="com.mycompany.payrollsystem.component.Menu" name="Menu1">
-        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
