@@ -38,7 +38,7 @@ public class CardHeader extends javax.swing.JPanel {
         card_header_name.setText(cardHeaderText);
     }
     
-    public void showCardHeaderPanel(JPanel panel) {
+    public void toggleCardHeaderPanel(JPanel panel) {
         
         icon_label.addMouseListener(new MouseAdapter() {
             @Override

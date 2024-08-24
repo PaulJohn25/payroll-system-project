@@ -5,6 +5,7 @@
 package com.mycompany.payrollsystem.cell;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -22,6 +23,7 @@ public class ActionButton extends JButton {
     private boolean mousePress;
     
     public ActionButton() {
+        setPreferredSize(new Dimension(80, 37));
         setContentAreaFilled(false);
         setBorder(new EmptyBorder(3, 3, 3, 3));
         addMouseListener(new MouseAdapter () {
