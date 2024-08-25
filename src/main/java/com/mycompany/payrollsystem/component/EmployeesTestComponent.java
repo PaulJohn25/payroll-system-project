@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.payrollsystem.component;
+import com.mycompany.payrollsystem.modals.CreateBranchModal;
+import com.mycompany.payrollsystem.modals.CreateDepartmentModal;
+import com.mycompany.payrollsystem.modals.CreateDesignationModal;
+import com.mycompany.payrollsystem.modals.CreatePositionModal;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
@@ -478,6 +482,11 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         jButton1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Create Department");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         roundedCornersPanel5.setBackground(new java.awt.Color(245, 247, 248));
 
@@ -674,6 +683,11 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         jButton2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Create Branch");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         branch_site_table.setBackground(new java.awt.Color(245, 247, 248));
 
@@ -895,6 +909,11 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         jButton3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Create Position");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         roundedCornersPanel8.setBackground(new java.awt.Color(245, 247, 248));
 
@@ -1091,6 +1110,11 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         jButton4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Create Designation");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         roundedCornersPanel10.setBackground(new java.awt.Color(245, 247, 248));
 
@@ -1297,6 +1321,30 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CreateDepartmentModal createDepartment = new CreateDepartmentModal();
+        createDepartment.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        CreateBranchModal createBranch = new CreateBranchModal();
+        createBranch.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        CreatePositionModal createPositionModal = new CreatePositionModal();
+        createPositionModal.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        CreateDesignationModal createDesignationModal = new CreateDesignationModal();
+        createDesignationModal.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel addEmployeeButtonPanel;

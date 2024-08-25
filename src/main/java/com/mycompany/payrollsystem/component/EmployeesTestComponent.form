@@ -620,6 +620,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Create Department"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Container class="com.mycompany.payrollsystem.swing.RoundedCornersPanel" name="roundedCornersPanel5">
                   <Properties>
@@ -1000,6 +1003,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Create Branch"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Container class="com.mycompany.payrollsystem.swing.RoundedCornersPanel" name="branch_site_table">
                   <Properties>
@@ -1415,6 +1421,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Create Position"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Container class="com.mycompany.payrollsystem.swing.RoundedCornersPanel" name="roundedCornersPanel8">
                   <Properties>
@@ -1792,6 +1801,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Create Designation"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Container class="com.mycompany.payrollsystem.swing.RoundedCornersPanel" name="roundedCornersPanel10">
                   <Properties>
