@@ -5,7 +5,15 @@
 package com.mycompany.payrollsystem.Forms;
 
 import com.mycompany.payrollsystem.Util;
+import com.mycompany.payrollsystem.component.AddEmployee;
+import com.mycompany.payrollsystem.component.EmployeesTestComponent;
+import java.awt.Color;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -13,21 +21,71 @@ import javax.swing.JFrame;
  */
 public class Employees extends javax.swing.JFrame {
 
-    private final Util util = new Util();
+    private final Util util;
+    private final AddEmployee addEmployee;
+    
    
     
     /**
      * Creates new form Dashboard
      */
     public Employees() {
+        this.util = new Util();
+        this.addEmployee = new AddEmployee();
         initComponents();
         this.setLocationRelativeTo(null);
-//        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        init();
+    }
+    
+    private void init() {
         util.fitImageToComponent(hide_panel, "images/hide_icon.png");
         util.fitImageToComponent(close_panel, "images/close.png");
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
         util.fitImageToComponent(intra_logo_label, "images/main_logo-removebg.png");
         Menu.getListMenu().setSelectedIndex(1);
+        
+        JPanel addEmployeeButtonPanel = employeesTestComponent.getAddEmployeeButtonPanel();
+        
+        addEmployeeButtonPanel.addMouseListener(new MouseAdapter() {
+            
+            @Override
+            public void mousePressed(MouseEvent e) {
+                System.out.println("Add Employee Button is clicked!");
+                        
+                addEmployeeButtonPanel.setBackground(new Color(21, 122, 60));
+                
+                // Replace the panel in the scroll pane
+                jScrollPane1.setViewportView(addEmployee);
+                
+                // Revalidate and repaint to update the UI
+                jScrollPane1.revalidate();
+                jScrollPane1.repaint();
+            }
+            
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                System.out.println("Add Employee Button is released!");
+                addEmployeeButtonPanel.setBackground(new Color(30,174,85));
+            }
+            
+        });
+        
+        addEmployee.getCloseButtons().forEach(button -> {
+            button.addActionListener(e -> {
+                this.showEmployeeComponent();
+            });
+        });
+        
+        
+    }
+    
+    public void showEmployeeComponent() {
+        
+        JPanel employeeComponent = new EmployeesTestComponent();
+        
+        jScrollPane1.setViewportView(employeeComponent);
+        jScrollPane1.revalidate();
+        jScrollPane1.repaint();
     }
 
     /**
@@ -46,7 +104,7 @@ public class Employees extends javax.swing.JFrame {
         menu_logo_label = new javax.swing.JLabel();
         Menu = new com.mycompany.payrollsystem.component.Menu();
         jScrollPane1 = new javax.swing.JScrollPane();
-        employeesTestComponent1 = new com.mycompany.payrollsystem.component.EmployeesTestComponent();
+        employeesTestComponent = new com.mycompany.payrollsystem.component.EmployeesTestComponent();
         menu_header_panel1 = new javax.swing.JPanel();
         intra_logo_label = new javax.swing.JLabel();
 
@@ -115,7 +173,7 @@ public class Employees extends javax.swing.JFrame {
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-        jScrollPane1.setViewportView(employeesTestComponent1);
+        jScrollPane1.setViewportView(employeesTestComponent);
 
         menu_header_panel1.setBackground(new java.awt.Color(203, 209, 238));
 
@@ -244,7 +302,7 @@ public class Employees extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.payrollsystem.component.Menu Menu;
     private javax.swing.JLabel close_panel;
-    private com.mycompany.payrollsystem.component.EmployeesTestComponent employeesTestComponent1;
+    private com.mycompany.payrollsystem.component.EmployeesTestComponent employeesTestComponent;
     private javax.swing.JLabel hide_panel;
     private javax.swing.JLabel intra_logo_label;
     private javax.swing.JPanel jPanel1;

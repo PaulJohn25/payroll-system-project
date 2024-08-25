@@ -2,6 +2,7 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\CirclePanel.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\ActionButton.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Util.java
+C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\ScrollPaneExample.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\EmployeesTestComponent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\RightGradientRoundedCornerPanel.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelAction.java
@@ -15,7 +16,6 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\AdminDasboardComponent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Forms\Report.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelStatus.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\EmployeesComponent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\Staff_Dashboard_Profile.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Forms\Leave_Management.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\chart\PieChart.java
@@ -30,10 +30,10 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Forms\Login.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Forms\User_Management.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\PaginationExample.java
+C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\AddEmployee.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\RoundedCornersPanel.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\Breadcrumb.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\RightRoundedCornersPanel.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\Employee_List.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\Card.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\model\CardModel.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Forms\Loan_Management.java

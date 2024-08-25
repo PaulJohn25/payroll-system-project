@@ -3,18 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.payrollsystem.component;
-import com.mycompany.payrollsystem.Util;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
 import com.mycompany.payrollsystem.cell.TableActionCellRender;
 import com.mycompany.payrollsystem.cell.TableActionEvent;
 import com.mycompany.payrollsystem.cell.TableStatusCellRender;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 
 
 /**
@@ -66,55 +63,51 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         branch_card_header.toggleCardHeaderPanel(branch_panel);
         position_card_header.toggleCardHeaderPanel(positions_panel);
         designation_card_header.toggleCardHeaderPanel(designation_panel);
-         
-        addEmployeeButtonPanel.addMouseListener(new MouseAdapter() {
-          
-            @Override
-            public void mousePressed(MouseEvent e) {
-                System.out.println("Add Employee Button is clicked!");
-                addEmployeeButtonPanel.setBackground(new Color(21, 122, 60));
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                System.out.println("Add Employee Button is released!");
-                addEmployeeButtonPanel.setBackground(new Color(30,174,85));
-            }
-               
-        });
-        
+                 
         TableActionEvent event;
         event = (int row) -> {
             System.out.println("Edit row: " + row);
         };
         
-        employees_table.getColumnModel().getColumn(5).setCellRenderer(new TableActionCellRender());
-        employees_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor(event));
+        setTableCellRender(employees_table, 5, new TableActionCellRender());
+        setTableCellEditor(employees_table, 5, new TableActionCellEditor(event));
         
-        department_table.getColumnModel().getColumn(4).setCellRenderer(new TableStatusCellRender());
-        department_table.getColumnModel().getColumn(5).setCellRenderer(new TableActionCellRender());
-        department_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor(event));
+        setTableCellRender(department_table, 4, new TableActionCellRender());
+        setTableCellRender(department_table, 5, new TableActionCellRender());
+        setTableCellEditor(department_table, 5, new TableActionCellEditor(event));
+
+        setTableCellRender(branch_table, 3, new TableActionCellRender());
+        setTableCellRender(branch_table, 4, new TableActionCellRender());
+        setTableCellEditor(branch_table, 4, new TableActionCellEditor(event));
+
+        setTableCellRender(positions_table, 4, new TableActionCellRender());
+        setTableCellRender(positions_table, 5, new TableActionCellRender());
+        setTableCellEditor(positions_table, 5, new TableActionCellEditor(event));
         
-        branch_table.getColumnModel().getColumn(3).setCellRenderer(new TableStatusCellRender());
-        branch_table.getColumnModel().getColumn(4).setCellRenderer(new TableActionCellRender());
-        branch_table.getColumnModel().getColumn(4).setCellEditor(new TableActionCellEditor(event));
-        
-        positions_table.getColumnModel().getColumn(4).setCellRenderer(new TableStatusCellRender());
-        positions_table.getColumnModel().getColumn(5).setCellRenderer(new TableActionCellRender());
-        positions_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor(event));
-        
-        designation_table.getColumnModel().getColumn(3).setCellRenderer(new TableStatusCellRender());
-        designation_table.getColumnModel().getColumn(4).setCellRenderer(new TableActionCellRender());
-        designation_table.getColumnModel().getColumn(4).setCellEditor(new TableActionCellEditor(event));
-        
+        setTableCellRender(designation_table, 3, new TableActionCellRender());
+        setTableCellRender(designation_table, 4, new TableActionCellRender());
+        setTableCellEditor(designation_table, 4, new TableActionCellEditor(event));
+
         breadcrumb.setupBreadcrumb("Employees");   
-//        setupButton(employee_list_button, buttonActiveColor, textActiveColor);
     }
         
+    
+    private void setTableCellRender(JTable table, int columnIndex, TableActionCellRender tableActionCellRender) {
+        table.getColumnModel().getColumn(columnIndex).setCellRenderer(tableActionCellRender);
+    }
+    
+    private void setTableCellEditor(JTable table, int columnIndex, TableActionCellEditor tableActionCellEditor) {
+        table.getColumnModel().getColumn(columnIndex).setCellEditor(tableActionCellEditor);
+    }
     
     private void hidePanel(JPanel panel) {
         panel.setVisible(false);
     }
+    
+    public JPanel getAddEmployeeButtonPanel() {
+        return addEmployeeButtonPanel;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this
      * code. The content of this method is always regenerated by the Form Editor.
