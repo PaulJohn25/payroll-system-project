@@ -19,8 +19,6 @@ public class AddEmployee extends javax.swing.JPanel {
      * @return the closeButtons
      */
     public List<JButton> getCloseButtons() { 
-        closeButtons.add(close_add_employee_button_one);
-        closeButtons.add(cclose_add_employee_button_two);
         return Collections.unmodifiableList(closeButtons);
     }
 
@@ -31,8 +29,9 @@ public class AddEmployee extends javax.swing.JPanel {
      */
     public AddEmployee() {
         this.closeButtons = new ArrayList<>();
-        
         initComponents();
+        closeButtons.add(close_add_employee_button_one);
+        closeButtons.add(cclose_add_employee_button_two);
     }
     
 //    public List<JButton> getCloseButtons() {
@@ -626,14 +625,11 @@ public class AddEmployee extends javax.swing.JPanel {
             .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
-                        .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel24)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(30, 30, 30))
+                        .addComponent(jLabel24)
+                        .addGap(27, 27, 27)
+                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
                         .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -645,8 +641,8 @@ public class AddEmployee extends javax.swing.JPanel {
                             .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
                             .addComponent(jTextField13)
                             .addComponent(jTextField12)
-                            .addComponent(jComboBox7, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(29, 29, 29)))
+                            .addComponent(jComboBox7, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
                         .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -662,7 +658,7 @@ public class AddEmployee extends javax.swing.JPanel {
                         .addComponent(jLabel32)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                         .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         roundedCornersPanel3Layout.setVerticalGroup(
             roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

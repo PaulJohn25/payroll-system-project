@@ -13,6 +13,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -23,69 +24,71 @@ public class Employees extends javax.swing.JFrame {
 
     private final Util util;
     private final AddEmployee addEmployee;
-    
-   
-    
+    private final EmployeesTestComponent employeeComponent;
+    private final JPanel addEmployeeButtonPanel;
+
     /**
      * Creates new form Dashboard
      */
     public Employees() {
         this.util = new Util();
-        this.addEmployee = new AddEmployee();
         initComponents();
+        this.employeeComponent = employeesTestComponent;
+        this.addEmployeeButtonPanel = employeeComponent.getAddEmployeeButtonPanel();
+        this.addEmployee = new AddEmployee();
         this.setLocationRelativeTo(null);
         init();
     }
-    
+
     private void init() {
         util.fitImageToComponent(hide_panel, "images/hide_icon.png");
         util.fitImageToComponent(close_panel, "images/close.png");
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
         util.fitImageToComponent(intra_logo_label, "images/main_logo-removebg.png");
         Menu.getListMenu().setSelectedIndex(1);
-        
-        JPanel addEmployeeButtonPanel = employeesTestComponent.getAddEmployeeButtonPanel();
-        
+
         addEmployeeButtonPanel.addMouseListener(new MouseAdapter() {
-            
+
             @Override
             public void mousePressed(MouseEvent e) {
                 System.out.println("Add Employee Button is clicked!");
-                        
-                addEmployeeButtonPanel.setBackground(new Color(21, 122, 60));
-                
+
                 // Replace the panel in the scroll pane
                 jScrollPane1.setViewportView(addEmployee);
-                
+
                 // Revalidate and repaint to update the UI
                 jScrollPane1.revalidate();
                 jScrollPane1.repaint();
             }
-            
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                System.out.println("Add Employee Button is released!");
-                addEmployeeButtonPanel.setBackground(new Color(30,174,85));
-            }
-            
+
         });
-        
+
         addEmployee.getCloseButtons().forEach(button -> {
             button.addActionListener(e -> {
                 this.showEmployeeComponent();
             });
         });
-        
-        
+
     }
-    
+
     public void showEmployeeComponent() {
-        
-        JPanel employeeComponent = new EmployeesTestComponent();
-        
-        jScrollPane1.setViewportView(employeeComponent);
-        jScrollPane1.revalidate();
-        jScrollPane1.repaint();
+
+        int choice; // Default option (pre-selected button)
+        choice = JOptionPane.showOptionDialog(this, // Parent component
+                "Back to List without saving",
+                "Close", // Title
+                JOptionPane.DEFAULT_OPTION, // Option type (customized buttons)
+                JOptionPane.PLAIN_MESSAGE, // Message type
+                null, // Icon (null means no custom icon)
+                new String[]{"Yes", "No"}, // Custom button labels
+                null);
+
+        if (choice == 0) {
+            jScrollPane1.setViewportView(employeeComponent);
+            jScrollPane1.revalidate();
+            jScrollPane1.repaint();
+        }
+
     }
 
     /**

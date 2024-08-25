@@ -8,7 +8,6 @@ import java.awt.Font;
 import javax.swing.table.JTableHeader;
 import com.mycompany.payrollsystem.cell.TableActionCellRender;
 import com.mycompany.payrollsystem.cell.TableActionEvent;
-import com.mycompany.payrollsystem.cell.TableStatusCellRender;
 import java.awt.Dimension;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -22,19 +21,23 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
     /**
      * Creates new form Dashboard
      */
-    private final JTableHeader employees_table_header;
-    private final JTableHeader department_table_header;
-    private final JTableHeader branch_table_header;
-    private final JTableHeader position_table_header;
-    private final JTableHeader designation_table_header;
-    private final Font headerFont = new Font("Arial", Font.BOLD, 20);
+    private JTableHeader employees_table_header;
+    private JTableHeader department_table_header;
+    private JTableHeader branch_table_header;
+    private JTableHeader position_table_header;
+    private JTableHeader designation_table_header;
+    private final Font headerFont;
     
     
     public EmployeesTestComponent() {
+        this.headerFont = new Font("Arial", Font.BOLD, 20);
         initComponents();
         setOpaque(false);
         setPreferredSize(new Dimension(900, 2200));
-        
+        init();
+    }
+    
+    private void init() {
         department_card_header.setupCardHeader("Department");
         branch_card_header.setupCardHeader("Branch / Site");
         position_card_header.setupCardHeader("Position");
@@ -44,7 +47,6 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         hidePanel(branch_panel);
         hidePanel(positions_panel);
         hidePanel(designation_panel);
-        
         
         employees_table_header = employees_table.getTableHeader();
         department_table_header = department_table.getTableHeader();
@@ -88,7 +90,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         setTableCellRender(designation_table, 4, new TableActionCellRender());
         setTableCellEditor(designation_table, 4, new TableActionCellEditor(event));
 
-        breadcrumb.setupBreadcrumb("Employees");   
+        breadcrumb.setupBreadcrumb("Employees"); 
     }
         
     
