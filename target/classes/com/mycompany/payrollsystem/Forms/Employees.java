@@ -5,7 +5,17 @@
 package com.mycompany.payrollsystem.Forms;
 
 import com.mycompany.payrollsystem.Util;
+import com.mycompany.payrollsystem.cell.TableActionEvent;
+import com.mycompany.payrollsystem.component.AddEmployee;
+import com.mycompany.payrollsystem.component.EmployeesTestComponent;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 /**
  *
@@ -13,21 +23,95 @@ import javax.swing.JFrame;
  */
 public class Employees extends javax.swing.JFrame {
 
-    private final Util util = new Util();
-   
-    
+    /**
+     * @return the scrollPane
+     */
+    public JScrollPane getScrollPane() {
+        return scrollPane;
+    }
+
+    private final Util util;
+    private final AddEmployee addEmployee;
+    private final EmployeesTestComponent employeeComponent;
+    private final JPanel addEmployeeButtonPanel;
+    private final JScrollPane scrollPane;
+
     /**
      * Creates new form Dashboard
      */
     public Employees() {
+        this.util = new Util();
         initComponents();
+        scrollPane = jScrollPane1;
+        this.employeeComponent = employeesTestComponent;
+        this.addEmployeeButtonPanel = employeeComponent.getAddEmployeeButtonPanel();
+        this.addEmployee = new AddEmployee();
         this.setLocationRelativeTo(null);
-//        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        init();
+    }
+
+    private void init() {
+
         util.fitImageToComponent(hide_panel, "images/hide_icon.png");
         util.fitImageToComponent(close_panel, "images/close.png");
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
         util.fitImageToComponent(intra_logo_label, "images/main_logo-removebg.png");
         Menu.getListMenu().setSelectedIndex(1);
+
+        addEmployeeButtonPanel.addMouseListener(new MouseAdapter() {
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                System.out.println("Add Employee Button is clicked!");
+
+                // Replace the panel in the scroll pane
+                jScrollPane1.setViewportView(addEmployee);
+
+                // Revalidate and repaint to update the UI
+                jScrollPane1.revalidate();
+                jScrollPane1.repaint();
+            }
+
+        });
+
+        addEmployee.getCloseButtons().forEach(button -> {
+            button.addActionListener(e -> {
+                this.showEmployeeComponent();
+            });
+        });
+
+        TableActionEvent edit_employee_event = (int row) -> {
+            System.out.println("Edit Employee Index: " + row);
+            // Replace the panel in the scroll pane
+            jScrollPane1.setViewportView(addEmployee);
+
+            // Revalidate and repaint to update the UI
+            jScrollPane1.revalidate();
+            jScrollPane1.repaint();
+        };
+
+        employeesTestComponent.setEdit_employee_info_event(edit_employee_event);
+
+    }
+
+    public void showEmployeeComponent() {
+
+        int choice; // Default option (pre-selected button)
+        choice = JOptionPane.showOptionDialog(this, // Parent component
+                "Back to List without saving",
+                "Close", // Title
+                JOptionPane.DEFAULT_OPTION, // Option type (customized buttons)
+                JOptionPane.PLAIN_MESSAGE, // Message type
+                null, // Icon (null means no custom icon)
+                new String[]{"Yes", "No"}, // Custom button labels
+                null);
+
+        if (choice == 0) {
+            jScrollPane1.setViewportView(employeeComponent);
+            jScrollPane1.revalidate();
+            jScrollPane1.repaint();
+        }
+
     }
 
     /**
@@ -46,7 +130,7 @@ public class Employees extends javax.swing.JFrame {
         menu_logo_label = new javax.swing.JLabel();
         Menu = new com.mycompany.payrollsystem.component.Menu();
         jScrollPane1 = new javax.swing.JScrollPane();
-        employeesTestComponent1 = new com.mycompany.payrollsystem.component.EmployeesTestComponent();
+        employeesTestComponent = new com.mycompany.payrollsystem.component.EmployeesTestComponent();
         menu_header_panel1 = new javax.swing.JPanel();
         intra_logo_label = new javax.swing.JLabel();
 
@@ -115,7 +199,7 @@ public class Employees extends javax.swing.JFrame {
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-        jScrollPane1.setViewportView(employeesTestComponent1);
+        jScrollPane1.setViewportView(employeesTestComponent);
 
         menu_header_panel1.setBackground(new java.awt.Color(203, 209, 238));
 
@@ -244,7 +328,7 @@ public class Employees extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.payrollsystem.component.Menu Menu;
     private javax.swing.JLabel close_panel;
-    private com.mycompany.payrollsystem.component.EmployeesTestComponent employeesTestComponent1;
+    private com.mycompany.payrollsystem.component.EmployeesTestComponent employeesTestComponent;
     private javax.swing.JLabel hide_panel;
     private javax.swing.JLabel intra_logo_label;
     private javax.swing.JPanel jPanel1;

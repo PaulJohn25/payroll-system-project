@@ -3,51 +3,74 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.payrollsystem.component;
-import com.mycompany.payrollsystem.Util;
+
+import com.mycompany.payrollsystem.modals.CreateBranchModal;
+import com.mycompany.payrollsystem.modals.CreateDepartmentModal;
+import com.mycompany.payrollsystem.modals.CreateDesignationModal;
+import com.mycompany.payrollsystem.modals.CreatePositionModal;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
 import com.mycompany.payrollsystem.cell.TableActionCellRender;
 import com.mycompany.payrollsystem.cell.TableActionEvent;
 import com.mycompany.payrollsystem.cell.TableStatusCellRender;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
-
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
 
 /**
  *
  * @author Paul
  */
 public class EmployeesTestComponent extends javax.swing.JPanel {
+
+    /**
+     * @param edit_employee_info_event the edit_employee_info_event to set
+     */
+    public void setEdit_employee_info_event(TableActionEvent edit_employee_info_event) {
+        this.edit_employee_info_event = edit_employee_info_event;
+        setTableCellEditor(employees_table, 5, new TableActionCellEditor(this.edit_employee_info_event));
+    }
+
     /**
      * Creates new form Dashboard
      */
-    private final JTableHeader employees_table_header;
-    private final JTableHeader department_table_header;
-    private final JTableHeader branch_table_header;
-    private final JTableHeader position_table_header;
-    private final JTableHeader designation_table_header;
-    private final Font headerFont = new Font("Arial", Font.BOLD, 20);
+    private JTableHeader employees_table_header;
+    private JTableHeader department_table_header;
+    private JTableHeader branch_table_header;
+    private JTableHeader position_table_header;
+    private JTableHeader designation_table_header;
+    private TableActionEvent edit_employee_info_event;
+    private TableActionEvent edit_department_details_event;
+    private TableActionEvent edit_branch_details_event;
+    private TableActionEvent edit_position_details_event;
+    private TableActionEvent edit_designation_details_event;
+    private CreateBranchModal createBranchModal;
+    private CreateDepartmentModal createDepartmentModal;
+    private CreateDesignationModal createDesignationModal;
+    private CreatePositionModal createPositionModal;
     
+    private final Font headerFont;
     
     public EmployeesTestComponent() {
+        this.headerFont = new Font("Arial", Font.BOLD, 20);
         initComponents();
         setOpaque(false);
         setPreferredSize(new Dimension(900, 2200));
-        
+        init();
+    }
+    
+    private void init() {
         department_card_header.setupCardHeader("Department");
         branch_card_header.setupCardHeader("Branch / Site");
         position_card_header.setupCardHeader("Position");
         designation_card_header.setupCardHeader("Designation");
-         
+        
         hidePanel(department_panel);
         hidePanel(branch_panel);
         hidePanel(positions_panel);
         hidePanel(designation_panel);
-        
         
         employees_table_header = employees_table.getTableHeader();
         department_table_header = department_table.getTableHeader();
@@ -61,60 +84,72 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         position_table_header.setFont(headerFont);
         designation_table_header.setFont(headerFont);
         
-        
         department_card_header.toggleCardHeaderPanel(department_panel);
         branch_card_header.toggleCardHeaderPanel(branch_panel);
         position_card_header.toggleCardHeaderPanel(positions_panel);
         designation_card_header.toggleCardHeaderPanel(designation_panel);
-         
-        addEmployeeButtonPanel.addMouseListener(new MouseAdapter() {
-          
-            @Override
-            public void mousePressed(MouseEvent e) {
-                System.out.println("Add Employee Button is clicked!");
-                addEmployeeButtonPanel.setBackground(new Color(21, 122, 60));
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                System.out.println("Add Employee Button is released!");
-                addEmployeeButtonPanel.setBackground(new Color(30,174,85));
-            }
-               
-        });
         
-        TableActionEvent event;
-        event = (int row) -> {
-            System.out.println("Edit row: " + row);
+        edit_department_details_event = (int row) -> {
+            System.out.println("Edit Department Index: " + row);
+            createDepartmentModal = new CreateDepartmentModal();
+            createDepartmentModal.setVisible(true);
         };
         
-        employees_table.getColumnModel().getColumn(5).setCellRenderer(new TableActionCellRender());
-        employees_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor(event));
+        edit_branch_details_event = (int row) -> {
+            System.out.println("Edit Branch Index: " + row);
+            createBranchModal = new CreateBranchModal();
+            createBranchModal.setVisible(true);
+        };
         
-        department_table.getColumnModel().getColumn(4).setCellRenderer(new TableStatusCellRender());
-        department_table.getColumnModel().getColumn(5).setCellRenderer(new TableActionCellRender());
-        department_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor(event));
+        edit_position_details_event = (int row) -> {
+            System.out.println("Edit Position Index: " + row);
+            createPositionModal = new CreatePositionModal();
+            createPositionModal.setVisible(true);
+        };        
         
-        branch_table.getColumnModel().getColumn(3).setCellRenderer(new TableStatusCellRender());
-        branch_table.getColumnModel().getColumn(4).setCellRenderer(new TableActionCellRender());
-        branch_table.getColumnModel().getColumn(4).setCellEditor(new TableActionCellEditor(event));
+        edit_designation_details_event = (int row) -> {
+            System.out.println("Edit Designation Details: " + row);
+            createDesignationModal = new CreateDesignationModal();
+            createDesignationModal.setVisible(true);
+        };
         
-        positions_table.getColumnModel().getColumn(4).setCellRenderer(new TableStatusCellRender());
-        positions_table.getColumnModel().getColumn(5).setCellRenderer(new TableActionCellRender());
-        positions_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor(event));
+        setTableCellRender(employees_table, 5, new TableActionCellRender());
+           
+        setTableCellRender(department_table, 4, new TableStatusCellRender());
+        setTableCellRender(department_table, 5, new TableActionCellRender());
+        setTableCellEditor(department_table, 5, new TableActionCellEditor(edit_department_details_event));
         
-        designation_table.getColumnModel().getColumn(3).setCellRenderer(new TableStatusCellRender());
-        designation_table.getColumnModel().getColumn(4).setCellRenderer(new TableActionCellRender());
-        designation_table.getColumnModel().getColumn(4).setCellEditor(new TableActionCellEditor(event));
+        setTableCellRender(branch_table, 3, new TableStatusCellRender());
+        setTableCellRender(branch_table, 4, new TableActionCellRender());
+        setTableCellEditor(branch_table, 4, new TableActionCellEditor(edit_branch_details_event));
         
-        breadcrumb.setupBreadcrumb("Employees");   
-//        setupButton(employee_list_button, buttonActiveColor, textActiveColor);
+        setTableCellRender(positions_table, 4, new TableStatusCellRender());
+        setTableCellRender(positions_table, 5, new TableActionCellRender());
+        setTableCellEditor(positions_table, 5, new TableActionCellEditor(edit_position_details_event));
+        
+        setTableCellRender(designation_table, 3, new TableStatusCellRender());
+        setTableCellRender(designation_table, 4, new TableActionCellRender());
+        setTableCellEditor(designation_table, 4, new TableActionCellEditor(edit_designation_details_event));
+        
+        breadcrumb.setupBreadcrumb("Employees");        
     }
-        
+    
+    private void setTableCellRender(JTable table, int columnIndex, DefaultTableCellRenderer tableActionCellRender) {
+        table.getColumnModel().getColumn(columnIndex).setCellRenderer(tableActionCellRender);
+    }
+    
+    private void setTableCellEditor(JTable table, int columnIndex, TableActionCellEditor tableActionCellEditor) {
+        table.getColumnModel().getColumn(columnIndex).setCellEditor(tableActionCellEditor);
+    }
     
     private void hidePanel(JPanel panel) {
         panel.setVisible(false);
     }
+    
+    public JPanel getAddEmployeeButtonPanel() {
+        return addEmployeeButtonPanel;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this
      * code. The content of this method is always regenerated by the Form Editor.
@@ -483,6 +518,11 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         jButton1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Create Department");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         roundedCornersPanel5.setBackground(new java.awt.Color(245, 247, 248));
 
@@ -679,6 +719,11 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         jButton2.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Create Branch");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         branch_site_table.setBackground(new java.awt.Color(245, 247, 248));
 
@@ -900,6 +945,11 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         jButton3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Create Position");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         roundedCornersPanel8.setBackground(new java.awt.Color(245, 247, 248));
 
@@ -1096,6 +1146,11 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         jButton4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Create Designation");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         roundedCornersPanel10.setBackground(new java.awt.Color(245, 247, 248));
 
@@ -1302,6 +1357,30 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CreateDepartmentModal createDepartment = new CreateDepartmentModal();
+        createDepartment.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        CreateBranchModal createBranch = new CreateBranchModal();
+        createBranch.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        CreatePositionModal createPositionModal = new CreatePositionModal();
+        createPositionModal.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        CreateDesignationModal createDesignationModal = new CreateDesignationModal();
+        createDesignationModal.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel addEmployeeButtonPanel;

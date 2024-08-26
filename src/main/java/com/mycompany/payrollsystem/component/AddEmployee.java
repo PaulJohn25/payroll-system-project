@@ -4,6 +4,11 @@
  */
 package com.mycompany.payrollsystem.component;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import javax.swing.JButton;
+
 /**
  *
  * @author Paul
@@ -11,11 +16,31 @@ package com.mycompany.payrollsystem.component;
 public class AddEmployee extends javax.swing.JPanel {
 
     /**
+     * @return the closeButtons
+     */
+    public List<JButton> getCloseButtons() { 
+        return Collections.unmodifiableList(closeButtons);
+    }
+
+    private final List<JButton> closeButtons;
+    
+    /**
      * Creates new form AddEmployee
      */
     public AddEmployee() {
+        this.closeButtons = new ArrayList<>();
         initComponents();
+        closeButtons.add(close_add_employee_button_one);
+        closeButtons.add(cclose_add_employee_button_two);
     }
+    
+//    public List<JButton> getCloseButtons() {
+//        List closeButtons = new ArrayList<JButton>();
+//        closeButtons.add(close_add_employee_button_one);
+//        closeButtons.add(cclose_add_employee_button_two);
+//        
+//        return closeButtons;
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this
@@ -27,7 +52,7 @@ public class AddEmployee extends javax.swing.JPanel {
 
         roundedCornersPanel1 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        close_add_employee_button_one = new javax.swing.JButton();
         roundedCornersPanel2 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -97,7 +122,7 @@ public class AddEmployee extends javax.swing.JPanel {
         jTextField18 = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
         jComboBox9 = new javax.swing.JComboBox<>();
-        jButton3 = new javax.swing.JButton();
+        cclose_add_employee_button_two = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
         roundedCornersPanel1.setBackground(new java.awt.Color(245, 247, 248));
@@ -105,9 +130,9 @@ public class AddEmployee extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel1.setText("Employee Info");
 
-        jButton1.setBackground(new java.awt.Color(233, 171, 46));
-        jButton1.setFont(new java.awt.Font("Arial", 0, 25)); // NOI18N
-        jButton1.setText("Close");
+        close_add_employee_button_one.setBackground(new java.awt.Color(233, 171, 46));
+        close_add_employee_button_one.setFont(new java.awt.Font("Arial", 0, 25)); // NOI18N
+        close_add_employee_button_one.setText("Close");
 
         javax.swing.GroupLayout roundedCornersPanel1Layout = new javax.swing.GroupLayout(roundedCornersPanel1);
         roundedCornersPanel1.setLayout(roundedCornersPanel1Layout);
@@ -116,8 +141,8 @@ public class AddEmployee extends javax.swing.JPanel {
             .addGroup(roundedCornersPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 408, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 396, Short.MAX_VALUE)
+                .addComponent(close_add_employee_button_one)
                 .addGap(25, 25, 25))
         );
         roundedCornersPanel1Layout.setVerticalGroup(
@@ -126,7 +151,7 @@ public class AddEmployee extends javax.swing.JPanel {
                 .addGap(22, 22, 22)
                 .addGroup(roundedCornersPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
+                    .addComponent(close_add_employee_button_one, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -411,9 +436,9 @@ public class AddEmployee extends javax.swing.JPanel {
                                 .addComponent(jLabel20))
                             .addGap(33, 33, 33)
                             .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                                .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                                .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField11)
+                                .addComponent(jTextField10)
+                                .addComponent(jComboBox2, 0, 199, Short.MAX_VALUE)
                                 .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -427,9 +452,8 @@ public class AddEmployee extends javax.swing.JPanel {
                     .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel4))
-                    .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
                 .addGap(25, 25, 25)
                 .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
@@ -470,14 +494,15 @@ public class AddEmployee extends javax.swing.JPanel {
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
-                .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(roundedCornersPanel2Layout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel18)
-                            .addComponent(jLabel17))))
+                            .addComponent(jLabel17)))
+                    .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(25, 25, 25)
                 .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -600,14 +625,11 @@ public class AddEmployee extends javax.swing.JPanel {
             .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
-                        .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel24)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(30, 30, 30))
+                        .addComponent(jLabel24)
+                        .addGap(27, 27, 27)
+                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
                         .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -617,10 +639,10 @@ public class AddEmployee extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                            .addComponent(jComboBox7, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(29, 29, 29)))
+                            .addComponent(jTextField13)
+                            .addComponent(jTextField12)
+                            .addComponent(jComboBox7, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
                         .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -636,7 +658,7 @@ public class AddEmployee extends javax.swing.JPanel {
                         .addComponent(jLabel32)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                         .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         roundedCornersPanel3Layout.setVerticalGroup(
             roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -718,9 +740,9 @@ public class AddEmployee extends javax.swing.JPanel {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(233, 171, 46));
-        jButton3.setFont(new java.awt.Font("Arial", 0, 25)); // NOI18N
-        jButton3.setText("Close");
+        cclose_add_employee_button_two.setBackground(new java.awt.Color(233, 171, 46));
+        cclose_add_employee_button_two.setFont(new java.awt.Font("Arial", 0, 25)); // NOI18N
+        cclose_add_employee_button_two.setText("Close");
 
         jButton4.setBackground(new java.awt.Color(0, 204, 0));
         jButton4.setFont(new java.awt.Font("Arial", 0, 25)); // NOI18N
@@ -744,7 +766,7 @@ public class AddEmployee extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel36)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox9, 0, 141, Short.MAX_VALUE))
+                        .addComponent(jComboBox9, 0, 117, Short.MAX_VALUE))
                     .addGroup(roundedCornersPanel4Layout.createSequentialGroup()
                         .addGroup(roundedCornersPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -752,7 +774,7 @@ public class AddEmployee extends javax.swing.JPanel {
                                 .addGap(13, 13, 13)
                                 .addComponent(jButton4)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton3)))
+                                .addComponent(cclose_add_employee_button_two)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -774,7 +796,7 @@ public class AddEmployee extends javax.swing.JPanel {
                     .addComponent(jLabel36))
                 .addGap(37, 37, 37)
                 .addGroup(roundedCornersPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+                    .addComponent(cclose_add_employee_button_two, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
                 .addGap(15, 15, 15))
         );
@@ -783,15 +805,16 @@ public class AddEmployee extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(roundedCornersPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addComponent(roundedCornersPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(roundedCornersPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(roundedCornersPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(roundedCornersPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(roundedCornersPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(roundedCornersPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -862,9 +885,9 @@ public class AddEmployee extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton cclose_add_employee_button_two;
+    private javax.swing.JButton close_add_employee_button_one;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
