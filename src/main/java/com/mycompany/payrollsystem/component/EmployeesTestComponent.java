@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.payrollsystem.component;
+
 import com.mycompany.payrollsystem.modals.CreateBranchModal;
 import com.mycompany.payrollsystem.modals.CreateDepartmentModal;
 import com.mycompany.payrollsystem.modals.CreateDesignationModal;
@@ -18,12 +19,20 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 
-
 /**
  *
  * @author Paul
  */
 public class EmployeesTestComponent extends javax.swing.JPanel {
+
+    /**
+     * @param edit_employee_info_event the edit_employee_info_event to set
+     */
+    public void setEdit_employee_info_event(TableActionEvent edit_employee_info_event) {
+        this.edit_employee_info_event = edit_employee_info_event;
+        setTableCellEditor(employees_table, 5, new TableActionCellEditor(this.edit_employee_info_event));
+    }
+
     /**
      * Creates new form Dashboard
      */
@@ -32,8 +41,17 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
     private JTableHeader branch_table_header;
     private JTableHeader position_table_header;
     private JTableHeader designation_table_header;
-    private final Font headerFont;
+    private TableActionEvent edit_employee_info_event;
+    private TableActionEvent edit_department_details_event;
+    private TableActionEvent edit_branch_details_event;
+    private TableActionEvent edit_position_details_event;
+    private TableActionEvent edit_designation_details_event;
+    private CreateBranchModal createBranchModal;
+    private CreateDepartmentModal createDepartmentModal;
+    private CreateDesignationModal createDesignationModal;
+    private CreatePositionModal createPositionModal;
     
+    private final Font headerFont;
     
     public EmployeesTestComponent() {
         this.headerFont = new Font("Arial", Font.BOLD, 20);
@@ -48,7 +66,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         branch_card_header.setupCardHeader("Branch / Site");
         position_card_header.setupCardHeader("Position");
         designation_card_header.setupCardHeader("Designation");
-         
+        
         hidePanel(department_panel);
         hidePanel(branch_panel);
         hidePanel(positions_panel);
@@ -66,39 +84,55 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         position_table_header.setFont(headerFont);
         designation_table_header.setFont(headerFont);
         
-        
         department_card_header.toggleCardHeaderPanel(department_panel);
         branch_card_header.toggleCardHeaderPanel(branch_panel);
         position_card_header.toggleCardHeaderPanel(positions_panel);
         designation_card_header.toggleCardHeaderPanel(designation_panel);
-                 
-        TableActionEvent event;
-        event = (int row) -> {
-            System.out.println("Edit row: " + row);
+        
+        edit_department_details_event = (int row) -> {
+            System.out.println("Edit Department Index: " + row);
+            createDepartmentModal = new CreateDepartmentModal();
+            createDepartmentModal.setVisible(true);
+        };
+        
+        edit_branch_details_event = (int row) -> {
+            System.out.println("Edit Branch Index: " + row);
+            createBranchModal = new CreateBranchModal();
+            createBranchModal.setVisible(true);
+        };
+        
+        edit_position_details_event = (int row) -> {
+            System.out.println("Edit Position Index: " + row);
+            createPositionModal = new CreatePositionModal();
+            createPositionModal.setVisible(true);
+        };        
+        
+        edit_designation_details_event = (int row) -> {
+            System.out.println("Edit Designation Details: " + row);
+            createDesignationModal = new CreateDesignationModal();
+            createDesignationModal.setVisible(true);
         };
         
         setTableCellRender(employees_table, 5, new TableActionCellRender());
-        setTableCellEditor(employees_table, 5, new TableActionCellEditor(event));
-        
+           
         setTableCellRender(department_table, 4, new TableStatusCellRender());
         setTableCellRender(department_table, 5, new TableActionCellRender());
-        setTableCellEditor(department_table, 5, new TableActionCellEditor(event));
-
+        setTableCellEditor(department_table, 5, new TableActionCellEditor(edit_department_details_event));
+        
         setTableCellRender(branch_table, 3, new TableStatusCellRender());
         setTableCellRender(branch_table, 4, new TableActionCellRender());
-        setTableCellEditor(branch_table, 4, new TableActionCellEditor(event));
-
+        setTableCellEditor(branch_table, 4, new TableActionCellEditor(edit_branch_details_event));
+        
         setTableCellRender(positions_table, 4, new TableStatusCellRender());
         setTableCellRender(positions_table, 5, new TableActionCellRender());
-        setTableCellEditor(positions_table, 5, new TableActionCellEditor(event));
+        setTableCellEditor(positions_table, 5, new TableActionCellEditor(edit_position_details_event));
         
         setTableCellRender(designation_table, 3, new TableStatusCellRender());
         setTableCellRender(designation_table, 4, new TableActionCellRender());
-        setTableCellEditor(designation_table, 4, new TableActionCellEditor(event));
-
-        breadcrumb.setupBreadcrumb("Employees"); 
-    }
+        setTableCellEditor(designation_table, 4, new TableActionCellEditor(edit_designation_details_event));
         
+        breadcrumb.setupBreadcrumb("Employees");        
+    }
     
     private void setTableCellRender(JTable table, int columnIndex, DefaultTableCellRenderer tableActionCellRender) {
         table.getColumnModel().getColumn(columnIndex).setCellRenderer(tableActionCellRender);
@@ -115,7 +149,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
     public JPanel getAddEmployeeButtonPanel() {
         return addEmployeeButtonPanel;
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this
      * code. The content of this method is always regenerated by the Form Editor.

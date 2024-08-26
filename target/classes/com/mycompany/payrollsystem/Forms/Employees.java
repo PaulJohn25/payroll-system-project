@@ -5,9 +5,9 @@
 package com.mycompany.payrollsystem.Forms;
 
 import com.mycompany.payrollsystem.Util;
+import com.mycompany.payrollsystem.cell.TableActionEvent;
 import com.mycompany.payrollsystem.component.AddEmployee;
 import com.mycompany.payrollsystem.component.EmployeesTestComponent;
-import java.awt.Color;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -15,6 +15,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 /**
  *
@@ -22,10 +23,18 @@ import javax.swing.JPanel;
  */
 public class Employees extends javax.swing.JFrame {
 
+    /**
+     * @return the scrollPane
+     */
+    public JScrollPane getScrollPane() {
+        return scrollPane;
+    }
+
     private final Util util;
     private final AddEmployee addEmployee;
     private final EmployeesTestComponent employeeComponent;
     private final JPanel addEmployeeButtonPanel;
+    private final JScrollPane scrollPane;
 
     /**
      * Creates new form Dashboard
@@ -33,6 +42,7 @@ public class Employees extends javax.swing.JFrame {
     public Employees() {
         this.util = new Util();
         initComponents();
+        scrollPane = jScrollPane1;
         this.employeeComponent = employeesTestComponent;
         this.addEmployeeButtonPanel = employeeComponent.getAddEmployeeButtonPanel();
         this.addEmployee = new AddEmployee();
@@ -41,6 +51,7 @@ public class Employees extends javax.swing.JFrame {
     }
 
     private void init() {
+
         util.fitImageToComponent(hide_panel, "images/hide_icon.png");
         util.fitImageToComponent(close_panel, "images/close.png");
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
@@ -68,6 +79,18 @@ public class Employees extends javax.swing.JFrame {
                 this.showEmployeeComponent();
             });
         });
+
+        TableActionEvent edit_employee_event = (int row) -> {
+            System.out.println("Edit Employee Index: " + row);
+            // Replace the panel in the scroll pane
+            jScrollPane1.setViewportView(addEmployee);
+
+            // Revalidate and repaint to update the UI
+            jScrollPane1.revalidate();
+            jScrollPane1.repaint();
+        };
+
+        employeesTestComponent.setEdit_employee_info_event(edit_employee_event);
 
     }
 
