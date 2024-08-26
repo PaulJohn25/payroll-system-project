@@ -4,10 +4,12 @@
  */
 package com.mycompany.payrollsystem.component;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 
 /**
  *
@@ -23,6 +25,7 @@ public class AddEmployee extends javax.swing.JPanel {
     }
 
     private final List<JButton> closeButtons;
+    
     
     /**
      * Creates new form AddEmployee
@@ -58,7 +61,7 @@ public class AddEmployee extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        file_path = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -133,6 +136,11 @@ public class AddEmployee extends javax.swing.JPanel {
         close_add_employee_button_one.setBackground(new java.awt.Color(233, 171, 46));
         close_add_employee_button_one.setFont(new java.awt.Font("Arial", 0, 25)); // NOI18N
         close_add_employee_button_one.setText("Close");
+        close_add_employee_button_one.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                close_add_employee_button_oneActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout roundedCornersPanel1Layout = new javax.swing.GroupLayout(roundedCornersPanel1);
         roundedCornersPanel1.setLayout(roundedCornersPanel1Layout);
@@ -169,9 +177,14 @@ public class AddEmployee extends javax.swing.JPanel {
 
         jButton2.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
         jButton2.setText("Choose File");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        jLabel4.setText("No file chosen");
+        file_path.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
+        file_path.setText("No file chosen");
 
         jLabel6.setBackground(new java.awt.Color(98, 112, 121));
         jLabel6.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
@@ -379,7 +392,7 @@ public class AddEmployee extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton2)
                         .addGap(12, 12, 12)
-                        .addComponent(jLabel4))
+                        .addComponent(file_path))
                     .addGroup(roundedCornersPanel2Layout.createSequentialGroup()
                         .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
@@ -451,7 +464,7 @@ public class AddEmployee extends javax.swing.JPanel {
                 .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel4))
+                        .addComponent(file_path))
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addGap(25, 25, 25)
@@ -883,10 +896,36 @@ public class AddEmployee extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox9ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser(); // select file to open
+        
+        fileChooser.setCurrentDirectory(new File("."));
+        
+        int response = fileChooser.showOpenDialog(null);
+        
+        if (response == JFileChooser.APPROVE_OPTION) {
+            File file = new File(fileChooser.getSelectedFile().getAbsolutePath());
+            
+            String fileName = file.getName();
+            
+            System.out.println(fileName);
+            file_path.setText(fileName);
+        }
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void close_add_employee_button_oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_close_add_employee_button_oneActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_close_add_employee_button_oneActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cclose_add_employee_button_two;
     private javax.swing.JButton close_add_employee_button_one;
+    private javax.swing.JLabel file_path;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -928,7 +967,6 @@ public class AddEmployee extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

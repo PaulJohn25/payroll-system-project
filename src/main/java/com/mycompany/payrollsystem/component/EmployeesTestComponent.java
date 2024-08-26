@@ -475,9 +475,9 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
                 .addComponent(addEmployeeButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(roundedCornersPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(20, 20, 20)
                 .addComponent(roundedCornersPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1181, Short.MAX_VALUE))
+                .addGap(0, 1201, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Employee List", jPanel4);

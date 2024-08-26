@@ -7,6 +7,7 @@ com\mycompany\payrollsystem\Forms\AdminDashboard$1.class
 com\mycompany\payrollsystem\swing\MenuItem$1.class
 com\mycompany\payrollsystem\modals\CreateDepartmentModal.class
 com\mycompany\payrollsystem\component\AddEmployee$11.class
+com\mycompany\payrollsystem\Forms\Payroll_Management$5.class
 com\mycompany\payrollsystem\cell\TableActionCellRender.class
 com\mycompany\payrollsystem\Util.class
 com\mycompany\payrollsystem\Forms\Employees$2.class
@@ -40,6 +41,7 @@ com\mycompany\payrollsystem\Forms\Login$7.class
 com\mycompany\payrollsystem\PaginationExample.class
 com\mycompany\payrollsystem\component\AddEmployee$2.class
 com\mycompany\payrollsystem\Forms\AdminDashboard.class
+com\mycompany\payrollsystem\Forms\Payroll_Management$1.class
 com\mycompany\payrollsystem\component\AddEmployee$5.class
 com\mycompany\payrollsystem\swing\RoundedCornersPanelWithBorder.class
 com\mycompany\payrollsystem\component\EmployeesTestComponent$1.class
@@ -55,6 +57,7 @@ com\mycompany\payrollsystem\swing\ListMenu.class
 com\mycompany\payrollsystem\cell\TableStatusCellRender.class
 com\mycompany\payrollsystem\component\AddEmployee$4.class
 com\mycompany\payrollsystem\cell\PanelStatus.class
+com\mycompany\payrollsystem\component\AddEmployee$15.class
 com\mycompany\payrollsystem\ScrollPaneExample.class
 com\mycompany\payrollsystem\cell\PanelAction$2.class
 com\mycompany\payrollsystem\custom_exceptions\CustomExceptions.class
@@ -63,6 +66,7 @@ com\mycompany\payrollsystem\swing\CirclePanel.class
 com\mycompany\payrollsystem\Forms\User_Management.class
 com\mycompany\payrollsystem\cell\TableActionEvent.class
 com\mycompany\payrollsystem\swing\TopLeftAndTopRightRoundedCornersPanel.class
+com\mycompany\payrollsystem\component\AddEmployee$14.class
 com\mycompany\payrollsystem\component\EmployeesTestComponent$2.class
 com\mycompany\payrollsystem\model\CardModel.class
 com\mycompany\payrollsystem\component\AddEmployee.class
@@ -74,6 +78,7 @@ com\mycompany\payrollsystem\cell\PanelAction$1.class
 com\mycompany\payrollsystem\Forms\Login$3.class
 com\mycompany\payrollsystem\component\AddEmployee$9.class
 com\mycompany\payrollsystem\PaginatedTableExample.class
+com\mycompany\payrollsystem\Forms\Payroll_Management$2.class
 com\mycompany\payrollsystem\swing\ListMenu$2.class
 com\mycompany\payrollsystem\Forms\Login.class
 com\mycompany\payrollsystem\modals\CreateDepartmentModal$1.class
@@ -87,17 +92,20 @@ com\mycompany\payrollsystem\swing\MenuItem.class
 com\mycompany\payrollsystem\cell\PanelAction.class
 com\mycompany\payrollsystem\component\Card.class
 com\mycompany\payrollsystem\component\AddEmployee$13.class
+com\mycompany\payrollsystem\Forms\Payroll_Management$3.class
 com\mycompany\payrollsystem\component\EmployeesTestComponent$3.class
 com\mycompany\payrollsystem\Forms\AdminDashboard$3.class
 com\mycompany\payrollsystem\Forms\Employees$4.class
 com\mycompany\payrollsystem\Forms\Loan_Management$2.class
 com\mycompany\payrollsystem\component\Staff_Dashboard_Profile.class
+com\mycompany\payrollsystem\Forms\Payroll_Management$4.class
 com\mycompany\payrollsystem\PaginationExample$1.class
 com\mycompany\payrollsystem\Forms\Employees$1.class
 com\mycompany\payrollsystem\component\AddEmployee$10.class
 com\mycompany\payrollsystem\component\EmployeesTestComponent$9.class
 com\mycompany\payrollsystem\Forms\File_Management.class
 com\mycompany\payrollsystem\Forms\Loan_Management.class
+com\mycompany\payrollsystem\Forms\Payroll_Management.class
 com\mycompany\payrollsystem\Forms\Login$4.class
 com\mycompany\payrollsystem\chart\ModelPieChart.class
 com\mycompany\payrollsystem\interfaces\PasswordInputValidator.class

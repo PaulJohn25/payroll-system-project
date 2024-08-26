@@ -66,6 +66,7 @@ public class Employees extends javax.swing.JFrame {
 
                 // Replace the panel in the scroll pane
                 jScrollPane1.setViewportView(addEmployee);
+                jScrollPane1.getVerticalScrollBar().setValue(0);
 
                 // Revalidate and repaint to update the UI
                 jScrollPane1.revalidate();
