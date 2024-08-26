@@ -3,18 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.payrollsystem.component;
-import com.mycompany.payrollsystem.Forms.CreateBranchModal;
-import com.mycompany.payrollsystem.Forms.CreateDepartmentModal;
-import com.mycompany.payrollsystem.Forms.CreateDesignationModal;
-import com.mycompany.payrollsystem.Forms.CreatePositionModal;
+import com.mycompany.payrollsystem.modals.CreateBranchModal;
+import com.mycompany.payrollsystem.modals.CreateDepartmentModal;
+import com.mycompany.payrollsystem.modals.CreateDesignationModal;
+import com.mycompany.payrollsystem.modals.CreatePositionModal;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
 import com.mycompany.payrollsystem.cell.TableActionCellRender;
 import com.mycompany.payrollsystem.cell.TableActionEvent;
+import com.mycompany.payrollsystem.cell.TableStatusCellRender;
 import java.awt.Dimension;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
 
 
 /**
@@ -78,19 +80,19 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         setTableCellRender(employees_table, 5, new TableActionCellRender());
         setTableCellEditor(employees_table, 5, new TableActionCellEditor(event));
         
-        setTableCellRender(department_table, 4, new TableActionCellRender());
+        setTableCellRender(department_table, 4, new TableStatusCellRender());
         setTableCellRender(department_table, 5, new TableActionCellRender());
         setTableCellEditor(department_table, 5, new TableActionCellEditor(event));
 
-        setTableCellRender(branch_table, 3, new TableActionCellRender());
+        setTableCellRender(branch_table, 3, new TableStatusCellRender());
         setTableCellRender(branch_table, 4, new TableActionCellRender());
         setTableCellEditor(branch_table, 4, new TableActionCellEditor(event));
 
-        setTableCellRender(positions_table, 4, new TableActionCellRender());
+        setTableCellRender(positions_table, 4, new TableStatusCellRender());
         setTableCellRender(positions_table, 5, new TableActionCellRender());
         setTableCellEditor(positions_table, 5, new TableActionCellEditor(event));
         
-        setTableCellRender(designation_table, 3, new TableActionCellRender());
+        setTableCellRender(designation_table, 3, new TableStatusCellRender());
         setTableCellRender(designation_table, 4, new TableActionCellRender());
         setTableCellEditor(designation_table, 4, new TableActionCellEditor(event));
 
@@ -98,7 +100,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
     }
         
     
-    private void setTableCellRender(JTable table, int columnIndex, TableActionCellRender tableActionCellRender) {
+    private void setTableCellRender(JTable table, int columnIndex, DefaultTableCellRenderer tableActionCellRender) {
         table.getColumnModel().getColumn(columnIndex).setCellRenderer(tableActionCellRender);
     }
     
