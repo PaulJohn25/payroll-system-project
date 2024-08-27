@@ -25,8 +25,6 @@ public class Leave_Management extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        testMenu1 = new com.mycompany.payrollsystem.component.Menu();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -79,6 +77,5 @@ public class Leave_Management extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.mycompany.payrollsystem.component.Menu testMenu1;
     // End of variables declaration//GEN-END:variables
 }

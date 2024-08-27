@@ -52,15 +52,9 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="menu_header_panel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="menu_header_panel1" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="Menu" min="-2" max="-2" attributes="0"/>
-                      <Component id="Menu1" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="menu_header_panel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Component id="menu_header_panel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jScrollPane1" pref="919" max="32767" attributes="0"/>
@@ -78,15 +72,8 @@
                       <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
                       <Component id="menu_header_panel1" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="Menu" min="-2" pref="891" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Menu1" min="-2" pref="891" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="jScrollPane1" min="-2" pref="683" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="683" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="1116" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -173,8 +160,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="com.mycompany.payrollsystem.component.Menu" name="Menu">
-        </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -188,10 +173,6 @@
           </Properties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Component class="com.mycompany.payrollsystem.component.AdminDasboardComponent" name="dashboard2">
-            </Component>
-          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="menu_header_panel1">
           <Properties>
@@ -229,8 +210,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="com.mycompany.payrollsystem.component.Menu" name="Menu1">
-        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
