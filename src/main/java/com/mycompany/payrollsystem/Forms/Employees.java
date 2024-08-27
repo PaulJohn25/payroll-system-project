@@ -42,7 +42,7 @@ public class Employees extends javax.swing.JFrame {
     public Employees() {
         this.util = new Util();
         initComponents();
-        scrollPane = jScrollPane1;
+        scrollPane = ScrollPane;
         this.employeeComponent = employeesTestComponent;
         this.addEmployeeButtonPanel = employeeComponent.getAddEmployeeButtonPanel();
         this.addEmployee = new AddEmployee();
@@ -65,11 +65,12 @@ public class Employees extends javax.swing.JFrame {
                 System.out.println("Add Employee Button is clicked!");
 
                 // Replace the panel in the scroll pane
-                jScrollPane1.setViewportView(addEmployee);
+                ScrollPane.setViewportView(addEmployee);
+                ScrollPane.getVerticalScrollBar().setValue(0);
 
                 // Revalidate and repaint to update the UI
-                jScrollPane1.revalidate();
-                jScrollPane1.repaint();
+                ScrollPane.revalidate();
+                ScrollPane.repaint();
             }
 
         });
@@ -83,11 +84,11 @@ public class Employees extends javax.swing.JFrame {
         TableActionEvent edit_employee_event = (int row) -> {
             System.out.println("Edit Employee Index: " + row);
             // Replace the panel in the scroll pane
-            jScrollPane1.setViewportView(addEmployee);
+            ScrollPane.setViewportView(addEmployee);
 
             // Revalidate and repaint to update the UI
-            jScrollPane1.revalidate();
-            jScrollPane1.repaint();
+            ScrollPane.revalidate();
+            ScrollPane.repaint();
         };
 
         employeesTestComponent.setEdit_employee_info_event(edit_employee_event);
@@ -107,9 +108,9 @@ public class Employees extends javax.swing.JFrame {
                 null);
 
         if (choice == 0) {
-            jScrollPane1.setViewportView(employeeComponent);
-            jScrollPane1.revalidate();
-            jScrollPane1.repaint();
+            ScrollPane.setViewportView(employeeComponent);
+            ScrollPane.revalidate();
+            ScrollPane.repaint();
         }
 
     }
@@ -129,7 +130,7 @@ public class Employees extends javax.swing.JFrame {
         menu_header_panel = new javax.swing.JPanel();
         menu_logo_label = new javax.swing.JLabel();
         Menu = new com.mycompany.payrollsystem.component.Menu();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        ScrollPane = new javax.swing.JScrollPane();
         employeesTestComponent = new com.mycompany.payrollsystem.component.EmployeesTestComponent();
         menu_header_panel1 = new javax.swing.JPanel();
         intra_logo_label = new javax.swing.JLabel();
@@ -196,10 +197,10 @@ public class Employees extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-        jScrollPane1.setViewportView(employeesTestComponent);
+        ScrollPane.setBackground(new java.awt.Color(255, 255, 255));
+        ScrollPane.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        ScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        ScrollPane.setViewportView(employeesTestComponent);
 
         menu_header_panel1.setBackground(new java.awt.Color(203, 209, 238));
 
@@ -236,7 +237,7 @@ public class Employees extends javax.swing.JFrame {
                     .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 919, Short.MAX_VALUE)
+                    .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 919, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -249,7 +250,7 @@ public class Employees extends javax.swing.JFrame {
                     .addComponent(menu_header_panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 891, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -327,13 +328,13 @@ public class Employees extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.payrollsystem.component.Menu Menu;
+    private javax.swing.JScrollPane ScrollPane;
     private javax.swing.JLabel close_panel;
     private com.mycompany.payrollsystem.component.EmployeesTestComponent employeesTestComponent;
     private javax.swing.JLabel hide_panel;
     private javax.swing.JLabel intra_logo_label;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel menu_header_panel;
     private javax.swing.JPanel menu_header_panel1;
     private javax.swing.JLabel menu_logo_label;
