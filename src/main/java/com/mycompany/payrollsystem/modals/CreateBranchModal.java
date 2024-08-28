@@ -197,12 +197,12 @@ public class CreateBranchModal extends javax.swing.JFrame {
 
     private void close_icon_modal2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_icon_modal2MousePressed
         // TODO add your handling code here:
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_close_icon_modal2MousePressed
 
     private void close_modal_button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_close_modal_button2ActionPerformed
         // TODO add your handling code here:
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_close_modal_button2ActionPerformed
 
 //    /**

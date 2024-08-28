@@ -211,12 +211,12 @@ public class CreateDepartmentModal extends javax.swing.JFrame {
 
     private void close_icon_modalMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_icon_modalMousePressed
         // TODO add your handling code here:
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_close_icon_modalMousePressed
 
     private void close_modal_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_close_modal_buttonActionPerformed
         // TODO add your handling code here:
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_close_modal_buttonActionPerformed
 
     /**

@@ -37,6 +37,13 @@ public class AddEmployee extends javax.swing.JPanel {
         closeButtons.add(cclose_add_employee_button_two);
     }
     
+//    public List<JButton> getCloseButtons() {
+//        List closeButtons = new ArrayList<JButton>();
+//        closeButtons.add(close_add_employee_button_one);
+//        closeButtons.add(cclose_add_employee_button_two);
+//        
+//        return closeButtons;
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this

@@ -5,6 +5,7 @@
 package com.mycompany.payrollsystem.Forms;
 
 import com.mycompany.payrollsystem.Util;
+import com.mycompany.payrollsystem.cell.TableActionEvent;
 import com.mycompany.payrollsystem.component.AddEmployee;
 import com.mycompany.payrollsystem.component.EmployeesTestComponent;
 
@@ -15,7 +16,6 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import com.mycompany.payrollsystem.cell.TableEditActionEvent;
 
 /**
  *
@@ -81,7 +81,7 @@ public class Employees extends javax.swing.JFrame {
             });
         });
 
-        TableEditActionEvent edit_employee_event = (int row) -> {
+        TableActionEvent edit_employee_event = (int row) -> {
             System.out.println("Edit Employee Index: " + row);
             // Replace the panel in the scroll pane
             ScrollPane.setViewportView(addEmployee);
