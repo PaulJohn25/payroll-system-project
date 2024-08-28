@@ -134,19 +134,18 @@ public class CreatePositionModal extends javax.swing.JFrame {
                         .addComponent(jLabel15)
                         .addGap(60, 60, 60)
                         .addComponent(jComboBox10, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
-                            .addComponent(jLabel11)
-                            .addGap(81, 81, 81)
-                            .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(close_modal_button2))
-                            .addGap(11, 11, 11)
-                            .addComponent(save_changes_modal_button2))
-                        .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
-                            .addComponent(jLabel14)
-                            .addGap(29, 29, 29)
-                            .addComponent(jComboBox9, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(81, 81, 81)
+                        .addGroup(roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(close_modal_button2))
+                        .addGap(11, 11, 11)
+                        .addComponent(save_changes_modal_button2))
+                    .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addGap(29, 29, 29)
+                        .addComponent(jComboBox9, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(15, 15, 15))
         );
         roundedCornersPanel3Layout.setVerticalGroup(
@@ -197,12 +196,12 @@ public class CreatePositionModal extends javax.swing.JFrame {
 
     private void close_icon_modal2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_icon_modal2MousePressed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_close_icon_modal2MousePressed
 
     private void close_modal_button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_close_modal_button2ActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_close_modal_button2ActionPerformed
 
     /**
