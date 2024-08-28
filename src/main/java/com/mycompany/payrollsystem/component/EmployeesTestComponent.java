@@ -8,16 +8,16 @@ import com.mycompany.payrollsystem.modals.CreateBranchModal;
 import com.mycompany.payrollsystem.modals.CreateDepartmentModal;
 import com.mycompany.payrollsystem.modals.CreateDesignationModal;
 import com.mycompany.payrollsystem.modals.CreatePositionModal;
-import com.mycompany.payrollsystem.cell.TableActionCellEditor;
+import com.mycompany.payrollsystem.cell.TableEditActionCellEditor;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
-import com.mycompany.payrollsystem.cell.TableActionCellRender;
-import com.mycompany.payrollsystem.cell.TableActionEvent;
+import com.mycompany.payrollsystem.cell.TableEditActionCellRender;
 import com.mycompany.payrollsystem.cell.TableStatusCellRender;
 import java.awt.Dimension;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
+import com.mycompany.payrollsystem.cell.TableEditActionEvent;
 
 /**
  *
@@ -28,9 +28,9 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
     /**
      * @param edit_employee_info_event the edit_employee_info_event to set
      */
-    public void setEdit_employee_info_event(TableActionEvent edit_employee_info_event) {
+    public void setEdit_employee_info_event(TableEditActionEvent edit_employee_info_event) {
         this.edit_employee_info_event = edit_employee_info_event;
-        setTableCellEditor(employees_table, 5, new TableActionCellEditor(this.edit_employee_info_event));
+        setTableCellEditor(employees_table, 5, new TableEditActionCellEditor(this.edit_employee_info_event));
     }
 
     /**
@@ -41,11 +41,11 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
     private JTableHeader branch_table_header;
     private JTableHeader position_table_header;
     private JTableHeader designation_table_header;
-    private TableActionEvent edit_employee_info_event;
-    private TableActionEvent edit_department_details_event;
-    private TableActionEvent edit_branch_details_event;
-    private TableActionEvent edit_position_details_event;
-    private TableActionEvent edit_designation_details_event;
+    private TableEditActionEvent edit_employee_info_event;
+    private TableEditActionEvent edit_department_details_event;
+    private TableEditActionEvent edit_branch_details_event;
+    private TableEditActionEvent edit_position_details_event;
+    private TableEditActionEvent edit_designation_details_event;
     private CreateBranchModal createBranchModal;
     private CreateDepartmentModal createDepartmentModal;
     private CreateDesignationModal createDesignationModal;
@@ -113,23 +113,23 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
             createDesignationModal.setVisible(true);
         };
         
-        setTableCellRender(employees_table, 5, new TableActionCellRender());
+        setTableCellRender(employees_table, 5, new TableEditActionCellRender());
            
         setTableCellRender(department_table, 4, new TableStatusCellRender());
-        setTableCellRender(department_table, 5, new TableActionCellRender());
-        setTableCellEditor(department_table, 5, new TableActionCellEditor(edit_department_details_event));
+        setTableCellRender(department_table, 5, new TableEditActionCellRender());
+        setTableCellEditor(department_table, 5, new TableEditActionCellEditor(edit_department_details_event));
         
         setTableCellRender(branch_table, 3, new TableStatusCellRender());
-        setTableCellRender(branch_table, 4, new TableActionCellRender());
-        setTableCellEditor(branch_table, 4, new TableActionCellEditor(edit_branch_details_event));
+        setTableCellRender(branch_table, 4, new TableEditActionCellRender());
+        setTableCellEditor(branch_table, 4, new TableEditActionCellEditor(edit_branch_details_event));
         
         setTableCellRender(positions_table, 4, new TableStatusCellRender());
-        setTableCellRender(positions_table, 5, new TableActionCellRender());
-        setTableCellEditor(positions_table, 5, new TableActionCellEditor(edit_position_details_event));
+        setTableCellRender(positions_table, 5, new TableEditActionCellRender());
+        setTableCellEditor(positions_table, 5, new TableEditActionCellEditor(edit_position_details_event));
         
         setTableCellRender(designation_table, 3, new TableStatusCellRender());
-        setTableCellRender(designation_table, 4, new TableActionCellRender());
-        setTableCellEditor(designation_table, 4, new TableActionCellEditor(edit_designation_details_event));
+        setTableCellRender(designation_table, 4, new TableEditActionCellRender());
+        setTableCellEditor(designation_table, 4, new TableEditActionCellEditor(edit_designation_details_event));
         
         breadcrumb.setupBreadcrumb("Employees");        
     }
@@ -138,7 +138,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         table.getColumnModel().getColumn(columnIndex).setCellRenderer(tableActionCellRender);
     }
     
-    private void setTableCellEditor(JTable table, int columnIndex, TableActionCellEditor tableActionCellEditor) {
+    private void setTableCellEditor(JTable table, int columnIndex, TableEditActionCellEditor tableActionCellEditor) {
         table.getColumnModel().getColumn(columnIndex).setCellEditor(tableActionCellEditor);
     }
     
@@ -371,6 +371,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         });
         employees_table.setRowHeight(60);
         employees_table.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        employees_table.setShowGrid(true);
         jScrollPane1.setViewportView(employees_table);
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
@@ -572,6 +573,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         });
         department_table.setRowHeight(60);
         department_table.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        department_table.setShowGrid(true);
         jScrollPane3.setViewportView(department_table);
 
         jLabel21.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
@@ -773,6 +775,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         });
         branch_table.setRowHeight(60);
         branch_table.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        branch_table.setShowGrid(true);
         jScrollPane5.setViewportView(branch_table);
 
         jLabel34.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
@@ -999,6 +1002,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         });
         positions_table.setRowHeight(60);
         positions_table.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        positions_table.setShowGrid(true);
         jScrollPane4.setViewportView(positions_table);
 
         jLabel28.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
@@ -1200,6 +1204,7 @@ public class EmployeesTestComponent extends javax.swing.JPanel {
         });
         designation_table.setRowHeight(60);
         designation_table.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        designation_table.setShowGrid(true);
         jScrollPane6.setViewportView(designation_table);
 
         jLabel42.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
