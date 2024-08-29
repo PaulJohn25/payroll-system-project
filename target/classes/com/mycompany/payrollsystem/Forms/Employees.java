@@ -5,9 +5,8 @@
 package com.mycompany.payrollsystem.Forms;
 
 import com.mycompany.payrollsystem.Util;
-import com.mycompany.payrollsystem.cell.TableActionEvent;
 import com.mycompany.payrollsystem.component.AddEmployee;
-import com.mycompany.payrollsystem.component.EmployeesTestComponent;
+import com.mycompany.payrollsystem.component.EmployeesComponent;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -16,6 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import com.mycompany.payrollsystem.cell.TableEditActionEvent;
 
 /**
  *
@@ -32,7 +32,7 @@ public class Employees extends javax.swing.JFrame {
 
     private final Util util;
     private final AddEmployee addEmployee;
-    private final EmployeesTestComponent employeeComponent;
+    private final EmployeesComponent employeeComponent;
     private final JPanel addEmployeeButtonPanel;
     private final JScrollPane scrollPane;
 
@@ -81,7 +81,7 @@ public class Employees extends javax.swing.JFrame {
             });
         });
 
-        TableActionEvent edit_employee_event = (int row) -> {
+        TableEditActionEvent edit_employee_event = (int row) -> {
             System.out.println("Edit Employee Index: " + row);
             // Replace the panel in the scroll pane
             ScrollPane.setViewportView(addEmployee);
@@ -131,7 +131,7 @@ public class Employees extends javax.swing.JFrame {
         menu_logo_label = new javax.swing.JLabel();
         Menu = new com.mycompany.payrollsystem.component.Menu();
         ScrollPane = new javax.swing.JScrollPane();
-        employeesTestComponent = new com.mycompany.payrollsystem.component.EmployeesTestComponent();
+        employeesTestComponent = new com.mycompany.payrollsystem.component.EmployeesComponent();
         menu_header_panel1 = new javax.swing.JPanel();
         intra_logo_label = new javax.swing.JLabel();
 
@@ -330,7 +330,7 @@ public class Employees extends javax.swing.JFrame {
     private com.mycompany.payrollsystem.component.Menu Menu;
     private javax.swing.JScrollPane ScrollPane;
     private javax.swing.JLabel close_panel;
-    private com.mycompany.payrollsystem.component.EmployeesTestComponent employeesTestComponent;
+    private com.mycompany.payrollsystem.component.EmployeesComponent employeesTestComponent;
     private javax.swing.JLabel hide_panel;
     private javax.swing.JLabel intra_logo_label;
     private javax.swing.JPanel jPanel1;
