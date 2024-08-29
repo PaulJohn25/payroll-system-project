@@ -5,6 +5,7 @@
 package com.mycompany.payrollsystem.cell;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
 
 /**
  *
@@ -20,8 +21,27 @@ public class PanelActionButtons extends javax.swing.JPanel {
         setOpaque(false);
            
         income_button.setDefaultColor(new Color(0,204,51));
+        income_button.setButtonPressedColor(new Color(0, 163, 41));
+        
         deduction_button.setDefaultColor(new Color(204,0,0));
+        deduction_button.setButtonPressedColor(new Color(163, 0 ,0));
+        
         remove_button.setDefaultColor(new Color(233, 171, 46));
+        remove_button.setButtonPressedColor(new Color(186, 137, 37));
+    }
+    
+    public void initEvent(TableEmployeeActionEvent event, int row) {
+        income_button.addActionListener((ActionEvent e) -> {
+            event.onAddIncome(row);
+        });
+        
+        deduction_button.addActionListener((ActionEvent e) -> {
+            event.onAddDeduction(row);
+        });
+        
+        remove_button.addActionListener((ActionEvent e) -> {
+            event.onRemoveEmployee(row);
+        });
     }
 
     /**
@@ -58,7 +78,6 @@ public class PanelActionButtons extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(0, 7, 0, 0);
         add(deduction_button, gridBagConstraints);
 
-        remove_button.setForeground(new java.awt.Color(255, 255, 255));
         remove_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/circular_close_icon_black_small.png"))); // NOI18N
         remove_button.setText("REMOVE");
         remove_button.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N

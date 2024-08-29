@@ -15,7 +15,7 @@ import javax.swing.JTable;
  */
 public class TableGroupActionCellEditor extends DefaultCellEditor {
     
-    private TableGroupActionEvent event;
+    private final TableGroupActionEvent event;
     
     public TableGroupActionCellEditor(TableGroupActionEvent event) {
         super(new JCheckBox());

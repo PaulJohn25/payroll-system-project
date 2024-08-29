@@ -6,6 +6,7 @@ package com.mycompany.payrollsystem.cell;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 /**
@@ -19,19 +20,23 @@ public class PanelRemoveAction extends javax.swing.JPanel {
      */
     public PanelRemoveAction() {
         initComponents();
-        remove_button.setPreferredSize(new Dimension(80, 25));
-//        remove_button.setButtonPressedColor(new Color(2, 144, 204));
+        GridBagConstraints gbc = new GridBagConstraints();
+        remove_button.setPreferredSize(new Dimension(120, 37));
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 0;
+        gbc.weighty = 0;
+        gbc.fill = GridBagConstraints.NONE;
+        
+        this.add(remove_button, gbc);
+        remove_button.setButtonPressedColor(new Color(186, 137, 37));
         remove_button.setDefaultColor(new Color(233,171,46));
         
     }
     
     public void initEvent(TableRemoveActionEvent event, int row) {
-        remove_button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                event.onRemove(row);
-            }
-            
+        remove_button.addActionListener((ActionEvent e) -> {
+            event.onRemove(row);
         });
     }
 

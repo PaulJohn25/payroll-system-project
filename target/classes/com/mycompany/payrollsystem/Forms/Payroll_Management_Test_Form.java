@@ -49,7 +49,7 @@ public class Payroll_Management_Test_Form extends javax.swing.JFrame {
         menu_logo_label = new javax.swing.JLabel();
         Menu = new com.mycompany.payrollsystem.component.Menu();
         ScrollPane = new javax.swing.JScrollPane();
-        payrollMagementTestComponent1 = new com.mycompany.payrollsystem.component.PayrollMagementTestComponent();
+        payrollMagementTestComponent1 = new com.mycompany.payrollsystem.component.PayrollMagementComponent();
         menu_header_panel1 = new javax.swing.JPanel();
         intra_logo_label = new javax.swing.JLabel();
 
@@ -263,6 +263,6 @@ public class Payroll_Management_Test_Form extends javax.swing.JFrame {
     private javax.swing.JPanel menu_header_panel;
     private javax.swing.JPanel menu_header_panel1;
     private javax.swing.JLabel menu_logo_label;
-    private com.mycompany.payrollsystem.component.PayrollMagementTestComponent payrollMagementTestComponent1;
+    private com.mycompany.payrollsystem.component.PayrollMagementComponent payrollMagementTestComponent1;
     // End of variables declaration//GEN-END:variables
 }

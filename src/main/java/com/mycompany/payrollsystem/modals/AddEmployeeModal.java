@@ -4,10 +4,13 @@
  */
 package com.mycompany.payrollsystem.modals;
 
-import com.mycompany.payrollsystem.cell.TableActionButtonsCellRender;
+import com.mycompany.payrollsystem.cell.PanelActionButtons;
+import com.mycompany.payrollsystem.cell.TableActionCellEditor;
+import com.mycompany.payrollsystem.cell.TableActionCellRender;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
+import com.mycompany.payrollsystem.cell.TableEmployeeActionEvent;
 
 /**
  *
@@ -26,11 +29,45 @@ public class AddEmployeeModal extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setBackground(new Color(0, 0, 0, 0));
-        
-        add_employee_table.getColumnModel().getColumn(2).setCellRenderer(new TableActionButtonsCellRender());
+       
         tableHeader = add_employee_table.getTableHeader();
         tableHeader.setFont(headerFont);
-       
+        
+        TableActionCellRender tableActionCellRenderTest = new TableActionCellRender(new PanelActionButtons());
+        add_employee_table
+                .getColumnModel()
+                .getColumn(2)
+                .setCellRenderer(tableActionCellRenderTest);
+        
+        TableEmployeeActionEvent event = new TableEmployeeActionEvent() {
+            @Override
+            public void onAddIncome(int row) {
+                System.out.println("Add Income Row: " + row);
+                OtherIncomePayrollModal otherIncomePayrollModal = new OtherIncomePayrollModal();
+                otherIncomePayrollModal.setVisible(true);
+                AddEmployeeModal.this.dispose();
+            }
+
+            @Override
+            public void onAddDeduction(int row) {
+                System.out.println("Add Deduction Row: " + row);
+                OtherDeductionModal otherDeductionModal = new OtherDeductionModal();
+                otherDeductionModal.setVisible(true);
+                AddEmployeeModal.this.dispose();
+            }
+
+            @Override
+            public void onRemoveEmployee(int row) {
+                System.out.println("Remove Employee Row: " + row);
+            }
+        };
+        
+        add_employee_table
+                .getColumnModel()
+                .getColumn(2)
+                .setCellEditor(new TableActionCellEditor<>(new PanelActionButtons(), event));
+        
+                
     }
 
     /**
@@ -356,8 +393,8 @@ public class AddEmployeeModal extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        OtherDeduction otherDeduction = new OtherDeduction();
-        otherDeduction.setVisible(true);
+        OtherDeductionModal otherDeductionModal = new OtherDeductionModal();
+        otherDeductionModal.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
