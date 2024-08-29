@@ -25,6 +25,7 @@ public class Timekeeping extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         menuBar1 = new java.awt.MenuBar();
@@ -236,10 +237,15 @@ public class Timekeeping extends javax.swing.JFrame {
         jTabbedPane1.addTab(" Scheduling & Logs ", jTabbedPane4);
         jTabbedPane1.addTab("OT Request ", jTabbedPane5);
 
+=======
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+>>>>>>> b799ef467e5e28293c1fbea815dc17518ec6b55b
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(166, 166, 166)
@@ -266,11 +272,19 @@ public class Timekeeping extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(74, Short.MAX_VALUE))
+=======
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+>>>>>>> b799ef467e5e28293c1fbea815dc17518ec6b55b
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
          
@@ -285,6 +299,8 @@ public class Timekeeping extends javax.swing.JFrame {
          javax.swing.JOptionPane.showMessageDialog(new Timekeeping(), "PUNCH IN/OUT");
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
+=======
+>>>>>>> b799ef467e5e28293c1fbea815dc17518ec6b55b
     /**
      * @param args the command line arguments
      */
@@ -311,7 +327,6 @@ public class Timekeeping extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Timekeeping.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -322,6 +337,7 @@ public class Timekeeping extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -348,5 +364,7 @@ public class Timekeeping extends javax.swing.JFrame {
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;
     private java.awt.MenuBar menuBar1;
+=======
+>>>>>>> b799ef467e5e28293c1fbea815dc17518ec6b55b
     // End of variables declaration//GEN-END:variables
 }

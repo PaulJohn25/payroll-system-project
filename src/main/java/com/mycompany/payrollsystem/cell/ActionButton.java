@@ -19,11 +19,27 @@ import javax.swing.border.EmptyBorder;
  * @author Paul
  */
 public class ActionButton extends JButton {
+
+    /**
+     * @param buttonPressedColor the buttonPressedColor to set
+     */
+    public void setButtonPressedColor(Color buttonPressedColor) {
+        this.pressedButtonColor = buttonPressedColor;
+    }
+
+    /**
+     * @param defaultColor the defaultColor to set
+     */
+    public void setDefaultColor(Color defaultColor) {
+        this.defaultButtonColor = defaultColor;
+    }
     
     private boolean mousePress;
+    private Color pressedButtonColor;
+    private Color defaultButtonColor;
     
     public ActionButton() {
-        setPreferredSize(new Dimension(80, 37));
+//        setPreferredSize(new Dimension(75, 37));
         setContentAreaFilled(false);
         setBorder(new EmptyBorder(3, 3, 3, 3));
         addMouseListener(new MouseAdapter () {
@@ -36,9 +52,6 @@ public class ActionButton extends JButton {
             public void mouseReleased(MouseEvent e) {
                 mousePress = false;
             }
-            
-            
-           
         });
     }
     
@@ -48,14 +61,16 @@ public class ActionButton extends JButton {
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         int width = getWidth();
         int height = getHeight();
-        int size = Math.min(width, height);
-        int x = (width-size) / 2;
-        int y = (height-size) / 2;
+//        int size = Math.min(width, height);
+//        int x = (width-size) / 2;
+//        int y = (height-size) / 2;
         
         if (mousePress) {
-            g2.setColor(new Color(2, 144, 204));
+//            g2.setColor(new Color(2, 144, 204));
+            g2.setColor(pressedButtonColor);
         } else {
-            g2.setColor(new Color(2,142,255));
+//            g2.setColor(new Color(2,142,255));
+            g2.setColor(defaultButtonColor);
         }
         
         g2.fillRoundRect(0, 0, width, height, 10, 10);
