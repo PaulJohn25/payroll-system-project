@@ -411,9 +411,11 @@ public class PayrollMagementComponent extends javax.swing.JPanel {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel card_header_name;
     private javax.swing.JPanel department_panel;
+    private javax.swing.JPanel department_panel1;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
@@ -427,6 +429,7 @@ public class PayrollMagementComponent extends javax.swing.JPanel {
     private javax.swing.JTable payroll_management_table;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel7;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel8;
+    private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel9;
     private com.mycompany.payrollsystem.swing.TopLeftAndTopRightRoundedCornersPanel topLeftAndTopRightRoundedCornersPanel1;
     // End of variables declaration//GEN-END:variables
 }
