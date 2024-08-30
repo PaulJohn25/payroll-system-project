@@ -30,6 +30,7 @@ com\mycompany\payrollsystem\modals\CreateBranchModal.class
 com\mycompany\payrollsystem\component\EmployeesComponent$3.class
 com\mycompany\payrollsystem\modals\AddEmployeeModal$5.class
 com\mycompany\payrollsystem\Forms\Statutories$10.class
+com\mycompany\payrollsystem\Main$3.class
 com\mycompany\payrollsystem\Forms\Permission_Management$12.class
 com\mycompany\payrollsystem\cell\PanelActionButtons.class
 com\mycompany\payrollsystem\Forms\Statutories.class
@@ -62,15 +63,12 @@ com\mycompany\payrollsystem\component\OtherIncomeManagement$1.class
 com\mycompany\payrollsystem\component\AddEmployee$14.class
 com\mycompany\payrollsystem\model\CardModel.class
 com\mycompany\payrollsystem\Forms\Timekeeping$1.class
-com\mycompany\payrollsystem\NewMain.class
 com\mycompany\payrollsystem\component\PayrollMagementComponent$3.class
 com\mycompany\payrollsystem\cell\PanelDownloadAction.class
 com\mycompany\payrollsystem\modals\OtherDeduction$2.class
-com\mycompany\payrollsystem\NewMain$2.class
 com\mycompany\payrollsystem\component\AddEmployee$9.class
 com\mycompany\payrollsystem\component\AddEmployeeComponent$13.class
 com\mycompany\payrollsystem\PaginatedTableExample.class
-com\mycompany\payrollsystem\NewMain$3.class
 com\mycompany\payrollsystem\Forms\Statutories$5.class
 com\mycompany\payrollsystem\Forms\Login.class
 com\mycompany\payrollsystem\component\AddEmployee$8.class
@@ -91,7 +89,6 @@ com\mycompany\payrollsystem\component\EmployeesComponent$10.class
 com\mycompany\payrollsystem\component\AddEmployeeComponent$4.class
 com\mycompany\payrollsystem\Forms\AdminDashboard$3.class
 com\mycompany\payrollsystem\Forms\Employees$4.class
-com\mycompany\payrollsystem\NewMain$1.class
 com\mycompany\payrollsystem\component\Staff_Dashboard_Profile.class
 com\mycompany\payrollsystem\component\PayrollMagementComponent$2.class
 com\mycompany\payrollsystem\Forms\Employees$1.class
@@ -123,10 +120,12 @@ com\mycompany\payrollsystem\component\EmployeesComponent$6.class
 com\mycompany\payrollsystem\component\PayrollMagementComponent$1.class
 com\mycompany\payrollsystem\component\AddEmployeeComponent$10.class
 com\mycompany\payrollsystem\component\Breadcrumb.class
+com\mycompany\payrollsystem\Main$2.class
 com\mycompany\payrollsystem\component\FileManagementComponent$1.class
 com\mycompany\payrollsystem\component\OtherIncomeManagement.class
 com\mycompany\payrollsystem\cell\TableActionCellRender.class
 com\mycompany\payrollsystem\component\EmployeesComponent$2.class
+com\mycompany\payrollsystem\Main.class
 com\mycompany\payrollsystem\modals\AddEmployeeModal$4.class
 com\mycompany\payrollsystem\component\Menu.class
 com\mycompany\payrollsystem\Forms\Permission_Management$11.class
@@ -171,7 +170,6 @@ com\mycompany\payrollsystem\modals\OtherIncomePayrollModal$4.class
 com\mycompany\payrollsystem\modals\OtherDeduction$1.class
 com\mycompany\payrollsystem\component\AddEmployee$15.class
 com\mycompany\payrollsystem\ScrollPaneExample.class
-com\mycompany\payrollsystem\cell\PanelAction$2.class
 com\mycompany\payrollsystem\component\CardHeader$1.class
 com\mycompany\payrollsystem\component\AddEmployeeComponent$1.class
 com\mycompany\payrollsystem\swing\CirclePanel.class
@@ -185,7 +183,6 @@ com\mycompany\payrollsystem\modals\CreatePayrollModal$2.class
 com\mycompany\payrollsystem\component\AddEmployee$3.class
 com\mycompany\payrollsystem\chart\PieChart$PeiChartType.class
 com\mycompany\payrollsystem\cell\PanelActionButtons$1.class
-com\mycompany\payrollsystem\cell\PanelAction$1.class
 com\mycompany\payrollsystem\modals\AddEmployeeModal$7.class
 com\mycompany\payrollsystem\cell\TableRemoveActionEvent.class
 com\mycompany\payrollsystem\Forms\Permission_Management$9.class
@@ -198,11 +195,11 @@ com\mycompany\payrollsystem\modals\OtherDeductionModal$2.class
 com\mycompany\payrollsystem\Forms\Statutories$1.class
 com\mycompany\payrollsystem\modals\OtherIncomePayrollModal$1.class
 com\mycompany\payrollsystem\Forms\Permission_Management$3.class
+com\mycompany\payrollsystem\cell\EmployeeActionEvent.class
 com\mycompany\payrollsystem\Forms\Payroll_Management$2.class
 com\mycompany\payrollsystem\swing\ListMenu$2.class
 com\mycompany\payrollsystem\modals\CreateDepartmentModal$1.class
 com\mycompany\payrollsystem\swing\MenuItem.class
-com\mycompany\payrollsystem\cell\PanelAction.class
 com\mycompany\payrollsystem\component\Card.class
 com\mycompany\payrollsystem\Forms\Permission_Management$4.class
 com\mycompany\payrollsystem\Forms\Payroll_Management$3.class
@@ -223,11 +220,11 @@ com\mycompany\payrollsystem\Forms\Permission_Management$13.class
 com\mycompany\payrollsystem\modals\AddEmployeeModal$1.class
 com\mycompany\payrollsystem\Forms\Permission_Management$7.class
 com\mycompany\payrollsystem\Forms\Login$2.class
-com\mycompany\payrollsystem\cell\EmployeeActionListener.class
 com\mycompany\payrollsystem\modals\CreateDesignationModal$2.class
 com\mycompany\payrollsystem\PaginationExample$2.class
 com\mycompany\payrollsystem\Forms\Login$1.class
 com\mycompany\payrollsystem\Forms\Loan_Management$1.class
+com\mycompany\payrollsystem\Main$1.class
 com\mycompany\payrollsystem\Forms\Permission_Management$8.class
 com\mycompany\payrollsystem\modals\AddEmployeeModal$3.class
 com\mycompany\payrollsystem\cell\ActionButton$1.class

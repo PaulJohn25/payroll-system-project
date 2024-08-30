@@ -12,7 +12,6 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\RightGradientRoundedCornerPanel.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\FileManagementComponent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Forms\Payroll_Management_Test_Form.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelAction.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\TopLeftAndTopRightRoundedCornersPanel.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\chart\ModelPieChart.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\model\MenuModel.java
@@ -29,6 +28,7 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Forms\Report.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\TableGroupActionEvent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\BackgroundLabel.java
+C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Main.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelStatus.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\CreateBranchModal.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\TableEditActionEvent.java
@@ -70,8 +70,6 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\Menu.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\chart\BarChart.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\Admin_Dashboard_Profile.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\NewMain.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\EmployeeActionListener.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\TableEmployeeActionEvent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Forms\Timekeeping.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\ButtonDashboard.java
@@ -79,4 +77,5 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\TableActionEvent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\DatabaseManager.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\ListMenu.java
+C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\EmployeeActionEvent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelGroupAction.java

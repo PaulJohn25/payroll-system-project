@@ -9,6 +9,7 @@ import com.mycompany.payrollsystem.component.AddEmployeeComponent;
 import com.mycompany.payrollsystem.component.AdminDasboardComponent;
 import com.mycompany.payrollsystem.component.EmployeesComponent;
 import com.mycompany.payrollsystem.component.FileManagementComponent;
+import com.mycompany.payrollsystem.component.OtherIncomeManagement;
 import com.mycompany.payrollsystem.component.PayrollMagementComponent;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
@@ -18,7 +19,7 @@ import javax.swing.JOptionPane;
  *
  * @author Paul
  */
-public class NewMain extends javax.swing.JFrame {
+public class Main extends javax.swing.JFrame {
 
     private final Util util = new Util(); 
     private final AddEmployeeComponent addEmployeeComponent;
@@ -29,7 +30,7 @@ public class NewMain extends javax.swing.JFrame {
     /**
      * Creates new form Dashboard
      */
-    public NewMain() {
+    public Main() {
         initComponents();
         this.setLocationRelativeTo(null);
         
@@ -83,6 +84,11 @@ public class NewMain extends javax.swing.JFrame {
                 case 3 -> {
                     System.out.println("Payroll Management Form");
                     setForm(new PayrollMagementComponent());
+                }
+                
+                case 4 -> {
+                    System.out.println("Other Income Management");
+                    setForm(new OtherIncomeManagement());
                 }
                 default -> {
                     System.out.println("Default Form");
@@ -307,14 +313,18 @@ public class NewMain extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -323,7 +333,7 @@ public class NewMain extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewMain().setVisible(true);
+                new Main().setVisible(true);
             }
         });
     }

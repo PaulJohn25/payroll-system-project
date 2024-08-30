@@ -8,7 +8,7 @@ package com.mycompany.payrollsystem.cell;
  *
  * @author Paul
  */
-public interface EmployeeActionListener {
+public interface EmployeeActionEvent {
     void onAddIncome();
     void onAddDeduction();
     void onRemoveEmployee();

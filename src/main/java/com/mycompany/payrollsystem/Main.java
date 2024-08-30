@@ -9,6 +9,7 @@ import com.mycompany.payrollsystem.component.AddEmployeeComponent;
 import com.mycompany.payrollsystem.component.AdminDasboardComponent;
 import com.mycompany.payrollsystem.component.EmployeesComponent;
 import com.mycompany.payrollsystem.component.FileManagementComponent;
+import com.mycompany.payrollsystem.component.OtherIncomeManagement;
 import com.mycompany.payrollsystem.component.PayrollMagementComponent;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
@@ -83,6 +84,11 @@ public class Main extends javax.swing.JFrame {
                 case 3 -> {
                     System.out.println("Payroll Management Form");
                     setForm(new PayrollMagementComponent());
+                }
+                
+                case 4 -> {
+                    System.out.println("Other Income Management");
+                    setForm(new OtherIncomeManagement());
                 }
                 default -> {
                     System.out.println("Default Form");

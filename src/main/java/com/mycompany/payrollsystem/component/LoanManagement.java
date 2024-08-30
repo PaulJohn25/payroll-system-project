@@ -12,7 +12,7 @@ import java.awt.Dimension;
  *
  * @author Paul
  */
-public class OtherIncomeManagement extends javax.swing.JPanel {
+public class LoanManagement extends javax.swing.JPanel {
 
     /**
      * Creates new form Dashboard
@@ -22,7 +22,7 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
    
     
 
-    public OtherIncomeManagement() {
+    public LoanManagement() {
         this.headerFont = new Font("Arial", Font.BOLD, 20);
         initComponents();
         setOpaque(false);
