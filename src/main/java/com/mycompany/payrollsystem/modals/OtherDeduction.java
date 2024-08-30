@@ -5,8 +5,7 @@
 package com.mycompany.payrollsystem.modals;
 
 import com.mycompany.payrollsystem.cell.PanelRemoveAction;
-import com.mycompany.payrollsystem.cell.TableActionCellRenderTest;
-import com.mycompany.payrollsystem.cell.TableRemoveActionEvent;
+import com.mycompany.payrollsystem.cell.TableActionCellRender;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
@@ -32,7 +31,7 @@ public class OtherDeduction extends javax.swing.JFrame {
         tableHeader = other_deduction_table.getTableHeader();
         tableHeader.setFont(headerFont);
         
-        TableActionCellRenderTest tableActionCellRender = new TableActionCellRenderTest(new PanelRemoveAction());
+        TableActionCellRender tableActionCellRender = new TableActionCellRender(new PanelRemoveAction());
         other_deduction_table.getColumnModel().getColumn(3).setCellRenderer(tableActionCellRender);
     }
 
