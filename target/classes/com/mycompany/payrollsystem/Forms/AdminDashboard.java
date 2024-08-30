@@ -5,6 +5,7 @@
 package com.mycompany.payrollsystem.Forms;
 
 import com.mycompany.payrollsystem.Util;
+import com.mycompany.payrollsystem.event.EventMenuSelected;
 import javax.swing.JFrame;
 
 /**
@@ -28,6 +29,14 @@ public class AdminDashboard extends javax.swing.JFrame {
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
         util.fitImageToComponent(intra_logo_label, "images/main_logo-removebg.png");
         Menu.getListMenu().setSelectedIndex(0);
+        Menu.addEventMenuSelected((int index) -> {
+            System.out.println("Selected Index: " + index);
+            if (index == 1) {
+                Employees employees = new Employees();
+                employees.setVisible(true);
+                this.dispose();
+            }
+        });
     }
 
     /**

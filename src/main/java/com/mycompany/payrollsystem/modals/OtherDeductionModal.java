@@ -46,7 +46,7 @@ public class OtherDeductionModal extends javax.swing.JFrame {
         other_deduction_table
                 .getColumnModel()
                 .getColumn(3)
-                .setCellEditor(new TableActionCellEditor<>(new PanelRemoveAction(), remove_event));
+                .setCellEditor(new TableActionCellEditor<>(PanelRemoveAction.class, remove_event));
     }
 
     /**

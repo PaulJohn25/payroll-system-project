@@ -65,7 +65,7 @@ public class AddEmployeeModal extends javax.swing.JFrame {
         add_employee_table
                 .getColumnModel()
                 .getColumn(2)
-                .setCellEditor(new TableActionCellEditor<>(new PanelActionButtons(), event));
+                .setCellEditor(new TableActionCellEditor<>(PanelActionButtons.class, event));
         
                 
     }

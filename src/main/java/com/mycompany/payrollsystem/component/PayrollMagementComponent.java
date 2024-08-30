@@ -30,7 +30,6 @@ public class PayrollMagementComponent extends javax.swing.JPanel {
     private final static String[] OPTIONS = {"Yes", "No"};
     private JTableHeader tableHeader;
     
-    
     public PayrollMagementComponent() {
         this.headerFont = new Font("Arial", Font.BOLD, 20);
         initComponents();
@@ -122,7 +121,7 @@ public class PayrollMagementComponent extends javax.swing.JPanel {
         
         TableActionCellRender tableActionCellRender = new TableActionCellRender(new PanelGroupAction());
         payroll_management_table.getColumnModel().getColumn(5).setCellRenderer(tableActionCellRender);
-        payroll_management_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor<>(new PanelGroupAction(), event));
+        payroll_management_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor<>(PanelGroupAction.class, event));
         
     }
      
@@ -186,7 +185,7 @@ public class PayrollMagementComponent extends javax.swing.JPanel {
         jButton3.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/add_icon_button.png"))); // NOI18N
-        jButton3.setText("Create Position");
+        jButton3.setText("Create Payroll");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);

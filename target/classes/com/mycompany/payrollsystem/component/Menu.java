@@ -5,6 +5,7 @@
 package com.mycompany.payrollsystem.component;
 
 import com.mycompany.payrollsystem.Util;
+import com.mycompany.payrollsystem.event.EventMenuSelected;
 import com.mycompany.payrollsystem.model.MenuModel;
 import com.mycompany.payrollsystem.swing.ListMenu;
 import javax.swing.SwingUtilities;
@@ -15,7 +16,13 @@ import javax.swing.SwingUtilities;
  */
 public class Menu extends javax.swing.JPanel {
 
+    private EventMenuSelected event;
     private final Util util = new Util();
+    
+    public void addEventMenuSelected(EventMenuSelected event) {
+        this.event = event;
+        listMenu.addEventMenuSelected(event);
+    }
     
     /**
      * Creates new form TestMenu
@@ -24,6 +31,7 @@ public class Menu extends javax.swing.JPanel {
         initComponents();
         setOpaque(false);
         listMenu.setBorder(null);
+        listMenu.addEventMenuSelected(event);
         SwingUtilities.invokeLater(() -> {
             util.fitImageToComponent(logo_panel, "images/intra_logo-removebg.png");
             init();

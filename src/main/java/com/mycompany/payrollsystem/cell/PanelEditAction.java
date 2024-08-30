@@ -38,12 +38,8 @@ public class PanelEditAction extends javax.swing.JPanel {
     }
     
     public void initEvent(TableEditActionEvent event, int row) {
-        edit_button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                event.onEdit(row);
-            }
-            
+        edit_button.addActionListener((ActionEvent e) -> {
+            event.onEdit(row);
         });
     }
 

@@ -146,7 +146,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/com/mycompany/payrollsystem/icons/add_icon_button.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Create Position"/>
+            <Property name="text" type="java.lang.String" value="Create Payroll"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>

@@ -5,7 +5,7 @@
 package com.mycompany.payrollsystem.Forms;
 
 import com.mycompany.payrollsystem.Util;
-import com.mycompany.payrollsystem.component.AddEmployee;
+import com.mycompany.payrollsystem.component.AddEmployeeComponent;
 import com.mycompany.payrollsystem.component.EmployeesComponent;
 
 import java.awt.event.MouseAdapter;
@@ -31,7 +31,7 @@ public class Employees extends javax.swing.JFrame {
     }
 
     private final Util util;
-    private final AddEmployee addEmployee;
+    private final AddEmployeeComponent addEmployee;
     private final EmployeesComponent employeeComponent;
     private final JPanel addEmployeeButtonPanel;
     private final JScrollPane scrollPane;
@@ -45,7 +45,7 @@ public class Employees extends javax.swing.JFrame {
         scrollPane = ScrollPane;
         this.employeeComponent = employeesTestComponent;
         this.addEmployeeButtonPanel = employeeComponent.getAddEmployeeButtonPanel();
-        this.addEmployee = new AddEmployee();
+        this.addEmployee = new AddEmployeeComponent();
         this.setLocationRelativeTo(null);
         init();
     }
@@ -91,7 +91,7 @@ public class Employees extends javax.swing.JFrame {
             ScrollPane.repaint();
         };
 
-        employeesTestComponent.setEdit_employee_info_event(edit_employee_event);
+        employeesTestComponent.setEditEmployeeInfoEvent(edit_employee_event);
 
     }
 

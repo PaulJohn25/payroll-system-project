@@ -9,6 +9,7 @@ import javax.swing.SwingUtilities;
 import com.mycompany.payrollsystem.chart.ModelPieChart;
 import com.mycompany.payrollsystem.chart.PieChart;
 import java.awt.Color;
+import java.awt.Dimension;
 
 
 

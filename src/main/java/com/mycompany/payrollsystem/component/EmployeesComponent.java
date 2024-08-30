@@ -17,22 +17,11 @@ import javax.swing.table.JTableHeader;
 import java.awt.Dimension;
 import javax.swing.JPanel;
 import com.mycompany.payrollsystem.cell.TableEditActionEvent;
-
 /**
  *
  * @author Paul
  */
 public class EmployeesComponent extends javax.swing.JPanel {
-
-    /**
-     * @param edit_employee_info_event the edit_employee_info_event to set
-     */
-    public void setEdit_employee_info_event(TableEditActionEvent edit_employee_info_event) {
-        this.edit_employee_info_event = edit_employee_info_event;
-        employees_table.getColumnModel()
-                .getColumn(5)
-                .setCellEditor(new TableActionCellEditor<>(new PanelEditAction(), this.edit_employee_info_event));
-    }
 
     /**
      * Creates new form Dashboard
@@ -51,7 +40,6 @@ public class EmployeesComponent extends javax.swing.JPanel {
     private CreateDepartmentModal createDepartmentModal;
     private CreateDesignationModal createDesignationModal;
     private CreatePositionModal createPositionModal;
-
     private final Font headerFont;
 
     public EmployeesComponent() {
@@ -90,6 +78,7 @@ public class EmployeesComponent extends javax.swing.JPanel {
         position_card_header.toggleCardHeaderPanel(positions_panel);
         designation_card_header.toggleCardHeaderPanel(designation_panel);
 
+        
         edit_department_details_event = (int row) -> {
             System.out.println("Edit Department Index: " + row);
             createDepartmentModal = new CreateDepartmentModal();
@@ -130,24 +119,34 @@ public class EmployeesComponent extends javax.swing.JPanel {
         department_table
                 .getColumnModel()
                 .getColumn(5)
-                .setCellEditor(new TableActionCellEditor<>(new PanelEditAction(), edit_department_details_event));
+                .setCellEditor(new TableActionCellEditor<>(PanelEditAction.class, edit_department_details_event));
 
         branch_table
                 .getColumnModel()
                 .getColumn(4)
-                .setCellEditor(new TableActionCellEditor<>(new PanelEditAction(), edit_branch_details_event));
+                .setCellEditor(new TableActionCellEditor<>(PanelEditAction.class, edit_branch_details_event));
 
         positions_table
                 .getColumnModel()
                 .getColumn(5)
-                .setCellEditor(new TableActionCellEditor<>(new PanelEditAction(), edit_position_details_event));
+                .setCellEditor(new TableActionCellEditor<>(PanelEditAction.class, edit_position_details_event));
 
         designation_table
                 .getColumnModel()
                 .getColumn(4)
-                .setCellEditor(new TableActionCellEditor<>(new PanelEditAction(), edit_designation_details_event));
+                .setCellEditor(new TableActionCellEditor<>(PanelEditAction.class, edit_designation_details_event));
 
         breadcrumb.setupBreadcrumb("Employees");
+    }
+    
+    /**
+     * @param edit_employee_info_event the edit_employee_info_event to set
+     */
+    public void setEditEmployeeInfoEvent(TableEditActionEvent edit_employee_info_event) {
+        this.edit_employee_info_event = edit_employee_info_event;
+        employees_table.getColumnModel()
+                .getColumn(5)
+                .setCellEditor(new TableActionCellEditor<>(PanelEditAction.class, this.edit_employee_info_event));
     }
 
     private void hidePanel(JPanel panel) {
@@ -268,7 +267,6 @@ public class EmployeesComponent extends javax.swing.JPanel {
         jLabel45 = new javax.swing.JLabel();
         designation_card_header = new com.mycompany.payrollsystem.component.CardHeader();
 
-        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(900, 935));
 
         jTabbedPane3.setBackground(new java.awt.Color(255, 255, 255));
@@ -486,7 +484,7 @@ public class EmployeesComponent extends javax.swing.JPanel {
                 .addComponent(roundedCornersPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(roundedCornersPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1201, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Employee List", jPanel4);

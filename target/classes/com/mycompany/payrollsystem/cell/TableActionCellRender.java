@@ -6,7 +6,6 @@ package com.mycompany.payrollsystem.cell;
 
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
@@ -47,8 +46,5 @@ public class TableActionCellRender<T extends JComponent> extends DefaultTableRen
         
         return cellPanel;
     }
-    
-    
-    
     
 }

@@ -43,7 +43,7 @@ public class OtherIncomePayrollModal extends javax.swing.JFrame {
         other_income_payroll_table
                 .getColumnModel()
                 .getColumn(3)
-                .setCellEditor(new TableActionCellEditor<>(new PanelRemoveAction(), remove_event)); 
+                .setCellEditor(new TableActionCellEditor<>(PanelRemoveAction.class, remove_event)); 
     }
 
     /**
