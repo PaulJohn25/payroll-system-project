@@ -4,13 +4,8 @@
  */
 package com.mycompany.payrollsystem;
 
+import com.mycompany.payrollsystem.panel_forms.*;
 import com.mycompany.payrollsystem.cell.TableEditActionEvent;
-import com.mycompany.payrollsystem.component.AddEmployeeComponent;
-import com.mycompany.payrollsystem.component.AdminDasboardComponent;
-import com.mycompany.payrollsystem.component.EmployeesComponent;
-import com.mycompany.payrollsystem.component.FileManagementComponent;
-import com.mycompany.payrollsystem.component.OtherIncomeManagement;
-import com.mycompany.payrollsystem.component.PayrollMagementComponent;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -22,9 +17,9 @@ import javax.swing.JOptionPane;
 public class Main extends javax.swing.JFrame {
 
     private final Util util = new Util(); 
-    private final AddEmployeeComponent addEmployeeComponent;
-    private final EmployeesComponent employeesComponent;
-    private final FileManagementComponent fileManagementComponent;
+    private final AddEmployee addEmployeeComponent;
+    private final Employees employeesComponent;
+    private final FileManagement fileManagementComponent;
    
     
     /**
@@ -34,9 +29,9 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         
-        addEmployeeComponent = new AddEmployeeComponent();
-        employeesComponent = new EmployeesComponent();
-        fileManagementComponent = new FileManagementComponent();
+        addEmployeeComponent = new AddEmployee();
+        employeesComponent = new Employees();
+        fileManagementComponent = new FileManagement();
         util.fitImageToComponent(hide_panel, "images/hide_icon.png");
         util.fitImageToComponent(close_panel, "images/close.png");
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
@@ -48,7 +43,7 @@ public class Main extends javax.swing.JFrame {
             switch (index) {
                 case 0 -> {
                     System.out.println("Dashboard Form");
-                    setForm(new AdminDasboardComponent());
+                    setForm(new AdminDasboard());
                 }
                 case 1 -> {
                     System.out.println("Employee Form");
@@ -83,12 +78,51 @@ public class Main extends javax.swing.JFrame {
                 
                 case 3 -> {
                     System.out.println("Payroll Management Form");
-                    setForm(new PayrollMagementComponent());
+                    setForm(new PayrollMagement());
                 }
                 
                 case 4 -> {
                     System.out.println("Other Income Management");
                     setForm(new OtherIncomeManagement());
+                }
+                case 5 -> {
+                    System.out.println("Loan Management");
+                    setForm(new LoanManagement());
+                }
+                case 6 -> {
+                    System.out.println("Timekeeping Management");
+                    setForm(new TimekeepingManagement());
+                }
+                case 7 -> {
+                    System.out.println("Leave Management");
+                    setForm(new LeaveManagement());
+                }
+                case 8 -> {
+                    System.out.println("Schedule Management");
+                    setForm(new ScheduleManagement());
+                }
+                case 9 -> {
+                    System.out.println("Statutories");
+                    setForm(new Statutories());
+                }
+                case 10 -> {
+                    System.out.println("Report");
+                    setForm(new Report());
+                }
+                case 11 -> {
+                    System.out.println("User Management");
+                    setForm(new UserManagement());
+                }
+                case 12 -> {
+                    System.out.println("Permission Management");
+                    setForm(new PermissionManagement());
+                }
+                case 13 -> {
+                    System.out.println("System Management");
+                    setForm(new SystemManagement());
+                }
+                case 14 -> {
+                    System.out.println("");
                 }
                 default -> {
                     System.out.println("Default Form");
@@ -140,7 +174,7 @@ public class Main extends javax.swing.JFrame {
         menu_logo_label = new javax.swing.JLabel();
         Menu = new com.mycompany.payrollsystem.component.Menu();
         scrollPane = new javax.swing.JScrollPane();
-        dashboard2 = new com.mycompany.payrollsystem.component.AdminDasboardComponent();
+        adminDasboard1 = new com.mycompany.payrollsystem.panel_forms.AdminDasboard();
         menu_header_panel1 = new javax.swing.JPanel();
         intra_logo_label = new javax.swing.JLabel();
         Menu1 = new com.mycompany.payrollsystem.component.Menu();
@@ -209,7 +243,7 @@ public class Main extends javax.swing.JFrame {
 
         scrollPane.setBackground(new java.awt.Color(255, 255, 255));
         scrollPane.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        scrollPane.setViewportView(dashboard2);
+        scrollPane.setViewportView(adminDasboard1);
 
         menu_header_panel1.setBackground(new java.awt.Color(203, 209, 238));
 
@@ -341,8 +375,8 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.payrollsystem.component.Menu Menu;
     private com.mycompany.payrollsystem.component.Menu Menu1;
+    private com.mycompany.payrollsystem.panel_forms.AdminDasboard adminDasboard1;
     private javax.swing.JLabel close_panel;
-    private com.mycompany.payrollsystem.component.AdminDasboardComponent dashboard2;
     private javax.swing.JLabel hide_panel;
     private javax.swing.JLabel intra_logo_label;
     private javax.swing.JPanel jPanel1;
