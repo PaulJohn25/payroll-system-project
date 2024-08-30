@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import com.mycompany.payrollsystem.cell.TableEditActionEvent;
+import javax.swing.JButton;
 
 /**
  *
@@ -33,7 +34,7 @@ public class Employees extends javax.swing.JFrame {
     private final Util util;
     private final AddEmployeeComponent addEmployee;
     private final EmployeesComponent employeeComponent;
-    private final JPanel addEmployeeButtonPanel;
+    private final JButton addEmployeeButton;
     private final JScrollPane scrollPane;
 
     /**
@@ -44,7 +45,7 @@ public class Employees extends javax.swing.JFrame {
         initComponents();
         scrollPane = ScrollPane;
         this.employeeComponent = employeesTestComponent;
-        this.addEmployeeButtonPanel = employeeComponent.getAddEmployeeButtonPanel();
+        this.addEmployeeButton = employeeComponent.getAddEmployeeButton();
         this.addEmployee = new AddEmployeeComponent();
         this.setLocationRelativeTo(null);
         init();
@@ -58,7 +59,7 @@ public class Employees extends javax.swing.JFrame {
         util.fitImageToComponent(intra_logo_label, "images/main_logo-removebg.png");
         Menu.getListMenu().setSelectedIndex(1);
 
-        addEmployeeButtonPanel.addMouseListener(new MouseAdapter() {
+        addEmployeeButton.addMouseListener(new MouseAdapter() {
 
             @Override
             public void mousePressed(MouseEvent e) {

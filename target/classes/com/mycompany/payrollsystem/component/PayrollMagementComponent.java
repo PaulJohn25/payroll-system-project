@@ -169,16 +169,16 @@ public class PayrollMagementComponent extends javax.swing.JPanel {
         roundedCornersPanel7Layout.setHorizontalGroup(
             roundedCornersPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(roundedCornersPanel7Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel14)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         roundedCornersPanel7Layout.setVerticalGroup(
             roundedCornersPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(roundedCornersPanel7Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, roundedCornersPanel7Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
-                .addGap(15, 15, 15))
+                .addContainerGap())
         );
 
         jButton3.setBackground(new java.awt.Color(0, 102, 0));
@@ -279,7 +279,7 @@ public class PayrollMagementComponent extends javax.swing.JPanel {
                 .addGap(12, 12, 12)
                 .addGroup(roundedCornersPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(roundedCornersPanel8Layout.createSequentialGroup()
-                        .addComponent(jScrollPane4)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 828, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(roundedCornersPanel8Layout.createSequentialGroup()
                         .addComponent(jLabel25)
@@ -334,9 +334,9 @@ public class PayrollMagementComponent extends javax.swing.JPanel {
                 .addGroup(department_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(roundedCornersPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(department_panelLayout.createSequentialGroup()
-                        .addComponent(roundedCornersPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(department_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(roundedCornersPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -344,9 +344,9 @@ public class PayrollMagementComponent extends javax.swing.JPanel {
             department_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(department_panelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(department_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(roundedCornersPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(roundedCornersPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(roundedCornersPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))

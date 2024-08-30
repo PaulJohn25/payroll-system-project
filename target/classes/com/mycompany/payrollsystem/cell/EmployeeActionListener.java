@@ -9,7 +9,7 @@ package com.mycompany.payrollsystem.cell;
  * @author Paul
  */
 public interface EmployeeActionListener {
-    void onAddIncome(int row);
-    void onAddDeduction(int row);
-    void onRemoveEmployee(int row);
+    void onAddIncome();
+    void onAddDeduction();
+    void onRemoveEmployee();
 }

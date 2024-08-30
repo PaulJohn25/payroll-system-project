@@ -17,6 +17,8 @@ import javax.swing.table.JTableHeader;
 import java.awt.Dimension;
 import javax.swing.JPanel;
 import com.mycompany.payrollsystem.cell.TableEditActionEvent;
+import com.mycompany.payrollsystem.modals.CreatePayrollModal;
+import javax.swing.JButton;
 /**
  *
  * @author Paul
@@ -153,8 +155,8 @@ public class EmployeesComponent extends javax.swing.JPanel {
         panel.setVisible(false);
     }
 
-    public JPanel getAddEmployeeButtonPanel() {
-        return addEmployeeButtonPanel;
+    public JButton getAddEmployeeButton() {
+        return addEmployeeButton;
     }
 
     /**
@@ -169,9 +171,6 @@ public class EmployeesComponent extends javax.swing.JPanel {
         breadcrumb = new com.mycompany.payrollsystem.component.Breadcrumb();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
-        addEmployeeButtonPanel = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
-        logo_panel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         roundedCornersPanel2 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
         employee_count_label = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -188,6 +187,7 @@ public class EmployeesComponent extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        addEmployeeButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         department_panel = new javax.swing.JPanel();
         roundedCornersPanel1 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
@@ -272,32 +272,6 @@ public class EmployeesComponent extends javax.swing.JPanel {
         jTabbedPane3.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane3.setForeground(new java.awt.Color(83, 82, 237));
         jTabbedPane3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-
-        addEmployeeButtonPanel.setBackground(new java.awt.Color(30, 174, 85));
-
-        logo_panel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logo_panel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/add-user (1).png"))); // NOI18N
-
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Add Employee");
-
-        javax.swing.GroupLayout addEmployeeButtonPanelLayout = new javax.swing.GroupLayout(addEmployeeButtonPanel);
-        addEmployeeButtonPanel.setLayout(addEmployeeButtonPanelLayout);
-        addEmployeeButtonPanelLayout.setHorizontalGroup(
-            addEmployeeButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addEmployeeButtonPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(logo_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        addEmployeeButtonPanelLayout.setVerticalGroup(
-            addEmployeeButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(logo_panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-        );
 
         roundedCornersPanel2.setBackground(new java.awt.Color(245, 247, 248));
 
@@ -426,7 +400,6 @@ public class EmployeesComponent extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
                     .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -436,6 +409,9 @@ public class EmployeesComponent extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel11)
                         .addGap(23, 23, 23))))
+            .addGroup(roundedCornersPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 871, Short.MAX_VALUE))
         );
         roundedCornersPanel3Layout.setVerticalGroup(
             roundedCornersPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -464,27 +440,38 @@ public class EmployeesComponent extends javax.swing.JPanel {
                         .addContainerGap(70, Short.MAX_VALUE))))
         );
 
+        addEmployeeButton.setBackground(new java.awt.Color(0, 102, 0));
+        addEmployeeButton.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        addEmployeeButton.setForeground(new java.awt.Color(255, 255, 255));
+        addEmployeeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/add-user (1).png"))); // NOI18N
+        addEmployeeButton.setText("Add Employee");
+        addEmployeeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addEmployeeButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(roundedCornersPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(addEmployeeButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(roundedCornersPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 204, Short.MAX_VALUE))
-            .addComponent(roundedCornersPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(roundedCornersPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addEmployeeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(addEmployeeButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(25, 25, 25)
+                .addComponent(addEmployeeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
                 .addComponent(roundedCornersPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(roundedCornersPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 1180, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Employee List", jPanel4);
@@ -1393,8 +1380,12 @@ public class EmployeesComponent extends javax.swing.JPanel {
         createDesignationModal.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void addEmployeeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEmployeeButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addEmployeeButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.mycompany.payrollsystem.swing.RoundedCornersPanel addEmployeeButtonPanel;
+    private javax.swing.JButton addEmployeeButton;
     private com.mycompany.payrollsystem.component.CardHeader branch_card_header;
     private javax.swing.JPanel branch_panel;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel branch_site_table;
@@ -1430,7 +1421,6 @@ public class EmployeesComponent extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -1482,7 +1472,6 @@ public class EmployeesComponent extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JLabel logo_panel;
     private com.mycompany.payrollsystem.component.CardHeader position_card_header;
     private javax.swing.JPanel positions_panel;
     private javax.swing.JTable positions_table;

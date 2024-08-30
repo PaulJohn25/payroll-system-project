@@ -10,9 +10,9 @@ import com.mycompany.payrollsystem.component.AdminDasboardComponent;
 import com.mycompany.payrollsystem.component.EmployeesComponent;
 import com.mycompany.payrollsystem.component.FileManagementComponent;
 import com.mycompany.payrollsystem.component.PayrollMagementComponent;
-import com.mycompany.payrollsystem.event.EventMenuSelected;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.Action;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -55,13 +55,11 @@ public class Main extends javax.swing.JFrame {
                     System.out.println("Employee Form");
                     setForm(employeesComponent);
                     
-                    employeesComponent.getAddEmployeeButtonPanel().addMouseListener(new MouseAdapter() {
-                        @Override
-                        public void mousePressed(MouseEvent e) {
-                            System.out.println("Add employee is clicked!");
-                            setForm(addEmployeeComponent);
-                        }
-                    });
+                    employeesComponent.getAddEmployeeButton().addActionListener(((e) -> {
+                         System.out.println("Add employee is clicked!");
+                         setForm(addEmployeeComponent);
+                    }));
+                  
                     
                     addEmployeeComponent.getCloseButtons().forEach(button -> {
                         button.addActionListener(e -> {
