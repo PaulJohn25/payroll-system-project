@@ -284,7 +284,7 @@ public class Timekeeping extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
+
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
          
@@ -299,8 +299,7 @@ public class Timekeeping extends javax.swing.JFrame {
          javax.swing.JOptionPane.showMessageDialog(new Timekeeping(), "PUNCH IN/OUT");
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-=======
->>>>>>> b799ef467e5e28293c1fbea815dc17518ec6b55b
+
     /**
      * @param args the command line arguments
      */

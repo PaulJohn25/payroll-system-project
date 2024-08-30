@@ -39,6 +39,7 @@ public class PanelGroupAction extends javax.swing.JPanel {
     }
     
     public void initEvent(TableGroupActionEvent event, int row) {
+        
         edit_button.addActionListener((ActionEvent e) -> {
             event.onEdit(row); 
         });

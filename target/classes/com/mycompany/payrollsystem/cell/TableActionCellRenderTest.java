@@ -6,6 +6,7 @@ package com.mycompany.payrollsystem.cell;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
@@ -15,8 +16,9 @@ import org.jdesktop.swingx.renderer.DefaultTableRenderer;
 /**
  *
  * @author Paul
+ * @param <T>
  */
-public class TableActionCellRenderTest<T extends Component> extends DefaultTableRenderer {
+public class TableActionCellRenderTest<T extends JComponent> extends DefaultTableRenderer {
     
     private final T component;
     

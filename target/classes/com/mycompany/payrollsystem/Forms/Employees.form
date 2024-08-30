@@ -186,7 +186,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="com.mycompany.payrollsystem.component.EmployeesTestComponent" name="employeesTestComponent">
+            <Component class="com.mycompany.payrollsystem.component.EmployeesComponent" name="employeesTestComponent">
             </Component>
           </SubComponents>
         </Container>

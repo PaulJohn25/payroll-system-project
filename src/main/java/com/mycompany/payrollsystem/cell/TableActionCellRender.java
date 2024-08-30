@@ -6,37 +6,49 @@ package com.mycompany.payrollsystem.cell;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.GridBagLayout;
+import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableCellRenderer;
+import org.jdesktop.swingx.renderer.DefaultTableRenderer;
 
 /**
  *
  * @author Paul
+ * @param <T>
  */
-public class TableActionCellRender extends DefaultTableCellRenderer {
+public class TableActionCellRender<T extends JComponent> extends DefaultTableRenderer {
     
+    private final T component;
+    
+    public TableActionCellRender(T component) {
+        this.component = component;
+    }
+
     @Override
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
-        Component component = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        Component comp = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
         
         JPanel cellPanel = new JPanel(new GridBagLayout());
         cellPanel.setOpaque(true);
         
-        PanelAction action = new PanelAction();
+        T cellComponent = component;
         
         if (!isSelected && row % 2 == 0) {
-            action.setBackground(Color.WHITE);
             cellPanel.setBackground(Color.WHITE);
+            cellComponent.setBackground(Color.WHITE);
         } else {
-            action.setBackground(component.getBackground());
-            cellPanel.setBackground(component.getBackground());
+            cellPanel.setBackground(comp.getBackground());
+            cellComponent.setBackground(comp.getBackground());
         }
-            
-        cellPanel.add(action);
+        
+        cellPanel.add(cellComponent);
         
         return cellPanel;
     }
+    
+    
+    
     
 }

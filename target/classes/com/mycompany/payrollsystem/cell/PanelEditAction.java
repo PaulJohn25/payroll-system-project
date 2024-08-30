@@ -6,7 +6,7 @@ package com.mycompany.payrollsystem.cell;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -21,6 +21,17 @@ public class PanelEditAction extends javax.swing.JPanel {
      */
     public PanelEditAction() {
         initComponents();
+        GridBagConstraints gbc = new GridBagConstraints();
+        edit_button.setPreferredSize(new Dimension(80, 37));
+        
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 0;
+        gbc.weighty = 0;
+        gbc.fill = GridBagConstraints.NONE;
+        
+        this.add(edit_button, gbc);
+        
         edit_button.setButtonPressedColor(new Color(2, 144, 204));
         edit_button.setDefaultColor(new Color(2,142,255));
         

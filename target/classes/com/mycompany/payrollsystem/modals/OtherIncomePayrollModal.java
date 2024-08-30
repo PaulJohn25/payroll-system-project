@@ -5,7 +5,9 @@
 package com.mycompany.payrollsystem.modals;
 
 import com.mycompany.payrollsystem.cell.PanelRemoveAction;
-import com.mycompany.payrollsystem.cell.TableActionCellRenderTest;
+import com.mycompany.payrollsystem.cell.TableActionCellEditor;
+import com.mycompany.payrollsystem.cell.TableActionCellRender;
+import com.mycompany.payrollsystem.cell.TableRemoveActionEvent;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
@@ -31,9 +33,17 @@ public class OtherIncomePayrollModal extends javax.swing.JFrame {
         tableHeader = other_income_payroll_table.getTableHeader();
         tableHeader.setFont(headerFont);
         
-        TableActionCellRenderTest tableActionCellRender = new TableActionCellRenderTest(new PanelRemoveAction());
-        
+        TableActionCellRender tableActionCellRender = new TableActionCellRender(new PanelRemoveAction());
         other_income_payroll_table.getColumnModel().getColumn(3).setCellRenderer(tableActionCellRender);
+        
+        TableRemoveActionEvent remove_event = (int row) -> {
+            System.out.println("Remove Row: " + row);
+        };
+        
+        other_income_payroll_table
+                .getColumnModel()
+                .getColumn(3)
+                .setCellEditor(new TableActionCellEditor<>(new PanelRemoveAction(), remove_event)); 
     }
 
     /**
