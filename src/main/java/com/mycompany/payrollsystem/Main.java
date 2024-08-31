@@ -6,6 +6,7 @@ package com.mycompany.payrollsystem;
 
 import com.mycompany.payrollsystem.panel_forms.*;
 import com.mycompany.payrollsystem.cell.TableEditActionEvent;
+import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -20,6 +21,8 @@ public class Main extends javax.swing.JFrame {
     private final AddEmployee addEmployeeComponent;
     private final Employees employeesComponent;
     private final FileManagement fileManagementComponent;
+    private final JButton addEmployeeButton;
+    private static final String[] OPTIONS = {"Yes", "No"};
    
     
     /**
@@ -32,6 +35,7 @@ public class Main extends javax.swing.JFrame {
         addEmployeeComponent = new AddEmployee();
         employeesComponent = new Employees();
         fileManagementComponent = new FileManagement();
+        addEmployeeButton = employeesComponent.getAddEmployeeButton();
         util.fitImageToComponent(hide_panel, "images/hide_icon.png");
         util.fitImageToComponent(close_panel, "images/close.png");
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
@@ -49,7 +53,7 @@ public class Main extends javax.swing.JFrame {
                     System.out.println("Employee Form");
                     setForm(employeesComponent);
                     
-                    employeesComponent.getAddEmployeeButton().addActionListener(((e) -> {
+                    addEmployeeButton.addActionListener(((e) -> {
                          System.out.println("Add employee is clicked!");
                          setForm(addEmployeeComponent);
                     }));
@@ -149,11 +153,13 @@ public class Main extends javax.swing.JFrame {
                 JOptionPane.DEFAULT_OPTION, // Option type (customized buttons)
                 JOptionPane.PLAIN_MESSAGE, // Message type
                 null, // Icon (null means no custom icon)
-                new String[]{"Yes", "No"}, // Custom button labels
+                OPTIONS, // Custom button labels
                 null);
 
         if (choice == 0) {
             setForm(employeesComponent);
+        } else {
+            System.out.println("Form Close");
         }
 
     }
