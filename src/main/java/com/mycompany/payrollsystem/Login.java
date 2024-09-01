@@ -2,15 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.payrollsystem.test_forms;
+package com.mycompany.payrollsystem;
 
-import com.mycompany.payrollsystem.Util;
+import com.mycompany.payrollsystem.database.DatabaseManager;
+import com.mycompany.payrollsystem.custom_exceptions.CustomExceptions;
 import com.mycompany.payrollsystem.interfaces.EmailInputValidator;
 import com.mycompany.payrollsystem.interfaces.PasswordInputValidator;
 import java.awt.Color;
+import java.sql.SQLException;
 import java.util.regex.Pattern;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,19 +21,26 @@ import javax.swing.JLabel;
  */
 public class Login extends javax.swing.JFrame implements EmailInputValidator, PasswordInputValidator {
 
-    private final Util util = new Util();
+    private final Util util;
+    private final DatabaseManager databaseManager;
+    private final Main main;
     private Pattern pattern;
     private final String regex = "^[a-zA-Z0-9._]+@gmail\\.com$";
+
     /**
      * Creates new form TestLogin
      */
     public Login() {
+        this.util = new Util();
+        this.databaseManager = new DatabaseManager();
+        this.main = new Main();
         initComponents();
+        setBackground(new Color(0, 0, 0, 0));
         this.setLocationRelativeTo(null); // Centers the form
         util.fitImageToComponent(CompanyLogoPanel, "images/company_image.png");
         util.fitImageToComponent(hide_panel, "images/hide_icon.png");
         util.fitImageToComponent(close_panel, "images/close.png");
-        setBackground(new Color(0, 0, 0, 0));
+       
     }
 
     /**
@@ -106,6 +116,11 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
         sign_up_button.setForeground(new java.awt.Color(255, 255, 255));
         sign_up_button.setText("SIGN IN");
         sign_up_button.setBorder(null);
+        sign_up_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sign_up_buttonActionPerformed(evt);
+            }
+        });
 
         email_error_label.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
 
@@ -168,7 +183,6 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
                             .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
                                 .addGap(33, 33, 33)
                                 .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
                                     .addComponent(jLabel10)
                                     .addGroup(leftRoundedCornerPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
@@ -181,7 +195,8 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
                                             .addComponent(password_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(email_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(email_error_label, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(password_error_label, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addComponent(password_error_label, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jLabel5))))
                             .addComponent(jLabel1)))
                     .addGroup(leftRoundedCornerPanel1Layout.createSequentialGroup()
                         .addGap(118, 118, 118)
@@ -331,7 +346,7 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
             .addComponent(rightRoundedCornerPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(roundedPanel1Layout.createSequentialGroup()
                 .addComponent(leftRoundedCornerPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 45, Short.MAX_VALUE))
+                .addGap(0, 38, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -376,9 +391,9 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
 
     private void show_password_checkboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_show_password_checkboxActionPerformed
         // TODO add your handling code here:
-        
+
         if (show_password_checkbox.isSelected()) {
-            password_textfield.setEchoChar((char)0); // Show password
+            password_textfield.setEchoChar((char) 0); // Show password
             System.out.println("Selected");
         } else {
             password_textfield.setEchoChar('*'); // Hide password
@@ -388,7 +403,7 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
 
     private void forgot_password_labelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgot_password_labelMouseEntered
         // TODO add your handling code here:
-        util.setBottomBorder(forgot_password_label, new Color(102,153,255));
+        util.setBottomBorder(forgot_password_label, new Color(102, 153, 255));
     }//GEN-LAST:event_forgot_password_labelMouseEntered
 
     private void forgot_password_labelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgot_password_labelMouseExited
@@ -396,14 +411,36 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
         forgot_password_label.setBorder(null);
     }//GEN-LAST:event_forgot_password_labelMouseExited
 
+    private void sign_up_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sign_up_buttonActionPerformed
+        // TODO add your handling code here:
+        String email = email_textfield.getText();
+        char[] passwordChars = password_textfield.getPassword();
+        String password = new String(passwordChars);
+
+        boolean isEmailValid = validateEmailInput(email, email_error_label);
+        boolean isPasswordValid = validatePasswordInput(password, password_error_label);
+
+        if (isEmailValid && isPasswordValid) {
+            try {
+                databaseManager.loginUser(email, password);
+                // Show main form
+                main.setVisible(true);
+                this.dispose(); // Dispose login form
+            } catch (CustomExceptions.IncorrectPasswordException
+                    | CustomExceptions.UserNotFoundException | SQLException e) {
+                JOptionPane.showMessageDialog(this, e.getMessage(), "Login Failed", JOptionPane.WARNING_MESSAGE);
+            }
+        }
+
+    }//GEN-LAST:event_sign_up_buttonActionPerformed
+
     @Override
     public boolean validateEmailInput(String input, JLabel error_label) {
-        
+
         boolean isEmailValid = true;
         String errorMessage = "";
         pattern = Pattern.compile(regex);
-       
-        
+
         if (input.trim().isEmpty()) {
             isEmailValid = false;
             errorMessage = "Email can't be empty.";
@@ -411,40 +448,40 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
             isEmailValid = false;
             errorMessage = "Email format is invalid.";
         }
-        
+
         if (!isEmailValid) {
             error_label.setText(errorMessage);
             error_label.setForeground(Color.RED);
         } else {
             error_label.setText(""); // Clear the error message
             error_label.setForeground(null); // Reset to default color 
-        } 
-        
+        }
+
         return isEmailValid;
     }
-    
+
     @Override
     public boolean validatePasswordInput(String input, JLabel error_label) {
-        
+
         boolean isPasswordValid = true;
         String errorMessage = "";
-        
+
         if (input.trim().isEmpty()) {
             isPasswordValid = false;
             errorMessage = "Password can't be empty.";
-        } 
-        
+        }
+
         if (!isPasswordValid) {
             error_label.setText(errorMessage);
             error_label.setForeground(Color.RED);
         } else {
-            error_label.setText(""); 
+            error_label.setText("");
             error_label.setForeground(null);
         }
-        
+
         return isPasswordValid;
     }
-    
+
     /**
      * @param args the command line arguments
      */

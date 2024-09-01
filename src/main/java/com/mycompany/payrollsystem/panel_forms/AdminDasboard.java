@@ -4,13 +4,12 @@
  */
 package com.mycompany.payrollsystem.panel_forms;
 
-import com.mycompany.payrollsystem.component.*;
 import com.mycompany.payrollsystem.model.CardModel;
 import javax.swing.SwingUtilities;
 import com.mycompany.payrollsystem.chart.ModelPieChart;
 import com.mycompany.payrollsystem.chart.PieChart;
+import com.mycompany.payrollsystem.component.AdminDashboardProfile;
 import java.awt.Color;
-import java.awt.Dimension;
 
 
 
@@ -38,6 +37,10 @@ public class AdminDasboard extends javax.swing.JPanel {
             showPieChart();
         });
     }
+    
+    public AdminDashboardProfile getAdminDashboardProfile() {
+        return admin_dashboard_profile;
+    }
 
     private void showPieChart() {
         pieChart.setChartType(PieChart.PeiChartType.DONUT_CHART);
@@ -57,7 +60,7 @@ public class AdminDasboard extends javax.swing.JPanel {
 
         header1 = new com.mycompany.payrollsystem.component.HeaderDashboard();
         breadcrumb = new com.mycompany.payrollsystem.component.Breadcrumb();
-        dashboard_Profile1 = new com.mycompany.payrollsystem.component.Admin_Dashboard_Profile();
+        admin_dashboard_profile = new com.mycompany.payrollsystem.component.AdminDashboardProfile();
         employees_card = new com.mycompany.payrollsystem.component.Card();
         departments_card = new com.mycompany.payrollsystem.component.Card();
         document_files_card = new com.mycompany.payrollsystem.component.Card();
@@ -164,7 +167,7 @@ public class AdminDasboard extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(branches_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addComponent(dashboard_Profile1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(admin_dashboard_profile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -190,7 +193,7 @@ public class AdminDasboard extends javax.swing.JPanel {
                             .addComponent(document_files_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(loans_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(branches_card, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(dashboard_Profile1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(admin_dashboard_profile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -201,10 +204,10 @@ public class AdminDasboard extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.mycompany.payrollsystem.component.AdminDashboardProfile admin_dashboard_profile;
     private com.mycompany.payrollsystem.chart.BarChart barChart1;
     private com.mycompany.payrollsystem.component.Card branches_card;
     private com.mycompany.payrollsystem.component.Breadcrumb breadcrumb;
-    private com.mycompany.payrollsystem.component.Admin_Dashboard_Profile dashboard_Profile1;
     private com.mycompany.payrollsystem.component.Card departments_card;
     private com.mycompany.payrollsystem.component.Card document_files_card;
     private com.mycompany.payrollsystem.component.Card employees_card;

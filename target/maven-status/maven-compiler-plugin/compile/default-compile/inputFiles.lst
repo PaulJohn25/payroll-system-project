@@ -1,3 +1,4 @@
+C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\database\DatabaseConnection.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\interfaces\EmailInputValidator.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\CirclePanel.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\OtherDeduction.java
@@ -7,7 +8,6 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\CreateDesignationModal.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\OtherIncomePayrollModal.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Util.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\ScrollPaneExample.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\RightGradientRoundedCornerPanel.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\panel_forms\Employees.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\panel_forms\Report.java
@@ -39,10 +39,10 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\panel_forms\FileManagement.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\panel_forms\Statutories.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\chart\PieChart.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\PaginatedTableExample.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\interfaces\PasswordInputValidator.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\CreatePositionModal.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\TableRemoveActionEvent.java
+C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\database\DatabaseManager.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelDownloadAction.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\CardHeader.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelActionButtons.java
@@ -50,14 +50,12 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelEditAction.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\RoundedCornersPanelWithBorder.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\test_forms\Leave_Management.java
+C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\Login.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\panel_forms\AddEmployee.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\custom_exceptions\CustomExceptions.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\PayrollSystem.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\OtherIncomeManagement.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\test_forms\Payroll_Management.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\CreateDepartmentModal.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\PaginationExample.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\test_forms\Login.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\RoundedCornersPanel.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\TableDownloadActionEvent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\OtherDeductionModal.java
@@ -79,7 +77,6 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\TableEmployeeActionEvent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\ButtonDashboard.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\TableActionEvent.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\DatabaseManager.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\ListMenu.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\EmployeeActionEvent.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\panel_forms\SystemManagement.java

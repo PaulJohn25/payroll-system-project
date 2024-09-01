@@ -47,7 +47,7 @@
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="dashboard_Profile1" min="-2" max="-2" attributes="0"/>
+                      <Component id="admin_dashboard_profile" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jPanel3" max="32767" attributes="0"/>
@@ -81,7 +81,7 @@
                           <Component id="branches_card" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="dashboard_Profile1" min="-2" max="-2" attributes="0"/>
+                  <Component id="admin_dashboard_profile" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -98,7 +98,7 @@
     </Component>
     <Component class="com.mycompany.payrollsystem.component.Breadcrumb" name="breadcrumb">
     </Component>
-    <Component class="com.mycompany.payrollsystem.component.Admin_Dashboard_Profile" name="dashboard_Profile1">
+    <Component class="com.mycompany.payrollsystem.component.AdminDashboardProfile" name="admin_dashboard_profile">
     </Component>
     <Component class="com.mycompany.payrollsystem.component.Card" name="employees_card">
       <Properties>

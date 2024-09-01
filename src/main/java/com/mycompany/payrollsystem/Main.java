@@ -40,6 +40,9 @@ public class Main extends javax.swing.JFrame {
         util.fitImageToComponent(close_panel, "images/close.png");
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
         util.fitImageToComponent(intra_logo_label, "images/main_logo-removebg.png");
+        
+        
+        
         Menu.getListMenu().setSelectedIndex(0);
         Menu.addEventMenuSelected((int index) -> {
             System.out.println("Selected Index: " + index);
@@ -126,8 +129,12 @@ public class Main extends javax.swing.JFrame {
                     setForm(new SystemManagement());
                 }
                 case 14 -> {
-                    System.out.println("");
+                    System.out.println("Logout");
+                    Login login = new Login();
+                    login.setVisible(true);
+                    this.dispose();
                 }
+               
                 default -> {
                     System.out.println("Default Form");
                 }
