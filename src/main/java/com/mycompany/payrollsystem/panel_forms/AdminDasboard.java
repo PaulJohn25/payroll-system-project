@@ -11,8 +11,6 @@ import com.mycompany.payrollsystem.chart.PieChart;
 import com.mycompany.payrollsystem.component.AdminDashboardProfile;
 import java.awt.Color;
 
-
-
 /**
  *
  * @author Paul
@@ -26,18 +24,16 @@ public class AdminDasboard extends javax.swing.JPanel {
         initComponents();
         setOpaque(false);
         breadcrumb.setupBreadcrumb("Dashboard");
-      
-        SwingUtilities.invokeLater(() -> {
-            employees_card.setupData(new CardModel("Employees", 7, "employees_card_icon"));
-            departments_card.setupData(new CardModel("Departments", 3, "departments_card_icon"));
-            leaves_card.setupData(new CardModel("Leaves", 0, "leaves_card_icon"));
-            document_files_card.setupData(new CardModel("Documents Files", 3, "document_files_card_icon"));
-            loans_card.setupData(new CardModel("Loans", 3, "loans_card_icon"));
-            branches_card.setupData(new CardModel("Branches", 3, "branches_card_icon"));
-            showPieChart();
-        });
+
+        employees_card.setupData(new CardModel("Employees", 7));
+        departments_card.setupData(new CardModel("Departments", 3));
+        leaves_card.setupData(new CardModel("Leaves", 0));
+        document_files_card.setupData(new CardModel("Documents Files", 3));
+        loans_card.setupData(new CardModel("Loans", 3));
+        branches_card.setupData(new CardModel("Branches", 3));
+        showPieChart();
     }
-    
+
     public AdminDashboardProfile getAdminDashboardProfile() {
         return admin_dashboard_profile;
     }
@@ -47,8 +43,6 @@ public class AdminDasboard extends javax.swing.JPanel {
         pieChart.addData(new ModelPieChart("Cabanatuan Branch", 5, new Color(255, 152, 232)));
         pieChart.addData(new ModelPieChart("Talavera Branch", 1, new Color(59, 79, 136)));
     }
-
- 
 
     /**
      * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this
@@ -78,16 +72,22 @@ public class AdminDasboard extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(900, 935));
 
         employees_card.setBackground(new java.awt.Color(0, 0, 255));
+        employees_card.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/employees_card_icon.png"))); // NOI18N
 
         departments_card.setBackground(new java.awt.Color(255, 102, 0));
+        departments_card.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/departments_card_icon.png"))); // NOI18N
 
         document_files_card.setBackground(new java.awt.Color(0, 0, 255));
+        document_files_card.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/document_files_card_icon.png"))); // NOI18N
 
         loans_card.setBackground(new java.awt.Color(255, 102, 0));
+        loans_card.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/loans_card_icon.png"))); // NOI18N
 
         leaves_card.setBackground(new java.awt.Color(255, 0, 0));
+        leaves_card.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/leaves_card_icon.png"))); // NOI18N
 
         branches_card.setBackground(new java.awt.Color(255, 0, 0));
+        branches_card.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/branches_card_icon.png"))); // NOI18N
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 

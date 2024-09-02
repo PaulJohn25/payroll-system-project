@@ -4,22 +4,13 @@
  */
 package com.mycompany.payrollsystem.panel_forms;
 
-import com.mycompany.payrollsystem.component.*;
 import com.mycompany.payrollsystem.cell.PanelDownloadAction;
-import com.mycompany.payrollsystem.cell.PanelEditAction;
-import com.mycompany.payrollsystem.cell.PanelStatus;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import com.mycompany.payrollsystem.cell.TableActionCellRender;
 import com.mycompany.payrollsystem.cell.TableDownloadActionEvent;
-import com.mycompany.payrollsystem.modals.CreateBranchModal;
-import com.mycompany.payrollsystem.modals.CreateDepartmentModal;
-import com.mycompany.payrollsystem.modals.CreateDesignationModal;
-import com.mycompany.payrollsystem.modals.CreatePositionModal;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
 import java.awt.Dimension;
-import javax.swing.JPanel;
-import com.mycompany.payrollsystem.cell.TableEditActionEvent;
 /**
  *
  * @author Paul

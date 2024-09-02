@@ -15,34 +15,41 @@ import javax.swing.JOptionPane;
  *
  * @author Paul
  */
-public class Main extends javax.swing.JFrame {
+public class Home extends javax.swing.JFrame {
 
     private final Util util = new Util(); 
     private final AddEmployee addEmployeeComponent;
     private final Employees employeesComponent;
     private final FileManagement fileManagementComponent;
     private final JButton addEmployeeButton;
+    private AdminDasboard adminDasboard;
     private static final String[] OPTIONS = {"Yes", "No"};
    
     
     /**
      * Creates new form Dashboard
      */
-    public Main() {
+    public Home() {
         initComponents();
         this.setLocationRelativeTo(null);
         
-        addEmployeeComponent = new AddEmployee();
-        employeesComponent = new Employees();
-        fileManagementComponent = new FileManagement();
+        this.addEmployeeComponent = new AddEmployee();
+        this.employeesComponent = new Employees();
+        this.fileManagementComponent = new FileManagement();
+        this.adminDasboard = AdminDashboard;
+        
         addEmployeeButton = employeesComponent.getAddEmployeeButton();
         util.fitImageToComponent(hide_panel, "images/hide_icon.png");
         util.fitImageToComponent(close_panel, "images/close.png");
         util.fitImageToComponent(menu_logo_label, "icons/menu.png");
         util.fitImageToComponent(intra_logo_label, "images/main_logo-removebg.png");
+        adminDasboard.getAdminDashboardProfile().setButtonDashboardLogoutEvent(this);
         
-        
-        
+//        SwingUtilities.invokeLater((() -> {
+//             this.adminDasboard = new AdminDasboard();
+//             adminDasboard.getAdminDashboardProfile().setButtonDashboardLogoutEvent(this);
+//        }));
+       
         Menu.getListMenu().setSelectedIndex(0);
         Menu.addEventMenuSelected((int index) -> {
             System.out.println("Selected Index: " + index);
@@ -50,7 +57,7 @@ public class Main extends javax.swing.JFrame {
             switch (index) {
                 case 0 -> {
                     System.out.println("Dashboard Form");
-                    setForm(new AdminDasboard());
+                    setForm(adminDasboard);
                 }
                 case 1 -> {
                     System.out.println("Employee Form");
@@ -130,7 +137,7 @@ public class Main extends javax.swing.JFrame {
                 }
                 case 14 -> {
                     System.out.println("Logout");
-                    Login login = new Login();
+                    PayrollSystem login = new PayrollSystem();
                     login.setVisible(true);
                     this.dispose();
                 }
@@ -187,7 +194,7 @@ public class Main extends javax.swing.JFrame {
         menu_logo_label = new javax.swing.JLabel();
         Menu = new com.mycompany.payrollsystem.component.Menu();
         scrollPane = new javax.swing.JScrollPane();
-        adminDasboard1 = new com.mycompany.payrollsystem.panel_forms.AdminDasboard();
+        AdminDashboard = new com.mycompany.payrollsystem.panel_forms.AdminDasboard();
         menu_header_panel1 = new javax.swing.JPanel();
         intra_logo_label = new javax.swing.JLabel();
         Menu1 = new com.mycompany.payrollsystem.component.Menu();
@@ -256,7 +263,7 @@ public class Main extends javax.swing.JFrame {
 
         scrollPane.setBackground(new java.awt.Color(255, 255, 255));
         scrollPane.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        scrollPane.setViewportView(adminDasboard1);
+        scrollPane.setViewportView(AdminDashboard);
 
         menu_header_panel1.setBackground(new java.awt.Color(203, 209, 238));
 
@@ -346,49 +353,73 @@ public class Main extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Main().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new Home().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.mycompany.payrollsystem.panel_forms.AdminDasboard AdminDashboard;
     private com.mycompany.payrollsystem.component.Menu Menu;
     private com.mycompany.payrollsystem.component.Menu Menu1;
-    private com.mycompany.payrollsystem.panel_forms.AdminDasboard adminDasboard1;
     private javax.swing.JLabel close_panel;
     private javax.swing.JLabel hide_panel;
     private javax.swing.JLabel intra_logo_label;

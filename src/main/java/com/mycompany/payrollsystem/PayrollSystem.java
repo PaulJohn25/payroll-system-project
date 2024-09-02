@@ -19,21 +19,21 @@ import javax.swing.JOptionPane;
  *
  * @author Paul
  */
-public class Login extends javax.swing.JFrame implements EmailInputValidator, PasswordInputValidator {
+public class PayrollSystem extends javax.swing.JFrame implements EmailInputValidator, PasswordInputValidator {
 
     private final Util util;
     private final DatabaseManager databaseManager;
-    private final Main main;
+    private final Home main;
     private Pattern pattern;
     private final String regex = "^[a-zA-Z0-9._]+@gmail\\.com$";
 
     /**
      * Creates new form TestLogin
      */
-    public Login() {
+    public PayrollSystem() {
         this.util = new Util();
         this.databaseManager = new DatabaseManager();
-        this.main = new Main();
+        this.main = new Home();
         initComponents();
         setBackground(new Color(0, 0, 0, 0));
         this.setLocationRelativeTo(null); // Centers the form
@@ -499,21 +499,23 @@ public class Login extends javax.swing.JFrame implements EmailInputValidator, Pa
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PayrollSystem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PayrollSystem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PayrollSystem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PayrollSystem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                new PayrollSystem().setVisible(true);
             }
         });
     }

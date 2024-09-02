@@ -189,7 +189,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="com.mycompany.payrollsystem.panel_forms.AdminDasboard" name="adminDasboard1">
+            <Component class="com.mycompany.payrollsystem.panel_forms.AdminDasboard" name="AdminDashboard">
             </Component>
           </SubComponents>
         </Container>

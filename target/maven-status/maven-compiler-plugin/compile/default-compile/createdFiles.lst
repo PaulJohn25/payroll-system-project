@@ -16,7 +16,6 @@ com\mycompany\payrollsystem\panel_forms\SystemManagement.class
 com\mycompany\payrollsystem\custom_exceptions\CustomExceptions$UserNotFoundException.class
 com\mycompany\payrollsystem\modals\CreatePositionModal.class
 com\mycompany\payrollsystem\test_forms\Other_Income_Management$2.class
-com\mycompany\payrollsystem\component\Admin_Dashboard_Profile.class
 com\mycompany\payrollsystem\modals\CreateBranchModal.class
 com\mycompany\payrollsystem\panel_forms\AddEmployee$13.class
 com\mycompany\payrollsystem\test_forms\File_Management.class
@@ -73,6 +72,7 @@ com\mycompany\payrollsystem\modals\OtherIncomePayrollModal.class
 com\mycompany\payrollsystem\Login$8.class
 com\mycompany\payrollsystem\modals\OtherDeduction$3.class
 com\mycompany\payrollsystem\panel_forms\OtherIncomeManagement$2.class
+com\mycompany\payrollsystem\component\AdminDashboardProfile$1.class
 com\mycompany\payrollsystem\panel_forms\AddEmployee$12.class
 com\mycompany\payrollsystem\component\Staff_Dashboard_Profile.class
 com\mycompany\payrollsystem\test_forms\Permission_Management$7.class
@@ -200,6 +200,7 @@ com\mycompany\payrollsystem\panel_forms\AddEmployee$4.class
 com\mycompany\payrollsystem\test_forms\Payroll_Management$4.class
 com\mycompany\payrollsystem\panel_forms\AddEmployee$1.class
 com\mycompany\payrollsystem\chart\ModelPieChart.class
+com\mycompany\payrollsystem\component\AdminDashboardProfile.class
 com\mycompany\payrollsystem\swing\BackgroundLabel.class
 com\mycompany\payrollsystem\modals\AddEmployeeModal$1.class
 com\mycompany\payrollsystem\panel_forms\Employees.class

@@ -4,10 +4,14 @@
  */
 package com.mycompany.payrollsystem.component;
 
+import com.mycompany.payrollsystem.PayrollSystem;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
@@ -34,8 +38,19 @@ public class AdminDashboardProfile extends javax.swing.JPanel {
         });
     }
     
-    public JPanel getButtonDashboardLogout() {
-        return button_dashboard_logout;
+    public void setButtonDashboardLogoutEvent(JFrame form) {
+        
+        button_dashboard_logout.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                System.out.println(form.getClass().getName());
+                System.out.println("Logout button is clicked!");
+                PayrollSystem login = new PayrollSystem();
+                login.setVisible(true);
+                form.dispose();
+            }  
+        });
+        
     }
 
     @Override

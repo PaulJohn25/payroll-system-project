@@ -4,17 +4,22 @@
  */
 package com.mycompany.payrollsystem.component;
 
+import com.mycompany.payrollsystem.Login;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 /**
  *
  * @author Paul
  */
-public class Admin_Dashboard_Profile extends javax.swing.JPanel {
+public class AdminDashboardProfile extends javax.swing.JPanel {
 
     private final int arcWidth = 15;
     private final int arcHeight = 15;
@@ -23,7 +28,7 @@ public class Admin_Dashboard_Profile extends javax.swing.JPanel {
     /**
      * Creates new form Dashboard_Profile
      */
-    public Admin_Dashboard_Profile() {
+    public AdminDashboardProfile() {
         initComponents();
         setOpaque(false);
         setBackground(backgroundColor);
@@ -31,6 +36,21 @@ public class Admin_Dashboard_Profile extends javax.swing.JPanel {
             button_dashboard_settings.setupButton("icons/settings_black.png", "Settings", true);
             button_dashboard_logout.setupButton("icons/logout _black.png", "Logout", false);
         });
+    }
+    
+    public void setButtonDashboardLogoutEvent(JFrame form) {
+        
+        button_dashboard_logout.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                System.out.println(form.getClass().getName());
+                System.out.println("Logout button is clicked!");
+                Login login = new Login();
+                login.setVisible(true);
+                form.dispose();
+            }  
+        });
+        
     }
 
     @Override
