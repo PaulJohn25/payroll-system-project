@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2024 at 04:14 AM
+-- Generation Time: Aug 19, 2024 at 03:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -34,14 +34,6 @@ CREATE TABLE `branches` (
   `phone_number` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `branches`
---
-
-INSERT INTO `branches` (`branch_id`, `branch_name`, `location`, `phone_number`) VALUES
-(1, 'Intracode', 'Cabanatuan', NULL),
-(2, 'Intracode', 'Somewhere out there', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -54,15 +46,6 @@ CREATE TABLE `departments` (
   `branch_id` int(11) DEFAULT NULL,
   `manager_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `departments`
---
-
-INSERT INTO `departments` (`department_id`, `department_name`, `branch_id`, `manager_id`) VALUES
-(1, 'Project lead', NULL, NULL),
-(2, 'intern', NULL, NULL),
-(3, 'intern', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -122,27 +105,6 @@ CREATE TABLE `reports` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `roles`
---
-
-CREATE TABLE `roles` (
-  `role_id` int(11) NOT NULL,
-  `role_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `roles`
---
-
-INSERT INTO `roles` (`role_id`, `role_name`) VALUES
-(1, 'JPImperial'),
-(2, 'ABalines'),
-(3, 'CLMonilla'),
-(4, 'GPernia');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `timekeeping`
 --
 
@@ -164,13 +126,13 @@ CREATE TABLE `timekeeping` (
 
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `username` varchar(30) NOT NULL,
-  `password` char(60) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `role_id` int(11) DEFAULT NULL,
   `department_id` int(11) DEFAULT NULL,
   `profile_picture` varchar(255) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `phone_number` varchar(20) DEFAULT NULL,
   `date_created` datetime DEFAULT current_timestamp(),
   `last_login` datetime DEFAULT NULL,
@@ -182,10 +144,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `name`, `username`, `password`, `role_id`, `department_id`, `profile_picture`, `email`, `phone_number`, `date_created`, `last_login`, `branch_id`) VALUES
-(1, 'John Paul Imperial', 'johnpaul', 'HelloWorld', 1, 2, 'john_profile.jpg', 'johnpaul08@gmail.com', '0998-247-2976', '2024-08-31 19:13:00', '2024-09-02 08:58:18', 1),
-(2, 'Aron Balines', 'aronbalines', 'HelloWorld', 1, 2, 'aron_profile.jpg', 'aronbalines@gmail.com', '0943-124-5212', '2024-09-02 09:27:51', '2024-09-02 09:30:06', 1),
-(3, 'Cedrick Lance Monilla', 'cedriclance', 'HelloWorld', 1, 2, 'cedrick_profile.jpg', 'cedriclance@gmail.com', '0942-532-1332', '2024-09-02 09:27:51', '2024-09-02 09:29:50', 1),
-(4, 'Grace Pernia', 'gracepernia', 'HelloWorld', 1, 2, 'grace_profile.jpg', 'gracepernia@gmail.com', '0942-143-5231', '2024-09-02 09:27:51', '2024-09-02 09:28:51', 1);
+(1, 'John Paul Imperial', 'jpImperial', 'intern123', 1, NULL, NULL, 'jpimperial@gmail.com', '09123456789', '2024-08-16 16:24:38', NULL, NULL),
+(2, 'Aron Carl M. Balines', 'acbalines123', 'acbalinesintern', 24, NULL, NULL, 'baliens@gmail.com', '09123456789', '2024-08-16 16:26:18', NULL, NULL),
+(3, 'Grace Pernia', 'gpernia', 'gperniaintern', 3, NULL, NULL, 'gpernia@gmail.com', '09234567891', '2024-08-16 16:30:48', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -261,12 +222,6 @@ ALTER TABLE `reports`
   ADD PRIMARY KEY (`report_id`);
 
 --
--- Indexes for table `roles`
---
-ALTER TABLE `roles`
-  ADD PRIMARY KEY (`role_id`);
-
---
 -- Indexes for table `timekeeping`
 --
 ALTER TABLE `timekeeping`
@@ -279,10 +234,9 @@ ALTER TABLE `timekeeping`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`),
   ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `unique_email` (`email`),
-  ADD KEY `role_id` (`role_id`),
-  ADD KEY `fk_users_branch` (`branch_id`),
-  ADD KEY `fk_users_department` (`department_id`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD KEY `fk_users_department` (`department_id`),
+  ADD KEY `fk_users_branch` (`branch_id`);
 
 --
 -- Indexes for table `user_files`
@@ -307,13 +261,13 @@ ALTER TABLE `user_leaves`
 -- AUTO_INCREMENT for table `branches`
 --
 ALTER TABLE `branches`
-  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `departments`
 --
 ALTER TABLE `departments`
-  MODIFY `department_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `department_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `leave_types`
@@ -349,7 +303,7 @@ ALTER TABLE `timekeeping`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_files`
@@ -396,10 +350,7 @@ ALTER TABLE `timekeeping`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `fk_users_branch` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`branch_id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_users_department` FOREIGN KEY (`department_id`) REFERENCES `departments` (`department_id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`),
-  ADD CONSTRAINT `users_ibfk_2` FOREIGN KEY (`department_id`) REFERENCES `departments` (`department_id`),
-  ADD CONSTRAINT `users_ibfk_3` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`branch_id`);
+  ADD CONSTRAINT `fk_users_department` FOREIGN KEY (`department_id`) REFERENCES `departments` (`department_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `user_files`
