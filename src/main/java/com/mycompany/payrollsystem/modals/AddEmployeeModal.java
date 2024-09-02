@@ -10,7 +10,7 @@ import com.mycompany.payrollsystem.cell.TableActionCellRender;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
-import com.mycompany.payrollsystem.cell.TableEmployeeActionEvent;
+import com.mycompany.payrollsystem.event.TableEmployeeActionEvent;
 
 /**
  *

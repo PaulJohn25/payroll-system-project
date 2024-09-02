@@ -4,6 +4,11 @@
  */
 package com.mycompany.payrollsystem.cell;
 
+import com.mycompany.payrollsystem.event.TableDownloadActionEvent;
+import com.mycompany.payrollsystem.event.TableRemoveActionEvent;
+import com.mycompany.payrollsystem.event.TableEmployeeActionEvent;
+import com.mycompany.payrollsystem.event.TableEditActionEvent;
+import com.mycompany.payrollsystem.event.TableGroupActionEvent;
 import java.awt.Color;
 import java.awt.Component;
 import javax.swing.DefaultCellEditor;

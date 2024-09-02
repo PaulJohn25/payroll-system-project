@@ -8,7 +8,7 @@ import com.mycompany.payrollsystem.component.*;
 import com.mycompany.payrollsystem.cell.PanelGroupAction;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import com.mycompany.payrollsystem.cell.TableActionCellRender;
-import com.mycompany.payrollsystem.cell.TableGroupActionEvent;
+import com.mycompany.payrollsystem.event.TableGroupActionEvent;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
 import com.mycompany.payrollsystem.modals.AddEmployeeModal;

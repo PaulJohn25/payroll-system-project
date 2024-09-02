@@ -4,7 +4,7 @@
  */
 package com.mycompany.payrollsystem.component;
 
-import com.mycompany.payrollsystem.Login;
+import com.mycompany.payrollsystem.PayrollSystem;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -45,7 +45,7 @@ public class AdminDashboardProfile extends javax.swing.JPanel {
             public void mousePressed(MouseEvent e) {
                 System.out.println(form.getClass().getName());
                 System.out.println("Logout button is clicked!");
-                Login login = new Login();
+                PayrollSystem login = new PayrollSystem();
                 login.setVisible(true);
                 form.dispose();
             }  

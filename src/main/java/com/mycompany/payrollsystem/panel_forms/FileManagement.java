@@ -7,7 +7,7 @@ package com.mycompany.payrollsystem.panel_forms;
 import com.mycompany.payrollsystem.cell.PanelDownloadAction;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import com.mycompany.payrollsystem.cell.TableActionCellRender;
-import com.mycompany.payrollsystem.cell.TableDownloadActionEvent;
+import com.mycompany.payrollsystem.event.TableDownloadActionEvent;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
 import java.awt.Dimension;

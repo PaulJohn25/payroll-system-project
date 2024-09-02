@@ -4,6 +4,7 @@
  */
 package com.mycompany.payrollsystem.cell;
 
+import com.mycompany.payrollsystem.event.TableEmployeeActionEvent;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 

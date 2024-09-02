@@ -7,7 +7,7 @@ package com.mycompany.payrollsystem.modals;
 import com.mycompany.payrollsystem.cell.PanelRemoveAction;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import com.mycompany.payrollsystem.cell.TableActionCellRender;
-import com.mycompany.payrollsystem.cell.TableRemoveActionEvent;
+import com.mycompany.payrollsystem.event.TableRemoveActionEvent;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;

@@ -4,6 +4,7 @@
  */
 package com.mycompany.payrollsystem.cell;
 
+import com.mycompany.payrollsystem.event.TableRemoveActionEvent;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;

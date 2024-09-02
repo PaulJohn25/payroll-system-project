@@ -17,7 +17,7 @@ import java.awt.Font;
 import javax.swing.table.JTableHeader;
 import java.awt.Dimension;
 import javax.swing.JPanel;
-import com.mycompany.payrollsystem.cell.TableEditActionEvent;
+import com.mycompany.payrollsystem.event.TableEditActionEvent;
 import javax.swing.JButton;
 /**
  *
