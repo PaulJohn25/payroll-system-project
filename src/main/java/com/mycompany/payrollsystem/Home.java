@@ -234,7 +234,7 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        menu_header_panel.setBackground(new java.awt.Color(203, 209, 238));
+        menu_header_panel.setBackground(new java.awt.Color(245, 247, 248));
 
         menu_logo_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         menu_logo_label.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -260,7 +260,7 @@ public class Home extends javax.swing.JFrame {
         scrollPane.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         scrollPane.setViewportView(AdminDashboard);
 
-        menu_header_panel1.setBackground(new java.awt.Color(203, 209, 238));
+        menu_header_panel1.setBackground(new java.awt.Color(245, 247, 248));
 
         intra_logo_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         intra_logo_label.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

@@ -4,7 +4,13 @@
  */
 package com.mycompany.payrollsystem.panel_forms;
 
-import com.mycompany.payrollsystem.component.*;
+import com.mycompany.payrollsystem.cell.PanelStatus;
+import com.mycompany.payrollsystem.cell.PanelStatusRegular;
+import com.mycompany.payrollsystem.cell.TableActionCellEditor;
+import com.mycompany.payrollsystem.cell.TableCellRender;
+import com.mycompany.payrollsystem.cell.OtherIncomeManagementPanelAction;
+import com.mycompany.payrollsystem.event.OtherIncomeManagementActionEvent;
+import com.mycompany.payrollsystem.modals.OtherIncomeLibraryDetailsModal;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
 import java.awt.Dimension;
@@ -20,9 +26,7 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
      */
     private final Font headerFont;
     private final JTableHeader other_income_management_table_header;
-   
     
-
     public OtherIncomeManagement() {
         this.headerFont = new Font("Arial", Font.BOLD, 20);
         initComponents();
@@ -31,16 +35,43 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
         other_income_management_table_header = other_income_management_table.getTableHeader();
         other_income_management_table_header.setFont(headerFont);
         
+        PanelStatusRegular panelStatus = new PanelStatusRegular();
+        panelStatus.setStatus("One Time");
+        
+        TableCellRender tableStatusRegularCellRender = new TableCellRender(panelStatus);
+        other_income_management_table.getColumnModel().getColumn(2).setCellRenderer(tableStatusRegularCellRender);
+        
+        TableCellRender tableStatusCellRender = new TableCellRender(new PanelStatus());
+        other_income_management_table.getColumnModel().getColumn(4).setCellRenderer(tableStatusCellRender);
+        
+        TableCellRender tableActionCellRender = new TableCellRender(new OtherIncomeManagementPanelAction());
+        other_income_management_table.getColumnModel().getColumn(5).setCellRenderer(tableActionCellRender);
+        
+        OtherIncomeManagementActionEvent event = new OtherIncomeManagementActionEvent() {
+            @Override
+            public void onAddAndEditEmployee(int row) {
+                System.out.println("Add/Edit Employee row: " + row);
+            }
+            
+            @Override
+            public void onEdit(int row) {
+                System.out.println("Edit row: " + row);
+                OtherIncomeLibraryDetailsModal otherIncomeLibraryDetailsModal = new OtherIncomeLibraryDetailsModal();
+                otherIncomeLibraryDetailsModal.setVisible(true);
+            }
+        };
+        
+        other_income_management_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor<>(OtherIncomeManagementPanelAction.class, event));
+        
         setPreferredSize(new Dimension(900, 1130));
         init();
     }
-
+    
     private void init() {
-       
+        
         breadcrumb.setupBreadcrumb("Other Income Management");
         
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this
@@ -50,7 +81,6 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         breadcrumb = new com.mycompany.payrollsystem.component.Breadcrumb();
         topLeftAndTopRightRoundedCornersPanel1 = new com.mycompany.payrollsystem.swing.TopLeftAndTopRightRoundedCornersPanel();
         card_header_name = new javax.swing.JLabel();
@@ -282,7 +312,7 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
         department_panel1Layout.setVerticalGroup(
             department_panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(department_panel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(18, 18, 18)
                 .addComponent(roundedCornersPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(CreateOtherIncomeLibaryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -318,18 +348,16 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
 
     private void CreateOtherIncomeLibaryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateOtherIncomeLibaryButtonActionPerformed
         // TODO add your handling code here:
-      
+        OtherIncomeLibraryDetailsModal otherIncomeLibraryDetailsModal = new OtherIncomeLibraryDetailsModal();
+        otherIncomeLibraryDetailsModal.setVisible(true);
     }//GEN-LAST:event_CreateOtherIncomeLibaryButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CreateOtherIncomeLibaryButton;
     private com.mycompany.payrollsystem.component.Breadcrumb breadcrumb;
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel card_header_name;
-    private javax.swing.JPanel department_panel;
     private javax.swing.JPanel department_panel1;
     private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
@@ -342,7 +370,6 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTable other_income_management_table;
-    private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel7;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel8;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel9;
     private com.mycompany.payrollsystem.swing.TopLeftAndTopRightRoundedCornersPanel topLeftAndTopRightRoundedCornersPanel1;

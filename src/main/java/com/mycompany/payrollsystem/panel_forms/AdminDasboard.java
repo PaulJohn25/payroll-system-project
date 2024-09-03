@@ -5,7 +5,6 @@
 package com.mycompany.payrollsystem.panel_forms;
 
 import com.mycompany.payrollsystem.model.CardModel;
-import javax.swing.SwingUtilities;
 import com.mycompany.payrollsystem.chart.ModelPieChart;
 import com.mycompany.payrollsystem.chart.PieChart;
 import com.mycompany.payrollsystem.component.AdminDashboardProfile;

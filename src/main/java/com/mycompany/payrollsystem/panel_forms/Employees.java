@@ -4,11 +4,10 @@
  */
 package com.mycompany.payrollsystem.panel_forms;
 
-import com.mycompany.payrollsystem.component.*;
 import com.mycompany.payrollsystem.cell.PanelEditAction;
 import com.mycompany.payrollsystem.cell.PanelStatus;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
-import com.mycompany.payrollsystem.cell.TableActionCellRender;
+import com.mycompany.payrollsystem.cell.TableCellRender;
 import com.mycompany.payrollsystem.modals.CreateBranchModal;
 import com.mycompany.payrollsystem.modals.CreateDepartmentModal;
 import com.mycompany.payrollsystem.modals.CreateDesignationModal;
@@ -105,8 +104,8 @@ public class Employees extends javax.swing.JPanel {
             createDesignationModal.setVisible(true);
         };
 
-        TableActionCellRender tableActionCellRender = new TableActionCellRender(new PanelEditAction());
-        TableActionCellRender tableStatusCellRender = new TableActionCellRender(new PanelStatus());
+        TableCellRender tableActionCellRender = new TableCellRender(new PanelEditAction());
+        TableCellRender tableStatusCellRender = new TableCellRender(new PanelStatus());
 
         employees_table.getColumnModel().getColumn(5).setCellRenderer(tableActionCellRender);
         department_table.getColumnModel().getColumn(4).setCellRenderer(tableStatusCellRender);

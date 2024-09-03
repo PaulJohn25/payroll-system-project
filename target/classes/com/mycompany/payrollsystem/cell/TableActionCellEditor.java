@@ -4,6 +4,8 @@
  */
 package com.mycompany.payrollsystem.cell;
 
+import com.mycompany.payrollsystem.event.LoanManagementActionEvent;
+import com.mycompany.payrollsystem.event.OtherIncomeManagementActionEvent;
 import com.mycompany.payrollsystem.event.TableDownloadActionEvent;
 import com.mycompany.payrollsystem.event.TableRemoveActionEvent;
 import com.mycompany.payrollsystem.event.TableEmployeeActionEvent;
@@ -46,21 +48,37 @@ public class TableActionCellEditor<T extends JComponent, E> extends DefaultCellE
         if (actionComponent != null) {
             Color tableSelectionBackground = table.getSelectionBackground();
 
-            if (actionComponent instanceof PanelEditAction panelEditAction) {
-                panelEditAction.initEvent((TableEditActionEvent) event, row);
-                panelEditAction.setBackground(tableSelectionBackground);
-            } else if (actionComponent instanceof PanelGroupAction panelGroupAction) {
-                panelGroupAction.initEvent((TableGroupActionEvent) event, row);
-                panelGroupAction.setBackground(tableSelectionBackground);
-            } else if (actionComponent instanceof PanelRemoveAction panelRemoveAction) {
-                panelRemoveAction.initEvent((TableRemoveActionEvent) event, row);
-                panelRemoveAction.setBackground(tableSelectionBackground);
-            } else if (actionComponent instanceof PanelActionButtons panelActionButtons) {
-                panelActionButtons.initEvent((TableEmployeeActionEvent) event, row);
-                panelActionButtons.setBackground(tableSelectionBackground);
-            } else if (actionComponent instanceof PanelDownloadAction panelDownloadAction) {
-                panelDownloadAction.initEvent((TableDownloadActionEvent) event, row);
-                panelDownloadAction.setBackground(tableSelectionBackground);
+            switch (actionComponent) {
+                case PanelEditAction panelEditAction -> {
+                    panelEditAction.initEvent((TableEditActionEvent) event, row);
+                    panelEditAction.setBackground(tableSelectionBackground);
+                }
+                case PanelGroupAction panelGroupAction -> {
+                    panelGroupAction.initEvent((TableGroupActionEvent) event, row);
+                    panelGroupAction.setBackground(tableSelectionBackground);
+                }
+                case PanelRemoveAction panelRemoveAction -> {
+                    panelRemoveAction.initEvent((TableRemoveActionEvent) event, row);
+                    panelRemoveAction.setBackground(tableSelectionBackground);
+                }
+                case PanelActionButtons panelActionButtons -> {
+                    panelActionButtons.initEvent((TableEmployeeActionEvent) event, row);
+                    panelActionButtons.setBackground(tableSelectionBackground);
+                }
+                case PanelDownloadAction panelDownloadAction -> {
+                    panelDownloadAction.initEvent((TableDownloadActionEvent) event, row);
+                    panelDownloadAction.setBackground(tableSelectionBackground);
+                }
+                case LoanManagementPanelAction loanManagementPanelAction -> {
+                    loanManagementPanelAction.initEvent((LoanManagementActionEvent) event, row);
+                    loanManagementPanelAction.setBackground(tableSelectionBackground);
+                }
+                case OtherIncomeManagementPanelAction testPanel -> {
+                    testPanel.initEvent((OtherIncomeManagementActionEvent) event, row);
+                    testPanel.setBackground(tableSelectionBackground);
+                }
+                default -> {
+                }
             }
 
             return actionComponent;

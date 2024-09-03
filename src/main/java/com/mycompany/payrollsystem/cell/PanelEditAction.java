@@ -9,7 +9,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  *
@@ -60,7 +59,7 @@ public class PanelEditAction extends javax.swing.JPanel {
         edit_button.setBackground(new java.awt.Color(2, 142, 255));
         edit_button.setForeground(new java.awt.Color(255, 255, 255));
         edit_button.setText("EDIT");
-        edit_button.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        edit_button.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         edit_button.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         edit_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -6,7 +6,7 @@ package com.mycompany.payrollsystem.panel_forms;
 
 import com.mycompany.payrollsystem.cell.PanelDownloadAction;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
-import com.mycompany.payrollsystem.cell.TableActionCellRender;
+import com.mycompany.payrollsystem.cell.TableCellRender;
 import com.mycompany.payrollsystem.event.TableDownloadActionEvent;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
@@ -39,7 +39,7 @@ public class FileManagement extends javax.swing.JPanel {
        
         breadcrumb.setupBreadcrumb("File Management");
         
-        TableActionCellRender tableActionCellRender = new TableActionCellRender(new PanelDownloadAction());
+        TableCellRender tableActionCellRender = new TableCellRender(new PanelDownloadAction());
         file_table.getColumnModel().getColumn(3).setCellRenderer(tableActionCellRender);
         
         TableDownloadActionEvent download_event = (int row) -> {

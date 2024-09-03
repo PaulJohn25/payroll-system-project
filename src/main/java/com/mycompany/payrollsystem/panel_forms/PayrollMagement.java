@@ -4,14 +4,13 @@
  */
 package com.mycompany.payrollsystem.panel_forms;
 
-import com.mycompany.payrollsystem.component.*;
 import com.mycompany.payrollsystem.cell.PanelGroupAction;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
-import com.mycompany.payrollsystem.cell.TableActionCellRender;
+import com.mycompany.payrollsystem.cell.TableCellRender;
 import com.mycompany.payrollsystem.event.TableGroupActionEvent;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
-import com.mycompany.payrollsystem.modals.AddEmployeeModal;
+import com.mycompany.payrollsystem.modals.AddAndEditEmployeeModal;
 import com.mycompany.payrollsystem.modals.CreatePayrollModal;
 import java.awt.Dimension;
 
@@ -48,7 +47,7 @@ public class PayrollMagement extends javax.swing.JPanel {
             @Override
             public void onAddEmployee(int row) {
                 System.out.println("Add Employee Row: " + row);
-                AddEmployeeModal addEmployeeModal = new AddEmployeeModal();
+                AddAndEditEmployeeModal addEmployeeModal = new AddAndEditEmployeeModal();
                 addEmployeeModal.setVisible(true);
             }
 
@@ -120,7 +119,7 @@ public class PayrollMagement extends javax.swing.JPanel {
             }
         };
         
-        TableActionCellRender tableActionCellRender = new TableActionCellRender(new PanelGroupAction());
+        TableCellRender tableActionCellRender = new TableCellRender(new PanelGroupAction());
         payroll_management_table.getColumnModel().getColumn(5).setCellRenderer(tableActionCellRender);
         payroll_management_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor<>(PanelGroupAction.class, event));
         
@@ -344,7 +343,7 @@ public class PayrollMagement extends javax.swing.JPanel {
         department_panelLayout.setVerticalGroup(
             department_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(department_panelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(18, 18, 18)
                 .addComponent(roundedCornersPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
