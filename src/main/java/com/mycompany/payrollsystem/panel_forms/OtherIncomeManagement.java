@@ -35,13 +35,16 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
         other_income_management_table_header = other_income_management_table.getTableHeader();
         other_income_management_table_header.setFont(headerFont);
         
-        PanelStatusRegular panelStatus = new PanelStatusRegular();
-        panelStatus.setStatus("Regular");
+        PanelStatusRegular panelStatusRegular = new PanelStatusRegular();
+        panelStatusRegular.setStatus("Regular");
         
-        TableCellRender tableStatusRegularCellRender = new TableCellRender(panelStatus);
+        TableCellRender tableStatusRegularCellRender = new TableCellRender(panelStatusRegular);
         other_income_management_table.getColumnModel().getColumn(2).setCellRenderer(tableStatusRegularCellRender);
         
-        TableCellRender tableStatusCellRender = new TableCellRender(new PanelStatus());
+        PanelStatus panelStatus = new PanelStatus();
+        panelStatus.setStatus("Active");
+       
+        TableCellRender tableStatusCellRender = new TableCellRender(panelStatus);
         other_income_management_table.getColumnModel().getColumn(4).setCellRenderer(tableStatusCellRender);
         
         TableCellRender tableActionCellRender = new TableCellRender(new OtherIncomeManagementPanelAction());

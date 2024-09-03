@@ -4,6 +4,9 @@
  */
 package com.mycompany.payrollsystem.modals;
 
+import com.mycompany.payrollsystem.cell.PanelDates;
+import com.mycompany.payrollsystem.cell.PanelStatus;
+import com.mycompany.payrollsystem.cell.TableCellRender;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 
@@ -24,6 +27,22 @@ public class LoanEmployeeEditorModal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         scrollPane.setBorder(BorderFactory.createEmptyBorder());
         scrollPane.getViewport().setBackground(new Color(245,247,248));
+        
+        loan_management_table.getColumnModel().getColumn(4).setPreferredWidth(170);
+        
+        PanelStatus panelStatus = new PanelStatus();
+        panelStatus.setStatus("Approved");
+        
+        TableCellRender tableCellStatusRender = new TableCellRender(panelStatus);
+        loan_management_table.getColumnModel().getColumn(6).setCellRenderer(tableCellStatusRender);
+        
+        
+        PanelDates panelDates = new PanelDates();
+        panelDates.setupDates("April 01, 2023", "April 30, 2023");
+        
+        TableCellRender tableCellDatesRender = new TableCellRender(panelDates);
+        
+        loan_management_table.getColumnModel().getColumn(4).setCellRenderer(tableCellDatesRender);
     }
 
     /**
@@ -67,7 +86,7 @@ public class LoanEmployeeEditorModal extends javax.swing.JFrame {
         jLabel45 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
         jScrollPane7 = new javax.swing.JScrollPane();
-        other_income_payroll_table1 = new javax.swing.JTable();
+        loan_management_table = new javax.swing.JTable();
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
@@ -188,9 +207,9 @@ public class LoanEmployeeEditorModal extends javax.swing.JFrame {
 
         jTextField9.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
 
-        other_income_payroll_table1.setFont(new java.awt.Font("Arial", 0, 30)); // NOI18N
-        other_income_payroll_table1.setForeground(new java.awt.Color(51, 51, 51));
-        other_income_payroll_table1.setModel(new javax.swing.table.DefaultTableModel(
+        loan_management_table.setFont(new java.awt.Font("Arial", 0, 30)); // NOI18N
+        loan_management_table.setForeground(new java.awt.Color(51, 51, 51));
+        loan_management_table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -215,10 +234,11 @@ public class LoanEmployeeEditorModal extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        other_income_payroll_table1.setRowHeight(50);
-        other_income_payroll_table1.setSelectionBackground(new java.awt.Color(204, 204, 204));
-        other_income_payroll_table1.setShowGrid(true);
-        jScrollPane7.setViewportView(other_income_payroll_table1);
+        loan_management_table.setRowHeight(90);
+        loan_management_table.setRowSelectionAllowed(false);
+        loan_management_table.setSelectionBackground(new java.awt.Color(204, 204, 204));
+        loan_management_table.setShowGrid(true);
+        jScrollPane7.setViewportView(loan_management_table);
 
         jLabel46.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(51, 51, 51));
@@ -311,7 +331,7 @@ public class LoanEmployeeEditorModal extends javax.swing.JFrame {
         roundedCornersPanel2Layout.setHorizontalGroup(
             roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(roundedCornersPanel2Layout.createSequentialGroup()
-                .addContainerGap(111, Short.MAX_VALUE)
+                .addContainerGap(146, Short.MAX_VALUE)
                 .addGroup(roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(backgroundLabelDateEnd, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(backgroundLabelProcessType, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -408,7 +428,7 @@ public class LoanEmployeeEditorModal extends javax.swing.JFrame {
                 .addComponent(close_modal_button2)
                 .addGap(26, 26, 26))
             .addGroup(roundedCornersPanel1Layout.createSequentialGroup()
-                .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1032, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1067, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         roundedCornersPanel1Layout.setVerticalGroup(
@@ -524,8 +544,8 @@ public class LoanEmployeeEditorModal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTable loan_management_table;
     private javax.swing.JLabel modal_title2;
-    private javax.swing.JTable other_income_payroll_table1;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel1;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel11;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel2;

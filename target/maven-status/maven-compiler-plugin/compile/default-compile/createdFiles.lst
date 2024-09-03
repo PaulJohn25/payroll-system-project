@@ -171,6 +171,7 @@ com\mycompany\payrollsystem\swing\CirclePanel.class
 com\mycompany\payrollsystem\panel_forms\LoanManagement.class
 com\mycompany\payrollsystem\test_forms\Statutories$5.class
 com\mycompany\payrollsystem\swing\TopLeftAndTopRightRoundedCornersPanel.class
+com\mycompany\payrollsystem\cell\PanelDates.class
 com\mycompany\payrollsystem\test_forms\Timekeeping.class
 com\mycompany\payrollsystem\test_forms\Statutories$6.class
 com\mycompany\payrollsystem\modals\CreatePayrollModal$2.class

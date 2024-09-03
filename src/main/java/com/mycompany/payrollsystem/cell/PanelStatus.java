@@ -16,6 +16,10 @@ public class PanelStatus extends javax.swing.JPanel {
     public PanelStatus() {
         initComponents();
     }
+    
+    public void setStatus(String status) {
+        statusText.setText(status);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form. WARNING: Do NOT modify this
@@ -26,17 +30,17 @@ public class PanelStatus extends javax.swing.JPanel {
     private void initComponents() {
 
         roundedCornersPanel2 = new com.mycompany.payrollsystem.swing.RoundedCornersPanel();
-        jLabel1 = new javax.swing.JLabel();
+        statusText = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 204));
 
         roundedCornersPanel2.setBackground(new java.awt.Color(51, 204, 0));
-        roundedCornersPanel2.setPreferredSize(new java.awt.Dimension(80, 37));
+        roundedCornersPanel2.setPreferredSize(new java.awt.Dimension(80, 30));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Active");
+        statusText.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        statusText.setForeground(new java.awt.Color(255, 255, 255));
+        statusText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        statusText.setText("Active");
 
         javax.swing.GroupLayout roundedCornersPanel2Layout = new javax.swing.GroupLayout(roundedCornersPanel2);
         roundedCornersPanel2.setLayout(roundedCornersPanel2Layout);
@@ -44,12 +48,12 @@ public class PanelStatus extends javax.swing.JPanel {
             roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(roundedCornersPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
+                .addComponent(statusText, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
                 .addContainerGap())
         );
         roundedCornersPanel2Layout.setVerticalGroup(
             roundedCornersPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+            .addComponent(statusText, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -62,15 +66,13 @@ public class PanelStatus extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(roundedCornersPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(roundedCornersPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private com.mycompany.payrollsystem.swing.RoundedCornersPanel roundedCornersPanel2;
+    private javax.swing.JLabel statusText;
     // End of variables declaration//GEN-END:variables
 }

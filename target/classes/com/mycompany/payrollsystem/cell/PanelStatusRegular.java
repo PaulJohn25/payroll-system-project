@@ -60,7 +60,7 @@ public class PanelStatusRegular extends javax.swing.JPanel {
         statusText = new javax.swing.JLabel();
 
         statusPanel.setBackground(new java.awt.Color(153, 153, 153));
-        statusPanel.setPreferredSize(new java.awt.Dimension(80, 37));
+        statusPanel.setPreferredSize(new java.awt.Dimension(80, 30));
 
         statusText.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         statusText.setForeground(new java.awt.Color(255, 255, 255));
@@ -78,7 +78,7 @@ public class PanelStatusRegular extends javax.swing.JPanel {
         );
         statusPanelLayout.setVerticalGroup(
             statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(statusText, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+            .addComponent(statusText, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
