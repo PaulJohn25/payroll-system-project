@@ -9,6 +9,7 @@ import com.mycompany.payrollsystem.model.CardModel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import javax.swing.Icon;
 
 /**
  *
@@ -39,10 +40,13 @@ public class Card extends javax.swing.JPanel {
     public void setupData(CardModel cardModel) {
         text_panel.setText("<html>" + cardModel.getCardText() + "</html>");
         count_panel.setText(cardModel.getCount().toString());
-        util.fitImageToComponent(icon_panel, "icons/" + cardModel.getIcon() + ".png");
+//        util.fitImageToComponent(icon_panel, "icons/" + cardModel.getIcon() + ".png");
 //        icon_panel.setIcon(cardModel.toIcon(ICON_WIDTH, ICON_HEIGHT));
     }
-    
+        
+    public void setIcon(Icon icon) {
+        this.icon_panel.setIcon(icon);
+    }
     
     @Override
     protected void paintComponent(Graphics graphics) {

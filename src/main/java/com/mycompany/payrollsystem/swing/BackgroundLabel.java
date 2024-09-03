@@ -5,6 +5,7 @@
 package com.mycompany.payrollsystem.swing;
 
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -25,6 +26,10 @@ public class BackgroundLabel extends javax.swing.JPanel {
     
     public void setLabelText(String text) {
         label_text.setText(text);
+    }
+    
+    public void setLabelFont(Font font) {
+        label_text.setFont(font);
     }
 
     @Override
@@ -53,7 +58,7 @@ public class BackgroundLabel extends javax.swing.JPanel {
         label_text = new javax.swing.JLabel();
 
         label_text.setBackground(new java.awt.Color(102, 102, 102));
-        label_text.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        label_text.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         label_text.setForeground(new java.awt.Color(255, 255, 255));
         label_text.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label_text.setText("Label");

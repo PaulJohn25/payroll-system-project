@@ -6,8 +6,8 @@ package com.mycompany.payrollsystem.modals;
 
 import com.mycompany.payrollsystem.cell.PanelRemoveAction;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
-import com.mycompany.payrollsystem.cell.TableActionCellRender;
-import com.mycompany.payrollsystem.cell.TableRemoveActionEvent;
+import com.mycompany.payrollsystem.cell.TableCellRender;
+import com.mycompany.payrollsystem.event.TableRemoveActionEvent;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.table.JTableHeader;
@@ -33,7 +33,7 @@ public class OtherDeductionModal extends javax.swing.JFrame {
         tableHeader = other_deduction_table.getTableHeader();
         tableHeader.setFont(headerFont);
         
-        TableActionCellRender tableActionCellRender = new TableActionCellRender(new PanelRemoveAction());
+        TableCellRender tableActionCellRender = new TableCellRender(new PanelRemoveAction());
         other_deduction_table
                 .getColumnModel()
                 .getColumn(3)
@@ -46,7 +46,7 @@ public class OtherDeductionModal extends javax.swing.JFrame {
         other_deduction_table
                 .getColumnModel()
                 .getColumn(3)
-                .setCellEditor(new TableActionCellEditor<>(new PanelRemoveAction(), remove_event));
+                .setCellEditor(new TableActionCellEditor<>(PanelRemoveAction.class, remove_event));
     }
 
     /**
@@ -362,14 +362,14 @@ public class OtherDeductionModal extends javax.swing.JFrame {
     private void close_icon_modal2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_icon_modal2MousePressed
         // TODO add your handling code here:
         this.dispose();
-        AddEmployeeModal addEmployeeModal = new AddEmployeeModal();
+        AddAndEditEmployeeModal addEmployeeModal = new AddAndEditEmployeeModal();
         addEmployeeModal.setVisible(true);
     }//GEN-LAST:event_close_icon_modal2MousePressed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        AddEmployeeModal addEmployeeModal = new AddEmployeeModal();
+        AddAndEditEmployeeModal addEmployeeModal = new AddAndEditEmployeeModal();
         addEmployeeModal.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 

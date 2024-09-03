@@ -33,7 +33,7 @@ public class PanelStatus extends javax.swing.JPanel {
         roundedCornersPanel2.setBackground(new java.awt.Color(51, 204, 0));
         roundedCornersPanel2.setPreferredSize(new java.awt.Dimension(80, 37));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Active");

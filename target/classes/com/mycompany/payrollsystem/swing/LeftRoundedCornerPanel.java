@@ -8,7 +8,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-
 /**
  *
  * @author Paul
@@ -22,27 +21,27 @@ public class LeftRoundedCornerPanel extends javax.swing.JPanel {
         initComponents();
         setOpaque(false);
     }
-    
+
     @Override
     protected void paintComponent(Graphics graphics) {
-        Graphics2D g2 = (Graphics2D) graphics;
-        
+
+        super.paintComponent(graphics);
+
         int arcWidth = 15;
         int arcHeight = 15;
         int width = getWidth();
         int height = getHeight();
-        
+        Graphics2D g2 = (Graphics2D) graphics;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setColor(getBackground());
-        
+
         // Fill the rounded rectangle with rounding only on the left side
-        g2.fillRoundRect(0, 0, width, height, arcWidth * 2, arcHeight * 2);
-        
-        
+        g2.fillRoundRect(0, 0, width, height, arcWidth, arcHeight);
+
         // Fill rectangles to cover the unwanted rounded corners on the right side
         g2.fillRect(arcWidth, 0, width - arcWidth, arcHeight);
         g2.fillRect(arcWidth, height - arcHeight, width - arcWidth, arcHeight);
-        super.paintComponent(graphics);
+
     }
 
     /**

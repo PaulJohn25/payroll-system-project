@@ -4,10 +4,12 @@
  */
 package com.mycompany.payrollsystem.swing;
 
+import com.mycompany.payrollsystem.event.EventMenuSelected;
 import com.mycompany.payrollsystem.model.MenuModel;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
@@ -37,6 +39,13 @@ public class ListMenu<E extends Object> extends JList<E> {
     
     private final DefaultListModel model;
     private int selectedIndex = -1;
+    private int overIndex = -1;
+    private EventMenuSelected event;
+    
+    public void addEventMenuSelected(EventMenuSelected event) {
+        this.event = event;
+    }
+    
     public ListMenu() {
         model = new DefaultListModel();
         setModel(model);
@@ -48,15 +57,42 @@ public class ListMenu<E extends Object> extends JList<E> {
                     Object obj = model.getElementAt(index);
                     
                     if (obj instanceof MenuModel) {
-                        setSelectedIndex(index);
-                    } else {
-                        setSelectedIndex(index);
-                    }
+                        selectedIndex = index;
+                        if (event != null) {
+                            event.selected(index);
+                        }
+                    } 
                     
                     repaint();
                 }
             }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                overIndex = -1;
+                repaint();
+            }
+           
         });
+        
+        addMouseMotionListener(new MouseMotionAdapter() {
+            @Override
+            public void mouseMoved(MouseEvent me) {
+                int index = locationToIndex(me.getPoint());
+                
+                if (index != overIndex) {
+                    Object obj = model.getElementAt(index);
+                    
+                    if (obj instanceof MenuModel) {
+                        overIndex = index;
+                    } else {
+                        overIndex = -1;
+                    }
+                    repaint();
+                }
+            } 
+        });
+        
     }
     
     @Override
@@ -67,6 +103,7 @@ public class ListMenu<E extends Object> extends JList<E> {
                 MenuItem menuItem = new MenuItem();
                 menuItem.setItem(o);
                 menuItem.setSelected(getSelectedIndex() == index);
+                menuItem.setOver(overIndex == index);
                 return menuItem;
             }
         };

@@ -46,44 +46,45 @@ public class CardModel {
     /**
      * @return the icon
      */
-    public String getIcon() {
-        return icon;
-    }
+//    public String getIcon() {
+//        return icon;
+//    }
 
     /**
      * @param icon the icon to set
      */
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
+//    public void setIcon(String icon) {
+//        this.icon = icon;
+//    }
+    
     private String cardText;
     private Integer count;
-    private String icon;
+//    private String icon;
    
     public CardModel() {}
     
-    public CardModel(String cardText, Integer count, String icon) {
+    public CardModel(String cardText, Integer count) {
         this.cardText = cardText;
         this.count = count;
-        this.icon = icon;
+//        this.icon = icon;
     }
     
-     public Icon toIcon(int width, int height) {
-        URL imgUrl = getClass().getResource("/com/mycompany/payrollsystem/icons/" + getIcon() + ".png");
-        if (imgUrl != null) {
-            
-            // Load the original image
-            ImageIcon originalIcon = new ImageIcon(imgUrl);
-            Image originalImage = originalIcon.getImage();
-            
-            Image resizeIcon = originalImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
-            
-            return new ImageIcon(resizeIcon);
-        } else {
-            // Handle the null case, perhaps with a default icon or by logging an error
-            System.err.println("Icon not found: icons/" + getIcon() + ".png");
-            return null; // or return a default icon
-        }
-    }
+//     public Icon toIcon(int width, int height) {
+//        URL imgUrl = getClass().getResource("/com/mycompany/payrollsystem/icons/" + getIcon() + ".png");
+//        if (imgUrl != null) {
+//            
+//            // Load the original image
+//            ImageIcon originalIcon = new ImageIcon(imgUrl);
+//            Image originalImage = originalIcon.getImage();
+//            
+//            Image resizeIcon = originalImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+//            
+//            return new ImageIcon(resizeIcon);
+//        } else {
+//            // Handle the null case, perhaps with a default icon or by logging an error
+//            System.err.println("Icon not found: icons/" + getIcon() + ".png");
+//            return null; // or return a default icon
+//        }
+//    }
     
 }

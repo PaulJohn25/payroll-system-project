@@ -4,11 +4,11 @@
  */
 package com.mycompany.payrollsystem.cell;
 
+import com.mycompany.payrollsystem.event.TableRemoveActionEvent;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 /**
  *
  * @author Paul
@@ -56,7 +56,7 @@ public class PanelRemoveAction extends javax.swing.JPanel {
         remove_button.setBackground(new java.awt.Color(233, 171, 46));
         remove_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/payrollsystem/icons/remove_icon_24px.png"))); // NOI18N
         remove_button.setText("REMOVE");
-        remove_button.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        remove_button.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         remove_button.setPreferredSize(new java.awt.Dimension(99, 25));
         remove_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
