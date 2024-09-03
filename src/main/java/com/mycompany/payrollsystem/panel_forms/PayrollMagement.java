@@ -4,7 +4,7 @@
  */
 package com.mycompany.payrollsystem.panel_forms;
 
-import com.mycompany.payrollsystem.cell.PanelGroupAction;
+import com.mycompany.payrollsystem.cell.PayrollManagementPanelAction;
 import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import com.mycompany.payrollsystem.cell.TableCellRender;
 import com.mycompany.payrollsystem.event.TableGroupActionEvent;
@@ -119,9 +119,9 @@ public class PayrollMagement extends javax.swing.JPanel {
             }
         };
         
-        TableCellRender tableActionCellRender = new TableCellRender(new PanelGroupAction());
+        TableCellRender tableActionCellRender = new TableCellRender(new PayrollManagementPanelAction());
         payroll_management_table.getColumnModel().getColumn(5).setCellRenderer(tableActionCellRender);
-        payroll_management_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor<>(PanelGroupAction.class, event));
+        payroll_management_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor<>(PayrollManagementPanelAction.class, event));
         
     }
      

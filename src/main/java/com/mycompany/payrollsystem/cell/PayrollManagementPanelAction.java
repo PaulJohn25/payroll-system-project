@@ -12,12 +12,12 @@ import java.awt.event.ActionEvent;
  *
  * @author Paul
  */
-public class PanelGroupAction extends javax.swing.JPanel {
+public class PayrollManagementPanelAction extends javax.swing.JPanel {
 
     /**
      * Creates new form GroupActionButton
      */
-    public PanelGroupAction() {
+    public PayrollManagementPanelAction() {
         initComponents();
        
         edit_button.setButtonPressedColor(new Color(2, 144, 204));

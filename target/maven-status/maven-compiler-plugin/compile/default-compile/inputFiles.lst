@@ -43,6 +43,7 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\BackgroundLabel.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelStatus.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\CreateBranchModal.java
+C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PayrollManagementPanelAction.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\Staff_Dashboard_Profile.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\test_forms\Statutories.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\AdminDashboardProfile.java
@@ -56,8 +57,10 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\database\DatabaseManager.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelDownloadAction.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\CardHeader.java
+C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\UserManagementPanelAction.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelActionButtons.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\component\HeaderDashboard.java
+C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\CredentialModal.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\OtherIncomeLibraryDetailsModal.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelEditAction.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\RoundedCornersPanelWithBorder.java
@@ -87,5 +90,4 @@ C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\c
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\modals\AddAndEditEmployeeModal.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\swing\ListMenu.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\panel_forms\SystemManagement.java
-C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\cell\PanelGroupAction.java
 C:\Users\imper\OneDrive\Documents\NetBeansProjects\PayrollSystem\src\main\java\com\mycompany\payrollsystem\test_forms\Loan_Management.java

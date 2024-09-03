@@ -53,7 +53,7 @@ public class TableActionCellEditor<T extends JComponent, E> extends DefaultCellE
                     panelEditAction.initEvent((TableEditActionEvent) event, row);
                     panelEditAction.setBackground(tableSelectionBackground);
                 }
-                case PanelGroupAction panelGroupAction -> {
+                case PayrollManagementPanelAction panelGroupAction -> {
                     panelGroupAction.initEvent((TableGroupActionEvent) event, row);
                     panelGroupAction.setBackground(tableSelectionBackground);
                 }
@@ -73,9 +73,13 @@ public class TableActionCellEditor<T extends JComponent, E> extends DefaultCellE
                     loanManagementPanelAction.initEvent((LoanManagementActionEvent) event, row);
                     loanManagementPanelAction.setBackground(tableSelectionBackground);
                 }
-                case OtherIncomeManagementPanelAction testPanel -> {
-                    testPanel.initEvent((OtherIncomeManagementActionEvent) event, row);
-                    testPanel.setBackground(tableSelectionBackground);
+                case OtherIncomeManagementPanelAction otherIncomeManagementPanelAction -> {
+                    otherIncomeManagementPanelAction.initEvent((OtherIncomeManagementActionEvent) event, row);
+                    otherIncomeManagementPanelAction.setBackground(tableSelectionBackground);
+                }
+                case UserManagementPanelAction userManagementPanelAction -> {
+                    userManagementPanelAction.initEvent((TableEditActionEvent) event, row);
+                    userManagementPanelAction.setBackground(tableSelectionBackground);
                 }
                 default -> {
                 }
