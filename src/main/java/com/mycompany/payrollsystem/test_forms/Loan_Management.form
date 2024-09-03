@@ -49,9 +49,15 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD:src/main/java/com/mycompany/payrollsystem/Forms/Loan_Management.form
+                          <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
+                          <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
+=======
                           <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
                           <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
+>>>>>>> e7f6a1e63f0dd9a65c368fcc810f6af1b4f8dcf9:src/main/java/com/mycompany/payrollsystem/test_forms/Loan_Management.form
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -339,6 +345,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Search"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
 
