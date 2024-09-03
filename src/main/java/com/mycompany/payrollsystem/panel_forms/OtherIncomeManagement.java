@@ -6,9 +6,9 @@ package com.mycompany.payrollsystem.panel_forms;
 
 import com.mycompany.payrollsystem.cell.PanelStatus;
 import com.mycompany.payrollsystem.cell.PanelStatusRegular;
-import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import com.mycompany.payrollsystem.cell.TableCellRender;
 import com.mycompany.payrollsystem.cell.OtherIncomeManagementPanelAction;
+import com.mycompany.payrollsystem.cell.TableActionCellEditor;
 import com.mycompany.payrollsystem.event.OtherIncomeManagementActionEvent;
 import com.mycompany.payrollsystem.modals.OtherIncomeLibraryDetailsModal;
 import java.awt.Font;
@@ -36,7 +36,7 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
         other_income_management_table_header.setFont(headerFont);
         
         PanelStatusRegular panelStatus = new PanelStatusRegular();
-        panelStatus.setStatus("One Time");
+        panelStatus.setStatus("Regular");
         
         TableCellRender tableStatusRegularCellRender = new TableCellRender(panelStatus);
         other_income_management_table.getColumnModel().getColumn(2).setCellRenderer(tableStatusRegularCellRender);
@@ -46,6 +46,8 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
         
         TableCellRender tableActionCellRender = new TableCellRender(new OtherIncomeManagementPanelAction());
         other_income_management_table.getColumnModel().getColumn(5).setCellRenderer(tableActionCellRender);
+        
+        other_income_management_table.getColumnModel().getColumn(5).sizeWidthToFit();
         
         OtherIncomeManagementActionEvent event = new OtherIncomeManagementActionEvent() {
             @Override
@@ -62,6 +64,7 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
         };
         
         other_income_management_table.getColumnModel().getColumn(5).setCellEditor(new TableActionCellEditor<>(OtherIncomeManagementPanelAction.class, event));
+        other_income_management_table.getColumnModel().getColumn(5).setPreferredWidth(150);
         
         setPreferredSize(new Dimension(900, 1130));
         init();
@@ -236,6 +239,7 @@ public class OtherIncomeManagement extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        other_income_management_table.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_LAST_COLUMN);
         other_income_management_table.setRowHeight(60);
         other_income_management_table.setSelectionBackground(new java.awt.Color(204, 204, 204));
         other_income_management_table.setShowGrid(true);

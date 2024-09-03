@@ -58,6 +58,7 @@ com\mycompany\payrollsystem\test_forms\Permission_Management$3.class
 com\mycompany\payrollsystem\PayrollSystem$5.class
 com\mycompany\payrollsystem\panel_forms\Employees$3.class
 com\mycompany\payrollsystem\test_forms\Statutories$1.class
+com\mycompany\payrollsystem\Home$3.class
 com\mycompany\payrollsystem\PayrollSystem$6.class
 com\mycompany\payrollsystem\modals\AddAndEditEmployeeModal$2.class
 com\mycompany\payrollsystem\swing\RoundedCornersPanel.class

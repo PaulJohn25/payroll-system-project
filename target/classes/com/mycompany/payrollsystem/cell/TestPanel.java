@@ -4,11 +4,7 @@
  */
 package com.mycompany.payrollsystem.cell;
 
-import com.mycompany.payrollsystem.event.OtherIncomeManagementActionEvent;
 import java.awt.Color;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
 
 /**
  *
@@ -21,19 +17,12 @@ public class TestPanel extends javax.swing.JPanel {
      */
     public TestPanel() {
         initComponents();
-                      
-        edit_button.setDefaultColor(new Color(2,142,255));
-        add_edit_employee_button.setDefaultColor(new Color(51,204,0));
-    }
-    
-    public void initEvent(OtherIncomeManagementActionEvent event, int row) {
-        edit_button.addActionListener((ActionEvent e) -> {
-            event.onEdit(row);
-        });
         
-        add_edit_employee_button.addActionListener((ActionEvent e) -> {
-            event.onAddAndEditEmployee(row);
-        });
+        edit_button.setButtonPressedColor(new Color(2, 144, 204));
+        edit_button.setDefaultColor(new Color(2,142,255));
+        
+        add_edit_employee_button.setButtonPressedColor(new Color(36, 143, 0));
+        add_edit_employee_button.setDefaultColor(new Color(51,204,0));
     }
 
     /**
@@ -45,35 +34,33 @@ public class TestPanel extends javax.swing.JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        add_edit_employee_button = new com.mycompany.payrollsystem.cell.ActionButton();
         edit_button = new com.mycompany.payrollsystem.cell.ActionButton();
+        add_edit_employee_button = new com.mycompany.payrollsystem.cell.ActionButton();
 
         setLayout(new java.awt.GridBagLayout());
 
-        add_edit_employee_button.setForeground(new java.awt.Color(255, 255, 255));
-        add_edit_employee_button.setText("Add/Edit Employee");
-        add_edit_employee_button.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        add_edit_employee_button.setPreferredSize(new java.awt.Dimension(70, 30));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 6;
-        gridBagConstraints.ipady = 16;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 7, 0, 0);
-        add(add_edit_employee_button, gridBagConstraints);
-
         edit_button.setForeground(new java.awt.Color(255, 255, 255));
         edit_button.setText("Edit");
-        edit_button.setFont(new java.awt.Font("Arial", 0, 13)); // NOI18N
-        edit_button.setPreferredSize(new java.awt.Dimension(70, 30));
+        edit_button.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 41;
-        gridBagConstraints.ipady = 16;
+        gridBagConstraints.ipadx = 35;
+        gridBagConstraints.ipady = 12;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         add(edit_button, gridBagConstraints);
+
+        add_edit_employee_button.setForeground(new java.awt.Color(255, 255, 255));
+        add_edit_employee_button.setText("Add/Edit Employee");
+        add_edit_employee_button.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 10;
+        gridBagConstraints.ipady = 12;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 7, 0, 0);
+        add(add_edit_employee_button, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
